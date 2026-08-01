@@ -3059,7 +3059,7 @@ h3 {
 
 /* Why Self Storage Works Section - Premium Grid Redesign */
 .works-section {
-    padding: var(--space-section) 0;
+    padding: 20px 0;
     background-color: #ffffff;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);

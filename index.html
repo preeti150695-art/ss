@@ -788,60 +788,6 @@
                     </div>
                 </div>
 
-                <!-- Illustrated Delhi NCR Interactive Map -->
-                <div class="locations-map-container shadow-sm">
-                    <div class="map-header">
-                        <span class="material-symbols-rounded">my_location</span>
-                        <h3>Find Your Nearest Facility</h3>
-                        <p>Hover over the map regions below to highlight facility cards and find the closest Self Storage India facility near yo                        <!-- Custom Stylized NCR Map using Minimal SVG -->
-                        <svg viewBox="0 0 800 450" class="ncr-svg-map">
-                            <!-- Background Map Outlines -->
-                            <defs>
-                                <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-                                    <circle cx="2" cy="2" r="1.2" fill="#cbd5e1" />
-                                </pattern>
-                            </defs>
-                            <rect width="800" height="450" fill="#f8fafc" rx="16"></rect>
-                            <rect width="800" height="450" fill="url(#dotGrid)" rx="16"></rect>
-
-                            <!-- Radial Orbit Lines representing distance/reach -->
-                            <circle cx="400" cy="225" r="180" fill="none" stroke="rgba(37, 99, 235, 0.08)" stroke-width="2" stroke-dasharray="6,6"></circle>
-                            <circle cx="400" cy="225" r="100" fill="none" stroke="rgba(37, 99, 235, 0.08)" stroke-width="1.5" stroke-dasharray="4,4"></circle>
-                            
-                            <!-- Connecting dashed paths between facilities -->
-                            <line x1="310" y1="230" x2="260" y2="310" stroke="rgba(37, 99, 235, 0.2)" stroke-width="2" stroke-dasharray="5,5"></line>
-                            <line x1="310" y1="230" x2="490" y2="210" stroke="rgba(37, 99, 235, 0.2)" stroke-width="2" stroke-dasharray="5,5"></line>
-
-                            <!-- Center Hub indicator (Delhi NCR Centroid) -->
-                            <circle cx="400" cy="225" r="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"></circle>
-                            <text x="400" y="245" text-anchor="middle" font-size="10" font-weight="800" fill="#64748b" letter-spacing="1.5">NCR CENTROID</text>
-
-                            <!-- Interactive Map Pin 1: Dwarka (Delhi) -->
-                            <g class="map-pin" id="pin-delhi" onmouseover="focusLocCard('delhi')" onmouseout="blurLocCard('delhi')" onclick="openQuoteModal()">
-                                <rect x="220" y="170" width="160" height="42" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.02))"></rect>
-                                <circle cx="310" cy="230" r="18" fill="rgba(37, 99, 235, 0.15)" class="pin-pulse"></circle>
-                                <circle cx="310" cy="230" r="6" fill="#2563EB" stroke="#ffffff" stroke-width="2.5"></circle>
-                                <text x="300" y="195" text-anchor="middle" font-size="11" font-weight="800" fill="#1e293b">Delhi (Dwarka)</text>
-                            </g>
-
-                            <!-- Interactive Map Pin 2: Gurugram -->
-                            <g class="map-pin" id="pin-gurugram" onmouseover="focusLocCard('gurugram')" onmouseout="blurLocCard('gurugram')" onclick="openQuoteModal()">
-                                <rect x="170" y="325" width="160" height="42" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.02))"></rect>
-                                <circle cx="260" cy="310" r="18" fill="rgba(37, 99, 235, 0.15)" class="pin-pulse"></circle>
-                                <circle cx="260" cy="310" r="6" fill="#2563EB" stroke="#ffffff" stroke-width="2.5"></circle>
-                                <text x="250" y="350" text-anchor="middle" font-size="11" font-weight="800" fill="#1e293b">Gurugram</text>
-                            </g>
-
-                            <!-- Interactive Map Pin 3: Noida -->
-                            <g class="map-pin" id="pin-noida" onmouseover="focusLocCard('noida')" onmouseout="blurLocCard('noida')" onclick="openQuoteModal()">
-                                <rect x="420" y="145" width="160" height="42" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.02))"></rect>
-                                <circle cx="490" cy="210" r="18" fill="rgba(37, 99, 235, 0.15)" class="pin-pulse"></circle>
-                                <circle cx="490" cy="210" r="6" fill="#2563EB" stroke="#ffffff" stroke-width="2.5"></circle>
-                                <text x="500" y="170" text-anchor="middle" font-size="11" font-weight="800" fill="#1e293b">Noida Sector 59</text>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
 
                 <!-- Callout Banner -->
                 <div class="loc-cta-banner shadow-sm">

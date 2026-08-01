@@ -850,6 +850,7 @@ h3 {
 }
 
 .section-header-centered h2 {
+    font-size: clamp(1.4rem, 1.8vw, 1.65rem); /* Scaled down slightly for refined proportion */
     font-weight: 800;
     color: var(--text);
     margin-top: var(--space-xs);
@@ -857,7 +858,9 @@ h3 {
 }
 
 .section-header-centered p {
-    max-width: 700px;
+    font-size: 15px !important; /* Scaled down from 18px for better balance */
+    line-height: 1.55 !important;
+    max-width: 660px;
 }
 
 /* When Self Storage Makes Sense Section */

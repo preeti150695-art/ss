@@ -2274,10 +2274,7 @@ h3 {
     border-bottom: 1px solid var(--border);
 }
 
-.offerings-section h2 {
-    font-size: 38px; /* Reduced heading size a bit */
-    font-weight: 800;
-}
+
 
 .offerings-grid {
     display: grid;

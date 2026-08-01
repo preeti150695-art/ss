@@ -94,24 +94,20 @@ a {
 }
 
 /* Typography styles */
-h1 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: clamp(2rem, 4.5vw, 3rem); /* Max 48px size */
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--text);
-    margin-bottom: var(--space-lg);
-    animation: slideUp 0.6s ease;
-}
-
-h2 {
+h1, h2 {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: clamp(2rem, 5vw, 2.6rem);
-    line-height: 1.2;
+    font-size: clamp(1.3rem, 2vw, 1.7rem); /* Standardized size matching main hero title */
+    line-height: 1.15;
     letter-spacing: -0.02em;
     color: var(--text);
+}
+
+/* Standardized Subtitles/Paragraphs */
+.hero-paragraph, .section-subtitle, .sense-subtitle, .section-header-centered p {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    color: var(--text-secondary) !important;
 }
 
 h3 {
@@ -835,7 +831,6 @@ h3 {
 }
 
 .section-header-centered h2 {
-    font-size: 2.2rem;
     font-weight: 800;
     color: var(--text);
     margin-top: var(--space-xs);
@@ -843,9 +838,6 @@ h3 {
 }
 
 .section-header-centered p {
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.5;
     max-width: 700px;
 }
 
@@ -881,7 +873,6 @@ h3 {
 }
 
 .sense-left h2 {
-    font-size: 2.1rem;
     font-weight: 800;
     line-height: 1.25;
     margin-bottom: var(--space-md);
@@ -889,9 +880,6 @@ h3 {
 }
 
 .sense-subtitle {
-    font-size: 1.02rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
     margin-bottom: var(--space-lg);
 }
 

@@ -3057,6 +3057,272 @@ h3 {
     }
 }
 
+/* About Self Storage Section - Premium Editorial Redesign */
+.about-editorial-section {
+    padding: var(--space-section) 0;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.about-editorial-container {
+    display: flex;
+    gap: var(--space-3xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    position: relative;
+}
+
+.about-editorial-left {
+    width: 45%;
+}
+
+.about-editorial-right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-editorial-header {
+    margin-bottom: var(--space-2xl);
+}
+
+.about-editorial-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-md);
+}
+
+.about-editorial-header .supporting-text {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+/* About Content Blocks */
+.about-block {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-xl);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-block:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.about-block h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: var(--space-md);
+}
+
+.about-block p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: var(--space-sm);
+}
+
+.about-block p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* About Chip/Pill Badges */
+.about-pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: var(--space-xs);
+}
+
+.about-pill {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.88rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 200ms ease;
+    border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.about-pill.pill-secondary {
+    background-color: #f1f5f9;
+    color: var(--text-secondary);
+    border-color: rgba(0, 0, 0, 0.04);
+}
+
+.about-pill:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+/* About Feature Grid & Cards */
+.about-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.about-feature-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: var(--space-lg);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-feature-card span.material-symbols-rounded {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: var(--space-sm);
+    display: inline-block;
+}
+
+.about-feature-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.about-feature-card p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.about-feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: rgba(37, 99, 235, 0.2);
+    background: linear-gradient(180deg, #ffffff 0%, rgba(37, 99, 235, 0.02) 100%);
+}
+
+/* Timeline Styles */
+.about-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: var(--space-md);
+    max-width: 400px;
+}
+
+.about-timeline-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+}
+
+.about-timeline-item:hover {
+    transform: translateX(4px);
+}
+
+.about-timeline-item .timeline-value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    min-width: 80px;
+}
+
+.about-timeline-item .timeline-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.timeline-arrow {
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    opacity: 0.6;
+    margin: -2px 0;
+}
+
+/* About Section Bottom CTA */
+.about-cta {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(37, 99, 235, 0.08) 100%);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    border-radius: 28px;
+    padding: var(--space-2xl) var(--space-3xl);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--space-3xl);
+}
+
+.about-cta h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: var(--space-xs);
+    max-width: 650px;
+    line-height: 1.3;
+    color: var(--text);
+}
+
+.about-cta p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    max-width: 550px;
+}
+
+.about-cta-actions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .about-editorial-container {
+        flex-direction: column-reverse;
+        gap: var(--space-xl);
+    }
+    .about-editorial-left {
+        width: 100%;
+    }
+    .about-editorial-right {
+        width: 100%;
+    }
+    .about-features-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-cta {
+        padding: var(--space-xl);
+    }
+    .about-cta h2 {
+        font-size: 1.5rem;
+    }
+    .about-cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .about-cta-actions button {
+        width: 100%;
+    }
+}
+
+
 
 
 

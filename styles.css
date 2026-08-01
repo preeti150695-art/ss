@@ -851,48 +851,146 @@ h3 {
 
 /* When Self Storage Makes Sense Section */
 .sense-section {
-    padding: var(--space-xl) 0; /* Reduced padding from section padding to xl */
+    padding: var(--space-section) 0;
     background-color: #ffffff;
 }
 
-.stat-badge-wrapper {
-    margin-top: var(--space-md);
-    display: flex;
-    justify-content: center;
+.sense-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    display: grid;
+    grid-template-columns: 35% 61%;
+    gap: 4%;
+    align-items: flex-start;
 }
 
-.stat-badge {
-    display: inline-flex;
+.sense-left {
+    position: sticky;
+    top: 100px;
+}
+
+.sense-left .badge-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+    display: inline-block;
+}
+
+.sense-left h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: var(--space-md);
+    color: var(--text);
+}
+
+.sense-subtitle {
+    font-size: 1.02rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+}
+
+.sense-trust-indicator {
+    display: flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 16px;
+    margin-bottom: var(--space-xl);
+    padding: 8px 14px;
     background-color: var(--primary-light);
-    border: 1px solid rgba(24, 108, 236, 0.12);
-    border-radius: 20px;
-    font-size: 0.82rem;
+    border-radius: 6px;
+    border: 1px solid rgba(24, 108, 236, 0.08);
+}
+
+.sense-trust-indicator .stars {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.sense-trust-indicator .text {
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--text-secondary);
 }
 
-.stat-badge .stars {
-    color: var(--accent);
-    font-weight: 700;
+.sense-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sense-actions button {
+    width: 100%;
+}
+
+.sense-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sense-tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+.sense-tabs .tab-btn {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.sense-tabs .tab-btn:hover {
+    color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.sense-tabs .tab-btn.active {
+    color: #ffffff;
+    background-color: var(--primary);
 }
 
 .sense-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
-    max-width: 1280px;
-    margin: 0 auto var(--space-3xl);
-    padding: 0 var(--space-xl);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-height: 480px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.sense-grid::-webkit-scrollbar {
+    width: 6px;
+}
+.sense-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sense-grid::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 3px;
+}
+.sense-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--text-light);
 }
 
 .sense-card {
     background-color: #ffffff;
     border: 1px solid var(--border);
-    border-radius: 24px;
-    padding: var(--space-xl);
+    border-radius: 8px; /* Tighter border radius */
+    padding: var(--space-lg);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     cursor: pointer;
@@ -903,9 +1001,9 @@ h3 {
 }
 
 .sense-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     border-color: var(--primary);
-    box-shadow: 0 12px 30px rgba(24, 108, 236, 0.08);
+    box-shadow: 0 8px 24px rgba(24, 108, 236, 0.06);
 }
 
 .card-meta {
@@ -913,18 +1011,18 @@ h3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
 }
 
 .category-label {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     color: var(--text-light);
 }
 
 .arrow-icon {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--primary);
     opacity: 0;
     transform: translateX(-4px);
@@ -937,14 +1035,14 @@ h3 {
 }
 
 .sense-icon-box {
-    width: 56px;
-    height: 56px;
-    border-radius: 16px; /* Squircle design for a cute, premium aesthetic */
+    width: 48px;
+    height: 48px;
+    border-radius: 6px; /* Sharper geometric border-radius */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: var(--space-md);
-    transition: all 250ms cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy spring transition */
+    margin-bottom: var(--space-sm);
+    transition: all 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .sense-icon-box.theme-blue {
@@ -958,56 +1056,24 @@ h3 {
 }
 
 .sense-icon-box span {
-    font-size: 1.8rem; /* Enlarged glyph size */
+    font-size: 1.5rem;
 }
 
 .sense-card:hover .sense-icon-box {
-    transform: scale(1.1) rotate(-4deg); /* Cute, unique playful tilt on hover */
+    transform: scale(1.05) rotate(-3deg);
 }
 
 .sense-card h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: var(--space-xs);
 }
 
 .sense-card p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    line-height: 1.5;
-}
-
-/* Highlighted CTA Panel */
-.sense-cta-panel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-light);
-    border: 1px solid rgba(24, 108, 236, 0.12);
-    border-radius: 24px;
-    padding: var(--space-2xl);
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.panel-content h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 6px;
-}
-
-.panel-content p {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.4;
-}
-
-.panel-actions {
-    display: flex;
-    gap: var(--space-md);
-    flex-shrink: 0;
+    line-height: 1.45;
 }
 
 /* Trust Feature Strip */
@@ -1212,22 +1278,24 @@ h3 {
     .floating-badge {
         display: none; /* Hide floating badges on smaller screens */
     }
-    .sense-grid {
+    .sense-container {
         grid-template-columns: 1fr;
-        gap: var(--space-xl);
+        gap: var(--space-2xl);
     }
-    .sense-cta-panel {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-        gap: var(--space-xl);
+    .sense-left {
+        position: static;
     }
-    .panel-actions {
-        flex-direction: column;
-        width: 100%;
+    .sense-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
     }
-    .panel-actions button {
-        width: 100%;
+    .sense-actions {
+        flex-direction: row;
+    }
+    .sense-actions button {
+        flex: 1;
     }
     .trust-strip-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1245,6 +1313,12 @@ h3 {
     }
     .trust-strip-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .sense-grid {
+        grid-template-columns: 1fr;
+    }
+    .sense-actions {
+        flex-direction: column;
     }
 }
 

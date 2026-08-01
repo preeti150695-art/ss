@@ -239,150 +239,170 @@
 
         <!-- When Self Storage Makes Sense Section -->
         <section id="services" class="sense-section">
-            <div class="container">
-                <div class="section-header-centered">
+            <div class="sense-container">
+                <!-- Left Column: Sticky Header & CTA -->
+                <div class="sense-left">
+                    <span class="badge-tag">USE CASES</span>
                     <h2>When Do You Need Self Storage?</h2>
-                    <p>Whether you are decluttering your home, managing a major life transition, or scaling your business, we provide secure rooms tailored to your exact needs.</p>
+                    <p class="sense-subtitle">Whether you are decluttering your home, managing a major life transition, or scaling your business, we provide secure rooms tailored to your exact needs.</p>
                     
-                    <!-- Elegant Statistic Badge -->
-                    <div class="stat-badge-wrapper">
-                        <span class="stat-badge">
-                            <span class="stars">★★★★★</span> Trusted by 5,000+ homeowners and businesses across Delhi NCR.
-                        </span>
+                    <div class="sense-trust-indicator">
+                        <span class="stars">★★★★★</span>
+                        <span class="text">Trusted by 5,000+ homeowners & businesses across Delhi NCR.</span>
+                    </div>
+                    
+                    <div class="sense-actions">
+                        <button class="btn btn-primary btn-large" onclick="openQuoteModal()">Get Free Quote</button>
+                        <button class="btn btn-secondary btn-large" onclick="openQuoteModal()">Calculate Space</button>
                     </div>
                 </div>
-
-                <div class="sense-grid">
-                    <!-- Card 1: Relocating -->
-                    <div class="sense-card shadow-sm" data-category="home">
-                        <div class="card-meta">
-                            <span class="category-label">HOME</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
-                        </div>
-                        <div class="sense-icon-box theme-blue">
-                            <span class="material-symbols-rounded">moving</span>
-                        </div>
-                        <h3>Relocating</h3>
-                        <p>Move without the stress. Store your belongings safely until you're ready.</p>
+                
+                <!-- Right Column: Interactive Grid with Tabs -->
+                <div class="sense-right">
+                    <div class="sense-tabs">
+                        <button class="tab-btn active" onclick="filterSenseCards('all', this)">All Needs</button>
+                        <button class="tab-btn" onclick="filterSenseCards('home', this)">Home</button>
+                        <button class="tab-btn" onclick="filterSenseCards('business', this)">Business</button>
+                        <button class="tab-btn" onclick="filterSenseCards('lifestyle', this)">Lifestyle</button>
                     </div>
-
-                    <!-- Card 2: Home Renovation -->
-                    <div class="sense-card shadow-sm" data-category="home">
-                        <div class="card-meta">
-                            <span class="category-label">HOME</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                    
+                    <div class="sense-grid">
+                        <!-- Card 1: Relocating -->
+                        <div class="sense-card shadow-sm" data-category="home">
+                            <div class="card-meta">
+                                <span class="category-label">HOME</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-blue">
+                                <span class="material-symbols-rounded">moving</span>
+                            </div>
+                            <h3>Relocating</h3>
+                            <p>Move without the stress. Store your belongings safely until you're ready.</p>
                         </div>
-                        <div class="sense-icon-box theme-blue">
-                            <span class="material-symbols-rounded">home_repair_service</span>
+                        
+                        <!-- Card 2: Home Renovation -->
+                        <div class="sense-card shadow-sm" data-category="home">
+                            <div class="card-meta">
+                                <span class="category-label">HOME</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-blue">
+                                <span class="material-symbols-rounded">home_repair_service</span>
+                            </div>
+                            <h3>Home Renovation</h3>
+                            <p>Protect your furniture and valuables while transforming your home.</p>
                         </div>
-                        <h3>Home Renovation</h3>
-                        <p>Protect your furniture and valuables while transforming your home.</p>
-                    </div>
-
-                    <!-- Card 3: Work From Home -->
-                    <div class="sense-card shadow-sm" data-category="lifestyle">
-                        <div class="card-meta">
-                            <span class="category-label">LIFESTYLE</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                        
+                        <!-- Card 3: Work From Home -->
+                        <div class="sense-card shadow-sm" data-category="lifestyle">
+                            <div class="card-meta">
+                                <span class="category-label">LIFESTYLE</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-orange">
+                                <span class="material-symbols-rounded">home_work</span>
+                            </div>
+                            <h3>Work From Home</h3>
+                            <p>Create a productive workspace by freeing up extra rooms.</p>
                         </div>
-                        <div class="sense-icon-box theme-orange">
-                            <span class="material-symbols-rounded">home_work</span>
+                        
+                        <!-- Card 4: Extra Household Storage -->
+                        <div class="sense-card shadow-sm" data-category="home">
+                            <div class="card-meta">
+                                <span class="category-label">HOME</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-blue">
+                                <span class="material-symbols-rounded">inventory_2</span>
+                            </div>
+                            <h3>Extra Household Storage</h3>
+                            <p>Store seasonal items, furniture and belongings you don't use every day.</p>
                         </div>
-                        <h3>Work From Home</h3>
-                        <p>Create a productive workspace by freeing up extra rooms.</p>
-                    </div>
-
-                    <!-- Card 4: Extra Household Storage -->
-                    <div class="sense-card shadow-sm" data-category="home">
-                        <div class="card-meta">
-                            <span class="category-label">HOME</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                        
+                        <!-- Card 5: Business Expansion -->
+                        <div class="sense-card shadow-sm" data-category="business">
+                            <div class="card-meta">
+                                <span class="category-label">BUSINESS</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-orange">
+                                <span class="material-symbols-rounded">business_center</span>
+                            </div>
+                            <h3>Business Expansion</h3>
+                            <p>Free up office space and securely store inventory, files and equipment.</p>
                         </div>
-                        <div class="sense-icon-box theme-blue">
-                            <span class="material-symbols-rounded">inventory_2</span>
+                        
+                        <!-- Card 6: Business Transition -->
+                        <div class="sense-card shadow-sm" data-category="business">
+                            <div class="card-meta">
+                                <span class="category-label">BUSINESS</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-orange">
+                                <span class="material-symbols-rounded">currency_exchange</span>
+                            </div>
+                            <h3>Business Transition</h3>
+                            <p>Temporary storage during office relocation, liquidation or restructuring.</p>
                         </div>
-                        <h3>Extra Household Storage</h3>
-                        <p>Store seasonal items, furniture and belongings you don't use every day.</p>
-                    </div>
-
-                    <!-- Card 5: Business Expansion -->
-                    <div class="sense-card shadow-sm" data-category="business">
-                        <div class="card-meta">
-                            <span class="category-label">BUSINESS</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                        
+                        <!-- Card 7: Downsizing -->
+                        <div class="sense-card shadow-sm" data-category="lifestyle">
+                            <div class="card-meta">
+                                <span class="category-label">LIFESTYLE</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-blue">
+                                <span class="material-symbols-rounded">house</span>
+                            </div>
+                            <h3>Downsizing</h3>
+                            <p>Keep what matters without overcrowding your new home.</p>
                         </div>
-                        <div class="sense-icon-box theme-orange">
-                            <span class="material-symbols-rounded">business_center</span>
+                        
+                        <!-- Card 8: Decluttering -->
+                        <div class="sense-card shadow-sm" data-category="lifestyle">
+                            <div class="card-meta">
+                                <span class="category-label">LIFESTYLE</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-orange">
+                                <span class="material-symbols-rounded">cleaning_services</span>
+                            </div>
+                            <h3>Decluttering</h3>
+                            <p>Enjoy a cleaner, more organised home without giving away valuable belongings.</p>
                         </div>
-                        <h3>Business Expansion</h3>
-                        <p>Free up office space and securely store inventory, files and equipment.</p>
-                    </div>
-
-                    <!-- Card 6: Business Transition -->
-                    <div class="sense-card shadow-sm" data-category="business">
-                        <div class="card-meta">
-                            <span class="category-label">BUSINESS</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                        
+                        <!-- Card 9: Growing Family -->
+                        <div class="sense-card shadow-sm" data-category="lifestyle">
+                            <div class="card-meta">
+                                <span class="category-label">LIFESTYLE</span>
+                                <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
+                            </div>
+                            <div class="sense-icon-box theme-blue">
+                                <span class="material-symbols-rounded">family_restroom</span>
+                            </div>
+                            <h3>Growing Family</h3>
+                            <p>Create space for every new chapter without letting go of treasured possessions.</p>
                         </div>
-                        <div class="sense-icon-box theme-orange">
-                            <span class="material-symbols-rounded">currency_exchange</span>
-                        </div>
-                        <h3>Business Transition</h3>
-                        <p>Temporary storage during office relocation, liquidation or restructuring.</p>
-                    </div>
-
-                    <!-- Card 7: Downsizing -->
-                    <div class="sense-card shadow-sm" data-category="lifestyle">
-                        <div class="card-meta">
-                            <span class="category-label">LIFESTYLE</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
-                        </div>
-                        <div class="sense-icon-box theme-blue">
-                            <span class="material-symbols-rounded">house</span>
-                        </div>
-                        <h3>Downsizing</h3>
-                        <p>Keep what matters without overcrowding your new home.</p>
-                    </div>
-
-                    <!-- Card 8: Decluttering -->
-                    <div class="sense-card shadow-sm" data-category="lifestyle">
-                        <div class="card-meta">
-                            <span class="category-label">LIFESTYLE</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
-                        </div>
-                        <div class="sense-icon-box theme-orange">
-                            <span class="material-symbols-rounded">cleaning_services</span>
-                        </div>
-                        <h3>Decluttering</h3>
-                        <p>Enjoy a cleaner, more organised home without giving away valuable belongings.</p>
-                    </div>
-
-                    <!-- Card 9: Growing Family -->
-                    <div class="sense-card shadow-sm" data-category="lifestyle">
-                        <div class="card-meta">
-                            <span class="category-label">LIFESTYLE</span>
-                            <span class="material-symbols-rounded arrow-icon">arrow_forward</span>
-                        </div>
-                        <div class="sense-icon-box theme-blue">
-                            <span class="material-symbols-rounded">family_restroom</span>
-                        </div>
-                        <h3>Growing Family</h3>
-                        <p>Create space for every new chapter without letting go of treasured possessions.</p>
-                    </div>
-                </div>
-
-                <!-- Highlighted CTA Panel -->
-                <div class="sense-cta-panel shadow-sm">
-                    <div class="panel-content">
-                        <h3>Still not sure what storage solution is right for you?</h3>
-                        <p>Our experts will recommend the perfect storage unit based on your belongings and duration.</p>
-                    </div>
-                    <div class="panel-actions">
-                        <button class="btn btn-why-primary" onclick="openQuoteModal()">Get Free Quote</button>
-                        <button class="btn btn-why-secondary" onclick="openQuoteModal()">Calculate Storage Space</button>
                     </div>
                 </div>
             </div>
+            
+            <script>
+            function filterSenseCards(category, element) {
+                const tabs = document.querySelectorAll('.sense-tabs .tab-btn');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                element.classList.add('active');
+
+                const cards = document.querySelectorAll('.sense-grid .sense-card');
+                cards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            </script>
         <!-- Storage Calculator Section -->
         <section id="calculator" class="calc-section">
             <div class="container">

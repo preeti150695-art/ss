@@ -511,7 +511,7 @@ h3 {
 }
 
 .hero-paragraph {
-    font-size: 1.25rem; /* 20px paragraph scale */
+    font-size: 1.05rem; /* Reduced typography scale */
     color: var(--text-secondary);
     margin-bottom: var(--space-md); /* Reduced bottom margin to frame the ideal-list line */
     margin-top: var(--space-xs);

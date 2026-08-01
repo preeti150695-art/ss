@@ -511,7 +511,7 @@ h3 {
 }
 
 .hero-main-title {
-    font-size: clamp(1.6rem, 2.5vw, 2.1rem); /* Scaled down further to force single-line flow */
+    font-size: clamp(1.3rem, 2vw, 1.7rem); /* Reduced font size further by 20% */
     line-height: 1.15;
     white-space: nowrap;
 }

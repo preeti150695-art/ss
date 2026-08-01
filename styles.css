@@ -2432,10 +2432,10 @@ h3 {
     background-color: var(--primary);
     border: 2px solid var(--primary);
     color: #ffffff;
-    font-size: 16px; /* 16px */
-    font-weight: 500; /* Medium */
-    height: 48px;
-    border-radius: 4px; /* 4px border radius */
+    font-size: 14px; /* Reduced to 14px for smaller button */
+    font-weight: 600; /* Semi-bold for legibility */
+    height: 40px; /* Reduced height to 40px */
+    border-radius: 30px; /* Fully rounded pill shape */
     cursor: pointer;
     transition: all 250ms ease;
 }

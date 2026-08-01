@@ -2429,6 +2429,8 @@ h3 {
 /* Button Typography: 16px Medium, Rounded (14px radius) */
 .btn-offering-primary {
     margin-top: auto; /* Push buttons to the bottom of the card content */
+    align-self: flex-start; /* Shrink to fit text content, do not stretch */
+    padding: 0 24px; /* Add side padding for proportional length */
     background-color: var(--primary);
     border: 2px solid var(--primary);
     color: #ffffff;

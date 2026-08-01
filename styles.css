@@ -862,7 +862,7 @@ h3 {
 
 /* When Self Storage Makes Sense Section */
 .sense-section {
-    padding: var(--space-xl) 0;
+    padding: var(--space-section) 0;
     background-color: #f8fafc; /* Beautiful slate tint background contrast */
 }
 
@@ -1933,7 +1933,7 @@ h3 {
 
 /* Our Locations Section */
 .locations-section {
-    padding: var(--space-section) 0 40px 0; /* Reduced bottom padding */
+    padding: var(--space-section) 0;
     background-color: #ffffff;
     border-bottom: 1px solid var(--border);
 }

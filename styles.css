@@ -2390,9 +2390,9 @@ h3 {
 }
 
 .offering-content .offering-desc {
-    font-size: 18px; /* Description: 18px */
+    font-size: 15px; /* Description scaled down to match section subheadings */
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.55;
     margin-bottom: 12px; /* Reduced spacing */
 }
 

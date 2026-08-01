@@ -340,7 +340,7 @@ h3 {
 .btn {
     height: 42px; /* Sleeker standard height */
     padding: 0 var(--space-lg); /* Tightened padding */
-    border-radius: 8px; /* Clean, modern radius (less round) */
+    border-radius: 4px; /* Clean, modern radius (less round) */
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
@@ -411,7 +411,7 @@ h3 {
     height: 48px; /* Sleeker large height */
     padding: 0 var(--space-xl);
     font-size: 0.95rem;
-    border-radius: 8px; /* Matching clean radius */
+    border-radius: 4px; /* Matching clean radius */
 }
 
 .full-width {
@@ -2495,7 +2495,7 @@ h3 {
     font-size: 16px; /* 16px */
     font-weight: 500; /* Medium */
     height: 48px;
-    border-radius: 14px; /* 14px border radius */
+    border-radius: 4px; /* 4px border radius */
     cursor: pointer;
     transition: all 250ms ease;
 }
@@ -2515,7 +2515,7 @@ h3 {
     font-size: 16px; /* 16px */
     font-weight: 500; /* Medium */
     height: 48px;
-    border-radius: 14px; /* 14px border radius */
+    border-radius: 4px; /* 4px border radius */
     cursor: pointer;
     transition: all 250ms ease;
 }
@@ -2851,7 +2851,7 @@ h3 {
     padding: 14px 28px;
     font-size: 1rem; /* 16px */
     font-weight: 500; /* Medium */
-    border-radius: 14px; /* 14px border radius */
+    border-radius: 4px; /* 4px border radius */
     cursor: pointer;
     transition: all 250ms ease;
 }
@@ -2870,7 +2870,7 @@ h3 {
     padding: 14px 28px;
     font-size: 1rem; /* 16px */
     font-weight: 500; /* Medium */
-    border-radius: 14px; /* 14px border radius */
+    border-radius: 4px; /* 4px border radius */
     cursor: pointer;
     transition: all 250ms ease;
 }

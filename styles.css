@@ -724,7 +724,7 @@ h3 {
 .trust-bar {
     background-color: #f2f4f8; /* Light grey-blue background */
     padding: 20px 0;
-    margin-bottom: var(--space-section);
+    margin-bottom: 0;
     width: 100%;
 }
 

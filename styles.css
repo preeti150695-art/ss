@@ -864,6 +864,8 @@ h3 {
 .sense-section {
     padding: var(--space-section) 0;
     background-color: #ffffff; /* Section background remains white */
+    position: relative;
+    z-index: 2;
 }
 
 .stat-badge-wrapper {

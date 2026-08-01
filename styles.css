@@ -162,7 +162,7 @@ h3 {
 
 .nav-container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
     display: flex;
@@ -465,7 +465,7 @@ h3 {
 }
 
 .hero-content-wrapper {
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
     display: grid;
@@ -714,7 +714,7 @@ h3 {
 }
 
 .trust-bar-container {
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
     display: flex;
@@ -774,7 +774,7 @@ h3 {
 }
 
 .features-strip-container {
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
     display: grid;
@@ -883,7 +883,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto var(--space-3xl);
     padding: 0 var(--space-xl);
 }
@@ -987,7 +987,7 @@ h3 {
     border: 1px solid rgba(24, 108, 236, 0.12);
     border-radius: 24px;
     padding: var(--space-2xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
 }
 
@@ -1012,7 +1012,7 @@ h3 {
 
 /* Trust Feature Strip */
 .trust-strip {
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: var(--space-2xl) !important;
     border-radius: var(--radius-lg) !important;
@@ -1259,7 +1259,7 @@ h3 {
 .why-editorial-container {
     display: flex;
     gap: var(--space-3xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
     position: relative;
@@ -1600,7 +1600,7 @@ h3 {
     display: grid;
     grid-template-columns: 40% 60%;
     gap: var(--space-3xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
     align-items: start;
@@ -1887,7 +1887,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-3xl) auto;
     padding: 0 var(--space-xl);
 }
@@ -1929,7 +1929,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
 }
 
@@ -2064,7 +2064,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-2xl) auto 0;
     padding: 0 var(--space-xl);
 }
@@ -2201,7 +2201,7 @@ h3 {
 
 /* Illustrated Map Container */
 .locations-map-container {
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-3xl) auto 0;
     padding: 0 var(--space-xl);
 }
@@ -2281,7 +2281,7 @@ h3 {
     border: 1px solid rgba(37, 99, 235, 0.12);
     border-radius: 24px;
     padding: var(--space-2xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-3xl) auto 0;
     display: flex;
     align-items: center;
@@ -2342,7 +2342,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
 }
@@ -2531,7 +2531,7 @@ h3 {
 .offerings-trust-strip {
     display: flex;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-3xl) auto 0;
     padding: var(--space-xl) var(--space-xl) 0;
     border-top: 1px solid var(--border);
@@ -2611,7 +2611,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-lg);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto var(--space-2xl);
     padding: 0 var(--space-xl);
 }
@@ -2663,7 +2663,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
 }
@@ -2781,7 +2781,7 @@ h3 {
 .social-proof-strip {
     display: flex;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-3xl) auto 0;
     padding: var(--space-xl) var(--space-xl) 0;
     border-top: 1px solid var(--border);
@@ -3022,7 +3022,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-3xl) auto 0;
 }
 
@@ -3076,7 +3076,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin: 0 auto;
     padding: 0 var(--space-xl);
 }
@@ -3220,7 +3220,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1366px;
     margin: var(--space-2xl) auto 0;
     padding: 20px 32px;
     background-color: var(--surface);
@@ -3256,7 +3256,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     margin-top: var(--space-3xl);
-    max-width: 1400px;
+    max-width: 1366px;
     margin-left: auto;
     margin-right: auto;
 }

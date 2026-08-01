@@ -2416,14 +2416,17 @@ h3 {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 16px; /* Feature text: 16px */
-    font-weight: 600;
-    color: var(--text);
+    font-size: 14px; /* Reduced to 14px to align with general copy sizing */
+    font-weight: 500; /* Regular medium text weight */
+    color: var(--text-secondary);
 }
 
 .offering-highlights li .check-icon {
     color: #10B981;
-    font-weight: 700;
+    font-size: 1.15rem; /* Material icon size */
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Button Typography: 16px Medium, Rounded (14px radius) */

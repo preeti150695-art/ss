@@ -2981,17 +2981,15 @@ h3 {
 
 /* Horizontal Trust Promise Strip */
 .faq-trust-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: var(--space-xl) auto var(--space-3xl);
-    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns below the sticky image */
+    gap: 16px;
+    max-width: 100%;
+    margin: var(--space-lg) auto 0;
+    padding: 20px;
     background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: 20px;
-    flex-wrap: nowrap; /* Keep on same line on desktop */
-    gap: 12px;
 }
 
 .faq-trust-row-item {
@@ -3041,9 +3039,8 @@ h3 {
 
 @media (max-width: 900px) {
     .faq-trust-row {
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
-        flex-wrap: wrap; /* Wrap on small screens */
     }
     .faq-cta {
         flex-direction: column;

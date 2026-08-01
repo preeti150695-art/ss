@@ -3076,6 +3076,13 @@ h3 {
 
 .about-editorial-left {
     width: 45%;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.about-editorial-left .sticky-visual-wrapper {
+    position: static;
 }
 
 .about-editorial-right {

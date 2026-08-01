@@ -510,6 +510,11 @@ h3 {
     letter-spacing: 0.5px;
 }
 
+.hero-main-title {
+    font-size: clamp(1.8rem, 3vw, 2.35rem); /* Scaled down to prevent wrapping on desktop */
+    line-height: 1.15;
+}
+
 .hero-paragraph {
     font-size: 1.05rem; /* Reduced typography scale */
     color: var(--text-secondary);

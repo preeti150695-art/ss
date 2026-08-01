@@ -2099,21 +2099,22 @@ h3 {
 
 .loc-chips {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Force all chips onto a single line */
     gap: 6px;
     margin-bottom: var(--space-lg);
 }
 
 .loc-chips .chip {
-    font-size: 0.82rem;
+    font-size: 0.72rem; /* Slightly smaller to guarantee single-line fit */
     font-weight: 700;
     color: #10B981; /* Green success font */
     background-color: rgba(16, 185, 129, 0.05);
     border: 1px solid rgba(16, 185, 129, 0.12);
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 4px 8px; /* Tighter padding */
+    border-radius: 6px; /* Sharper geometric radius, matching standard badges */
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .loc-explore-link {

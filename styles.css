@@ -3082,7 +3082,7 @@ h3 {
 }
 
 .about-editorial-left .sticky-visual-wrapper {
-    position: static;
+    position: relative;
 }
 
 .about-editorial-right {

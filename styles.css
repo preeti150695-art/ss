@@ -421,7 +421,7 @@ h3 {
 /* Hero Section & Background Graphics */
 .hero-container {
     max-width: 100%;
-    padding: 135px 0 var(--space-xl); /* Reduced top and bottom padding */
+    padding: 120px 0 var(--space-xl); /* Reduced top padding to tighten vertical space */
     position: relative;
     overflow: hidden;
 }

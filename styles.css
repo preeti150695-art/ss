@@ -511,8 +511,9 @@ h3 {
 }
 
 .hero-main-title {
-    font-size: clamp(1.8rem, 3vw, 2.35rem); /* Scaled down to prevent wrapping on desktop */
+    font-size: clamp(1.6rem, 2.5vw, 2.1rem); /* Scaled down further to force single-line flow */
     line-height: 1.15;
+    white-space: nowrap;
 }
 
 .hero-paragraph {
@@ -1239,7 +1240,8 @@ h3 {
         display: none;
     }
     .hero-main-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        white-space: normal;
     }
     .trust-strip-grid {
         grid-template-columns: repeat(2, 1fr);

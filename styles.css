@@ -652,12 +652,12 @@ h3 {
 
 .badge-1 {
     top: 30px;
-    left: -40px;
+    left: -20px;
 }
 
 .badge-2 {
     top: 45%;
-    right: -40px;
+    right: -15px;
     transform: translateY(-50%);
 }
 
@@ -667,7 +667,7 @@ h3 {
 
 .badge-3 {
     bottom: 30px;
-    left: -40px;
+    left: -20px;
 }
 
 .badge-3:hover {

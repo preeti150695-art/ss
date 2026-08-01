@@ -863,7 +863,7 @@ h3 {
 /* When Self Storage Makes Sense Section */
 .sense-section {
     padding: var(--space-xl) 0;
-    background-color: #ffffff;
+    background-color: #f8fafc; /* Beautiful slate tint background contrast */
 }
 
 .stat-badge-wrapper {
@@ -903,10 +903,11 @@ h3 {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Solid white card pop */
     border: 1px solid var(--border);
     border-radius: 8px; /* Sharper geometric radius */
     padding: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Soft premium shadow definition */
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
 }

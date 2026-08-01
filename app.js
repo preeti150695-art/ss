@@ -231,4 +231,29 @@ function toggleFaq(trigger) {
     }
 }
 
+// 6. Scroll Reveal Observer for Why Self Storage
+document.addEventListener('DOMContentLoaded', () => {
+    const revealOptions = {
+        root: null,
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    };
+
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+    const targetElements = document.querySelectorAll('.reveal-element');
+    
+    targetElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+});
+
 

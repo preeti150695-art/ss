@@ -587,14 +587,14 @@ h3 {
 
 .hero-visual-wrapper {
     position: relative;
-    border-radius: var(--radius-xl);
+    border-radius: 8px;
     overflow: visible; /* Let floaters overlay */
     width: 100%;
     max-width: 520px;
 }
 
 .hero-visual-img-container {
-    border-radius: var(--radius-xl);
+    border-radius: 8px;
     overflow: hidden; /* Cleanly clips image corners */
     border: 1px solid var(--border);
     width: 100%;
@@ -634,7 +634,7 @@ h3 {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(24, 108, 236, 0.08);
-    border-radius: var(--radius-lg);
+    border-radius: 8px;
     padding: var(--space-md) var(--space-lg);
     display: flex;
     align-items: center;
@@ -679,7 +679,7 @@ h3 {
     height: 36px;
     background-color: var(--primary-light);
     color: var(--primary);
-    border-radius: var(--radius-md);
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;

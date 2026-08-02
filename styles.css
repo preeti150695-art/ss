@@ -3798,40 +3798,6 @@ h3 {
     z-index: 3;
 }
 
-.trust-header {
-    text-align: center;
-    margin-bottom: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.trust-eyebrow {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.70);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.trust-eyebrow span {
-    font-size: 1rem;
-    color: var(--accent); /* Orange accent icon */
-}
-
-.trust-header h2 {
-    font-family: var(--font-heading);
-    font-size: clamp(1.4rem, 2vw, 1.8rem);
-    font-weight: 800;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-    margin: 0;
-}
-
 /* Trust Grid Layout */
 .trust-grid {
     display: grid;
@@ -3843,7 +3809,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 8px;
     transition: transform 300ms ease;
 }
 
@@ -3852,39 +3818,23 @@ h3 {
     padding-right: 32px;
 }
 
-/* Icon Container Styling */
-.trust-icon-container {
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
+.trust-title-row {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: all 300ms ease;
+    gap: 12px;
 }
 
-.trust-icon-container span {
+.trust-title-row span {
     color: #ffffff;
-    font-variation-settings: 'FILL' 0, 'wght' 450, 'GRAD' 0, 'opsz' 28;
-    font-size: 26px;
-    transition: all 300ms ease;
+    font-size: 24px;
+    font-variation-settings: 'FILL' 0, 'wght' 450, 'GRAD' 0, 'opsz' 24;
+    flex-shrink: 0;
+    transition: color 300ms ease;
 }
 
-/* Content Typography */
-.trust-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.trust-content h3 {
+.trust-title-row h3 {
     font-family: var(--font-heading);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: -0.01em;
     color: #ffffff;
@@ -3892,9 +3842,9 @@ h3 {
     transition: color 300ms ease;
 }
 
-.trust-content p {
-    font-size: 16px;
-    line-height: 1.6;
+.trust-item p {
+    font-size: 15px;
+    line-height: 1.55;
     color: rgba(255, 255, 255, 0.75);
     margin: 0;
 }
@@ -3902,16 +3852,11 @@ h3 {
 /* Hover Effects */
 @media (hover: hover) {
     .trust-item:hover {
-        transform: translateY(-4px);
+        transform: translateY(-2px);
     }
     
-    .trust-item:hover .trust-icon-container {
-        background-color: rgba(255, 255, 255, 0.18);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
-    }
-    
-    .trust-item:hover .trust-content h3 {
+    .trust-item:hover .trust-title-row span,
+    .trust-item:hover .trust-title-row h3 {
         color: var(--accent); /* Orange highlight */
     }
 }
@@ -3940,31 +3885,10 @@ h3 {
     
     .trust-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 24px;
     }
     
-    .trust-item {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 16px;
-    }
-    
-    .trust-icon-container {
-        flex-shrink: 0;
-        width: 48px;
-        height: 48px;
-        border-radius: 12px;
-    }
-    
-    .trust-icon-container span {
-        font-size: 22px;
-    }
-    
-    .trust-content {
-        gap: 4px;
-    }
-    
-    .trust-content h3 {
+    .trust-title-row h3 {
         font-size: 18px;
     }
 }

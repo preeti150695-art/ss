@@ -2269,7 +2269,7 @@ h3 {
 
 /* Our Offerings Section */
 .offerings-section {
-    padding: 96px 0;
+    padding: 40px 0 96px 0; /* Reduced top padding from 96px */
     background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%); /* Soft blue gradient background */
     border-bottom: 1px solid var(--border);
 }

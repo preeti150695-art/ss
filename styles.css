@@ -4204,6 +4204,13 @@ h3 {
     color: #ffffff;
 }
 
+.panel-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
 .panel-icon-box {
     width: 36px; /* Shrunk icon container */
     height: 36px;
@@ -4211,8 +4218,9 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 12px; /* Shrunk margin-bottom */
+    margin-bottom: 0; /* Removed bottom margin */
     transition: background-color 300ms ease, color 300ms ease;
+    flex-shrink: 0;
 }
 
 .panel-icon-box span {
@@ -4220,13 +4228,12 @@ h3 {
 }
 
 .panel-visual-label {
-    font-size: 11px;
+    font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px; /* Made label a bit bigger */
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #64748B;
-    margin-bottom: 8px; /* Shrunk margin-bottom */
-    display: block;
+    color: #1E293B; /* Dark charcoal */
+    display: inline-block;
+    margin-bottom: 0; /* Removed bottom margin */
 }
 
 .storage-content-panel p {

@@ -2319,7 +2319,7 @@ h3 {
 .offering-image-container {
     position: relative;
     overflow: hidden;
-    height: 160px; /* Reduced card image height to make cards shorter */
+    height: 200px; /* Taller image space for better balance and detail */
 }
 
 .offering-image {

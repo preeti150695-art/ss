@@ -3355,7 +3355,7 @@ h3 {
 /* Split Columns Layout */
 .split-columns-layout {
     display: grid;
-    grid-template-columns: 58% 42%;
+    grid-template-columns: 1fr 1fr; /* Balanced 50-50 ratio for video and text columns */
     gap: 48px;
     align-items: start;
     margin-bottom: 80px;

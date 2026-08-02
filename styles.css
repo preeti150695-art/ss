@@ -3357,7 +3357,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Balanced 50-50 ratio for video and text columns */
     gap: 48px;
-    align-items: start;
+    align-items: center; /* Vertically center the columns for better balance */
     margin-bottom: 80px;
 }
 
@@ -3377,7 +3377,7 @@ h3 {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-premium), 0 20px 40px -15px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3; /* Taller aspect ratio to match text height */
 }
 
 /* Decorative outer glow behind video shell */

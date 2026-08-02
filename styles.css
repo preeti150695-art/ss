@@ -4384,22 +4384,34 @@ h3 {
     -webkit-text-fill-color: transparent;
 }
 
-.warehouse-editorial-content {
-    max-width: 800px;
-    margin: 0 auto 56px auto;
+.warehouse-editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 48px;
+    margin-bottom: 56px;
+}
+
+.warehouse-editorial-item {
     text-align: left;
 }
 
-.warehouse-editorial-content p {
-    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
-    font-size: 18px; /* 17px to 18px on desktop */
-    line-height: 1.85; /* Line-height between 1.75 and 1.85 */
-    color: #475569; /* Dark grey */
-    margin: 0 0 28px 0;
+.warehouse-editorial-item .item-tag {
+    font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 12px;
 }
 
-.warehouse-editorial-content p:last-child {
-    margin-bottom: 0;
+.warehouse-editorial-item p {
+    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    font-size: 15px; /* 17px to 18px on desktop -> adjusted down to 15px for higher density and look less like blog */
+    line-height: 1.7; /* Adjusted slightly */
+    color: #475569; /* Dark grey */
+    margin: 0;
 }
 
 /* Trust Strip Style */
@@ -4443,8 +4455,9 @@ h3 {
         padding: 80px 28px;
     }
 
-    .warehouse-editorial-content {
-        max-width: 720px;
+    .warehouse-editorial-grid {
+        grid-template-columns: 1fr; /* Single column on tablet/mobile */
+        gap: 32px;
     }
 
     .warehouse-trust-strip {
@@ -4466,9 +4479,9 @@ h3 {
         font-size: clamp(24px, 5vw, 34px); /* Mobile: 30px to 34px */
     }
 
-    .warehouse-editorial-content p {
-        font-size: 16px; /* 16px to 17px on mobile */
-        line-height: 1.75;
+    .warehouse-editorial-item p {
+        font-size: 14px; /* Shrunk for mobile */
+        line-height: 1.65;
     }
 
     .warehouse-trust-strip {

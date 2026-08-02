@@ -3371,7 +3371,7 @@ h3 {
 .video-outer-shell {
     position: relative;
     width: 100%;
-    height: 470px; /* Controlled desktop video height */
+    height: 360px; /* Controlled desktop video height */
     border-radius: 12px; /* Sharper geometric corner radius */
     overflow: hidden;
     background-color: #000000;

@@ -3760,6 +3760,215 @@ h3 {
     }
 }
 
+/* Premium Trust/Feature Strip Section */
+.trust-features-section {
+    position: relative;
+    background: linear-gradient(135deg, #18356f 0%, #284b96 45%, #18366f 100%);
+    padding: 70px var(--space-xl);
+    overflow: hidden;
+    color: #ffffff;
+    z-index: 2;
+}
+
+/* Background glows */
+.trust-features-section .glow-shape {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0) 70%);
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+.trust-features-section .glow-left {
+    top: -50px;
+    left: -50px;
+}
+
+.trust-features-section .glow-right {
+    bottom: -50px;
+    right: -50px;
+}
+
+.container-trust {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.trust-header {
+    text-align: center;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.trust-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.70);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.trust-eyebrow span {
+    font-size: 1rem;
+    color: var(--accent); /* Orange accent icon */
+}
+
+.trust-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+/* Trust Grid Layout */
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    transition: transform 300ms ease;
+}
+
+.trust-item:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    padding-right: 32px;
+}
+
+/* Icon Container Styling */
+.trust-icon-container {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 300ms ease;
+}
+
+.trust-icon-container span {
+    color: #ffffff;
+    font-variation-settings: 'FILL' 0, 'wght' 450, 'GRAD' 0, 'opsz' 28;
+    font-size: 26px;
+    transition: all 300ms ease;
+}
+
+/* Content Typography */
+.trust-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trust-content h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin: 0;
+    transition: color 300ms ease;
+}
+
+.trust-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+}
+
+/* Hover Effects */
+@media (hover: hover) {
+    .trust-item:hover {
+        transform: translateY(-4px);
+    }
+    
+    .trust-item:hover .trust-icon-container {
+        background-color: rgba(255, 255, 255, 0.18);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
+    }
+    
+    .trust-item:hover .trust-content h3 {
+        color: var(--accent); /* Orange highlight */
+    }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .trust-features-section {
+        padding: 60px var(--space-lg);
+    }
+    
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .trust-item:not(:last-child) {
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .trust-features-section {
+        padding: 48px 20px;
+    }
+    
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .trust-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .trust-icon-container {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+    }
+    
+    .trust-icon-container span {
+        font-size: 22px;
+    }
+    
+    .trust-content {
+        gap: 4px;
+    }
+    
+    .trust-content h3 {
+        font-size: 18px;
+    }
+}
+
 
 
 

@@ -4331,7 +4331,7 @@ h3 {
     background-color: #F8FAFC;
     background-image: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.02) 0%, transparent 50%),
                       radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.02) 0%, transparent 50%);
-    padding: 100px 32px;
+    padding: 60px 32px; /* Reduced vertical spacing */
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
@@ -4345,26 +4345,27 @@ h3 {
 
 .warehouse-solutions-header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 32px; /* Reduced margin */
 }
 
 .warehouse-solutions-header .section-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: rgba(37, 99, 235, 0.08);
-    color: var(--primary);
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
+    background-color: rgba(245, 158, 11, 0.04); /* Light orange tint bg */
+    border: 2px solid rgba(245, 158, 11, 0.2); /* Orange border tint */
+    color: var(--accent); /* Vibrant Orange */
+    padding: 12px 28px; /* Bigger padding */
+    border-radius: 50px;
+    font-size: 14px; /* Bigger font-size */
+    font-weight: 800;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 16px; /* Reduced margin */
 }
 
 .warehouse-solutions-header .section-eyebrow span.material-symbols-rounded {
-    font-size: 16px;
+    font-size: 18px; /* Bigger icon */
 }
 
 .warehouse-solutions-header h2 {
@@ -4452,7 +4453,7 @@ h3 {
 /* Responsiveness */
 @media (max-width: 992px) {
     .warehouse-solutions-section {
-        padding: 80px 28px;
+        padding: 48px 28px; /* Reduced spacing */
     }
 
     .warehouse-editorial-grid {
@@ -4472,7 +4473,7 @@ h3 {
 
 @media (max-width: 640px) {
     .warehouse-solutions-section {
-        padding: 60px 20px;
+        padding: 40px 20px; /* Reduced spacing */
     }
 
     .warehouse-solutions-header h2 {

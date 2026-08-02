@@ -3466,8 +3466,8 @@ h3 {
 }
 
 .column-intro-paragraph {
-    font-size: 1.05rem;
-    line-height: 1.6;
+    font-size: 15px; /* Standardized to 15px to match the first paragraph */
+    line-height: 1.55;
     color: var(--text-secondary);
 }
 

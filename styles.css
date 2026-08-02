@@ -2319,7 +2319,7 @@ h3 {
 .offering-image-container {
     position: relative;
     overflow: hidden;
-    height: 175px; /* Reduced to shorten overall card length */
+    height: 145px; /* Shrunk image height to make cards more compact */
 }
 
 .offering-image {
@@ -2351,8 +2351,6 @@ h3 {
     padding: 16px; /* Tightened padding to shorten card length */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center inline text */
     flex-grow: 1;
 }
 
@@ -2386,26 +2384,25 @@ h3 {
 .offering-title-row {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center title row horizontally */
     gap: 12px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     width: 100%;
 }
 
 .offering-title {
     font-family: var(--font-heading);
-    font-size: 22px; /* Adjusted slightly for stacked layout proportion */
+    font-size: 19px; /* Tighter card heading size */
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--text);
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 .offering-content .offering-desc {
-    font-size: 15px; /* Description scaled down to match section subheadings */
+    font-size: 14px; /* Shrunk description font size */
     color: var(--text-secondary);
-    line-height: 1.55;
-    margin-bottom: 12px; /* Reduced spacing */
+    line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .offering-divider {
@@ -2422,7 +2419,7 @@ h3 {
     margin: 0 0 12px 0; /* Reduced margin */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center list items horizontally */
+    align-items: flex-start; /* Left-aligned list items for cleaner structure */
     gap: 6px; /* Tightened gap */
 }
 
@@ -2446,8 +2443,8 @@ h3 {
 /* Button Typography: 16px Medium, Rounded (14px radius) */
 .btn-offering-primary {
     margin-top: auto; /* Push buttons to the bottom of the card content */
-    align-self: center; /* Center the buttons horizontally in the card */
-    padding: 0 24px; /* Add side padding for proportional length */
+    align-self: flex-start; /* Left-aligned buttons for premium editorial layout */
+    padding: 0 20px; /* Adjusted padding */
     background-color: var(--primary);
     border: 2px solid var(--primary);
     color: #ffffff;

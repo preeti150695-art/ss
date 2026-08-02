@@ -3371,13 +3371,13 @@ h3 {
 .video-outer-shell {
     position: relative;
     width: 100%;
+    height: 470px; /* Controlled desktop video height */
     border-radius: 12px; /* Sharper geometric corner radius */
     overflow: hidden;
     background-color: #000000;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: var(--shadow-premium), 0 20px 40px -15px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
-    aspect-ratio: 3/2; /* Balanced aspect ratio */
 }
 
 /* Decorative outer glow behind video shell */
@@ -3697,6 +3697,8 @@ h3 {
 
     .video-outer-shell {
         border-radius: 12px;
+        height: auto;
+        aspect-ratio: 16/9; /* Standard responsive aspect ratio on smaller screens */
     }
 
     .benefit-cards-grid {

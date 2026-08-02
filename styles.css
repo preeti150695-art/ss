@@ -2910,14 +2910,14 @@ h3 {
 
 /* FAQ Section Styles */
 .faq-section {
-    padding: 20px 0 60px 0; /* Reduced top padding */
+    padding: 20px 0; /* Shrunk bottom padding */
     background-color: #ffffff;
     border-bottom: 1px solid var(--border);
 }
 
 .faq-accordions-centered-container {
     max-width: 800px;
-    margin: 0 auto var(--space-2xl);
+    margin: 0 auto; /* Removed bottom margin */
     display: flex;
     flex-direction: column;
     gap: var(--space-md);

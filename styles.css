@@ -3764,7 +3764,7 @@ h3 {
 .trust-features-section {
     position: relative;
     background: linear-gradient(135deg, #18356f 0%, #284b96 45%, #18366f 100%);
-    padding: 70px var(--space-xl);
+    padding: 36px var(--space-xl); /* Reduced vertical height of the blue band */
     overflow: hidden;
     color: #ffffff;
     z-index: 2;
@@ -3919,7 +3919,7 @@ h3 {
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
     .trust-features-section {
-        padding: 60px var(--space-lg);
+        padding: 32px var(--space-lg);
     }
     
     .trust-grid {
@@ -3935,7 +3935,7 @@ h3 {
 
 @media (max-width: 640px) {
     .trust-features-section {
-        padding: 48px 20px;
+        padding: 24px 20px;
     }
     
     .trust-grid {

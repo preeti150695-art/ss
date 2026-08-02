@@ -2455,12 +2455,12 @@ h3 {
 .btn-offering-primary {
     margin-top: auto; /* Aligns to bottom */
     width: 100%; /* Consistent width across cards */
-    height: 42px; /* Reduced height to 42px */
+    height: 46px; /* A bit bigger height */
     border-radius: 12px; /* Border radius around 12px */
-    background-color: var(--primary);
+    background-color: var(--accent); /* Orange */
     border: none;
     color: #ffffff;
-    font-size: 14px; /* Shrunk font size */
+    font-size: 15px; /* A bit bigger font */
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -2476,8 +2476,8 @@ h3 {
 }
 
 .btn-offering-primary:hover {
-    background-color: var(--accent);
-    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+    background-color: #D97706; /* Darker orange hover */
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.25);
 }
 
 .btn-offering-primary:hover span {
@@ -4089,7 +4089,7 @@ h3 {
 }
 
 .reliable-storage-header {
-    text-align: left;
+    text-align: center; /* Centered */
     margin-bottom: 32px; /* Shrunk margin */
 }
 
@@ -4120,7 +4120,7 @@ h3 {
     line-height: 1.25;
     letter-spacing: -0.02em;
     max-width: 850px;
-    margin: 0;
+    margin: 0 auto; /* Centered */
 }
 
 .reliable-storage-header h2 .highlight {

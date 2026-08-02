@@ -789,14 +789,15 @@
                 <!-- 3 Premium Product Cards -->
                 <div class="offerings-grid">
                     <!-- Card 1: Private Storage -->
-                    <div class="offering-card shadow-sm" onclick="openQuoteModal()">
+                    <div class="offering-card" onclick="openQuoteModal()">
                         <div class="offering-image-container">
                             <img src="assets/home_storage_new.png" alt="Private Self Storage Rooms" class="offering-image">
+                            <div class="offering-image-overlay"></div>
                             <span class="offering-badge">Best for Families</span>
                         </div>
                         <div class="offering-content">
                             <div class="offering-title-row">
-                                <div class="offering-icon-wrapper theme-blue">
+                                <div class="offering-icon-wrapper">
                                     <span class="material-symbols-rounded">lock</span>
                                 </div>
                                 <h3 class="offering-title">Private Storage Rooms</h3>
@@ -804,25 +805,29 @@
                             <p class="offering-desc">Enjoy your own lockable storage room with complete privacy, 24/7 security, and flexible rental plans that fit your needs.</p>
                             <div class="offering-divider"></div>
                             <ul class="offering-highlights">
-                                <li><span class="material-symbols-rounded check-icon">check</span> Private lock & key</li>
-                                <li><span class="material-symbols-rounded check-icon">check</span> 24/7 CCTV surveillance</li>
-                                <li><span class="material-symbols-rounded check-icon">check</span> Flexible monthly rentals</li>
+                                <li><span class="material-symbols-rounded check-icon">check</span> Private lock and key</li>
+                                <li><span class="material-symbols-rounded check-icon">check</span> 24/7 CCTV monitoring</li>
+                                <li><span class="material-symbols-rounded check-icon">check</span> Flexible monthly plans</li>
                                 <li><span class="material-symbols-rounded check-icon">check</span> Clean, pest-controlled units</li>
                             </ul>
-                            <button class="btn btn-offering-primary">Explore Private Storage</button>
+                            <button class="btn btn-offering-primary">
+                                View Private Storage <span class="material-symbols-rounded">arrow_forward</span>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Card 2: Business Storage -->
-                    <div class="offering-card shadow-sm" onclick="openQuoteModal()">
+                    <!-- Card 2: Business Storage (Featured) -->
+                    <div class="offering-card featured-card" onclick="openQuoteModal()">
                         <div class="offering-image-container">
                             <img src="assets/business_storage_new.png" alt="Business Self Storage Solutions" class="offering-image">
+                            <div class="offering-image-overlay"></div>
                             <span class="offering-badge">Best for Businesses</span>
+                            <span class="offering-popular-badge">Most Popular</span>
                         </div>
                         <div class="offering-content">
                             <div class="offering-title-row">
-                                <div class="offering-icon-wrapper theme-blue">
-                                    <span class="material-symbols-rounded">business</span>
+                                <div class="offering-icon-wrapper">
+                                    <span class="material-symbols-rounded">domain</span>
                                 </div>
                                 <h3 class="offering-title">Business Storage</h3>
                             </div>
@@ -834,19 +839,22 @@
                                 <li><span class="material-symbols-rounded check-icon">check</span> Business-friendly access</li>
                                 <li><span class="material-symbols-rounded check-icon">check</span> Flexible business plans</li>
                             </ul>
-                            <button class="btn btn-offering-primary">Explore Business Storage</button>
+                            <button class="btn btn-offering-primary">
+                                Explore Business Storage <span class="material-symbols-rounded">arrow_forward</span>
+                            </button>
                         </div>
                     </div>
 
                     <!-- Card 3: Luggage & Box Storage -->
-                    <div class="offering-card shadow-sm" onclick="openQuoteModal()">
+                    <div class="offering-card" onclick="openQuoteModal()">
                         <div class="offering-image-container">
                             <img src="assets/luggage_storage_new.png" alt="Luggage and Box Storage Rooms" class="offering-image">
+                            <div class="offering-image-overlay"></div>
                             <span class="offering-badge">Best for Travellers</span>
                         </div>
                         <div class="offering-content">
                             <div class="offering-title-row">
-                                <div class="offering-icon-wrapper theme-blue">
+                                <div class="offering-icon-wrapper">
                                     <span class="material-symbols-rounded">luggage</span>
                                 </div>
                                 <h3 class="offering-title">Luggage & Box Storage</h3>
@@ -854,12 +862,14 @@
                             <p class="offering-desc">Store luggage, boxes and seasonal belongings securely with affordable short-term or long-term plans.</p>
                             <div class="offering-divider"></div>
                             <ul class="offering-highlights">
-                                <li><span class="material-symbols-rounded check-icon">check</span> Short & long-term options</li>
+                                <li><span class="material-symbols-rounded check-icon">check</span> Short and long-term plans</li>
                                 <li><span class="material-symbols-rounded check-icon">check</span> Affordable pricing</li>
-                                <li><span class="material-symbols-rounded check-icon">check</span> Easy retrieval</li>
+                                <li><span class="material-symbols-rounded check-icon">check</span> Easy item retrieval</li>
                                 <li><span class="material-symbols-rounded check-icon">check</span> Safe packing environment</li>
                             </ul>
-                            <button class="btn btn-offering-primary">Explore Luggage Storage</button>
+                            <button class="btn btn-offering-primary">
+                                View Luggage Storage <span class="material-symbols-rounded">arrow_forward</span>
+                            </button>
                         </div>
                     </div>
                 </div>

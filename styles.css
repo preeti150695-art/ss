@@ -2305,7 +2305,7 @@ h3 {
 .offering-image-container {
     position: relative;
     overflow: hidden;
-    height: 230px; /* Fixed height between 220px and 240px */
+    height: 170px; /* Reduced card image container height to shrink card */
 }
 
 .offering-image {
@@ -2361,7 +2361,7 @@ h3 {
 }
 
 .offering-content {
-    padding: 24px; /* Generous spacing */
+    padding: 20px; /* Shrunk padding to make cards more compact */
     display: flex;
     flex-direction: column;
     flex-grow: 1; /* Pushes content/button alignment */
@@ -2394,25 +2394,25 @@ h3 {
 
 .offering-title {
     font-family: var(--font-heading);
-    font-size: 26px; /* 26px on desktop */
+    font-size: 21px; /* Shrunk title size */
     font-weight: 800;
     letter-spacing: -0.02em;
     color: #1E293B; /* Dark charcoal */
-    margin: 0;
+    margin: 0 0 12px 0; /* Add bottom margin since icon container is removed */
 }
 
 .offering-desc {
-    font-size: 16px; /* 16px to 17px */
-    line-height: 1.65;
+    font-size: 14px; /* Shrunk text size */
+    line-height: 1.5; /* Shrunk line height */
     color: #475569; /* Dark grey */
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0;
     text-align: left;
 }
 
 .offering-divider {
     height: 1px;
     background-color: var(--border);
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0; /* Reduced margin */
     opacity: 0.6;
     width: 100%;
 }
@@ -2420,25 +2420,25 @@ h3 {
 .offering-highlights {
     list-style: none;
     padding: 0;
-    margin: 0 0 24px 0;
+    margin: 0 0 20px 0; /* Shrunk margin */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px; /* Tighter gap */
     text-align: left;
 }
 
 .offering-highlights li {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 15px; /* 15px to 16px */
+    gap: 8px;
+    font-size: 14px; /* Shrunk font size */
     font-weight: 500;
     color: #475569;
 }
 
 .offering-highlights li .check-icon {
     color: #10B981; /* Green icon */
-    font-size: 18px; /* 18px icon size */
+    font-size: 16px; /* Shrunk icon size */
     font-weight: 600;
     display: inline-flex;
     align-items: center;
@@ -2455,12 +2455,12 @@ h3 {
 .btn-offering-primary {
     margin-top: auto; /* Aligns to bottom */
     width: 100%; /* Consistent width across cards */
-    height: 48px; /* Height around 48px */
+    height: 42px; /* Reduced height to 42px */
     border-radius: 12px; /* Border radius around 12px */
     background-color: var(--primary);
     border: none;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px; /* Shrunk font size */
     font-weight: 600;
     display: flex;
     align-items: center;

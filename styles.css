@@ -2288,7 +2288,7 @@ h3 {
 .offering-card {
     background: #ffffff;
     border: 1px solid var(--border);
-    border-radius: 28px;
+    border-radius: 12px; /* Sharper edges */
     overflow: hidden;
     cursor: pointer;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -2381,13 +2381,20 @@ h3 {
     font-size: 1.3rem;
 }
 
+.offering-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
 .offering-title {
     font-family: var(--font-heading);
     font-size: 22px; /* Adjusted slightly for stacked layout proportion */
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--text);
-    margin-bottom: 8px; /* Added margin below title */
+    margin: 0; /* Remove default margin */
 }
 
 .offering-content .offering-desc {

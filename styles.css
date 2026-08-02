@@ -3371,7 +3371,7 @@ h3 {
 .video-outer-shell {
     position: relative;
     width: 100%;
-    border-radius: 24px;
+    border-radius: 12px; /* Sharper geometric corner radius */
     overflow: hidden;
     background-color: #000000;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -3696,7 +3696,7 @@ h3 {
     }
 
     .video-outer-shell {
-        border-radius: 20px;
+        border-radius: 12px;
     }
 
     .benefit-cards-grid {

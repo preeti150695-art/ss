@@ -4370,7 +4370,7 @@ h3 {
 
 .warehouse-solutions-header h2 {
     font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(30px, 4vw, 48px);
+    font-size: clamp(20px, 2.5vw, 30px); /* Matched to reliable storage heading */
     font-weight: 800;
     color: #1E293B; /* Dark charcoal */
     line-height: 1.25;
@@ -4477,7 +4477,7 @@ h3 {
     }
 
     .warehouse-solutions-header h2 {
-        font-size: clamp(24px, 5vw, 34px); /* Mobile: 30px to 34px */
+        font-size: clamp(18px, 4vw, 24px); /* Scaled down for mobile */
     }
 
     .warehouse-editorial-item p {

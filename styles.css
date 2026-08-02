@@ -3326,18 +3326,18 @@ h3 {
 
 /* Intro Headings styling */
 .intro-header-block {
-    max-width: 680px;
-    margin-bottom: 72px;
+    max-width: 100%;
+    margin-bottom: 28px; /* Reduced for stacked column layout */
 }
 
 .intro-header-block h2 {
     font-family: var(--font-heading);
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-size: clamp(1.5rem, 2.2vw, 1.9rem); /* Adjusted font size for columns */
     font-weight: 800;
     color: var(--text);
-    line-height: 1.15;
+    line-height: 1.2;
     letter-spacing: -0.5px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .accent-gradient-text {
@@ -3347,8 +3347,8 @@ h3 {
 }
 
 .intro-header-block p {
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: 15px; /* Aligned with standard 15px subheading scale */
+    line-height: 1.55;
     color: var(--text-secondary);
 }
 

@@ -2381,12 +2381,13 @@ h3 {
     font-size: 1.3rem;
 }
 
-.offering-header h3 {
+.offering-title {
     font-family: var(--font-heading);
-    font-size: 24px; /* Reduced slightly for visual hierarchy */
+    font-size: 22px; /* Adjusted slightly for stacked layout proportion */
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--text);
+    margin-bottom: 8px; /* Added margin below title */
 }
 
 .offering-content .offering-desc {

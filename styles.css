@@ -4076,7 +4076,7 @@ h3 {
     background-color: #F8FAFC;
     background-image: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.02) 0%, transparent 50%),
                       radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.02) 0%, transparent 50%);
-    padding: 64px 32px; /* Shrunk padding to make section smaller */
+    padding: 64px 32px 40px 32px; /* Reduced bottom padding */
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
@@ -4331,7 +4331,7 @@ h3 {
     background-color: #F8FAFC;
     background-image: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.02) 0%, transparent 50%),
                       radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.02) 0%, transparent 50%);
-    padding: 60px 32px; /* Reduced vertical spacing */
+    padding: 20px 32px 60px 32px; /* Reduced top padding to close the gap */
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     overflow: hidden;
@@ -4453,7 +4453,7 @@ h3 {
 /* Responsiveness */
 @media (max-width: 992px) {
     .warehouse-solutions-section {
-        padding: 48px 28px; /* Reduced spacing */
+        padding: 16px 28px 48px 28px; /* Reduced top spacing on tablet */
     }
 
     .warehouse-editorial-grid {
@@ -4473,7 +4473,7 @@ h3 {
 
 @media (max-width: 640px) {
     .warehouse-solutions-section {
-        padding: 40px 20px; /* Reduced spacing */
+        padding: 12px 20px 40px 20px; /* Reduced top spacing on mobile */
     }
 
     .warehouse-solutions-header h2 {

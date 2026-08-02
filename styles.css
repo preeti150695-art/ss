@@ -3908,6 +3908,128 @@ h3 {
     }
 }
 
+/* SEO Content Section */
+#self-storage-ncr {
+    background-color: var(--surface); /* Soft light grey/off-white background */
+    padding: 96px 24px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.ncr-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.ncr-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.ncr-editorial-main h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    margin: 0 0 24px 0;
+}
+
+.ncr-editorial-main .accent-word {
+    color: var(--primary);
+}
+
+.ncr-editorial-main p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0 0 20px 0;
+}
+
+.ncr-editorial-main p strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.ncr-editorial-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ncr-panel {
+    background-color: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.ncr-panel:hover {
+    transform: translateY(-2px);
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.ncr-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.ncr-panel-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(24, 108, 236, 0.06);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ncr-panel-icon span {
+    font-size: 18px;
+}
+
+.ncr-panel-header h3 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.ncr-panel p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.ncr-panel p strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Responsive query for NCR section */
+@media (max-width: 992px) {
+    #self-storage-ncr {
+        padding: 64px 24px;
+    }
+    
+    .ncr-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
 
 
 

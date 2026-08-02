@@ -4099,9 +4099,9 @@ h3 {
     gap: 8px;
     background-color: rgba(37, 99, 235, 0.08);
     color: var(--primary);
-    padding: 6px 12px;
+    padding: 8px 16px; /* Bigger padding */
     border-radius: 30px;
-    font-size: 11px; /* Shrunk font size */
+    font-size: 13px; /* Bigger font size */
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -4109,17 +4109,17 @@ h3 {
 }
 
 .reliable-storage-header .section-eyebrow span.material-symbols-rounded {
-    font-size: 14px;
+    font-size: 16px; /* Bigger icon size */
 }
 
 .reliable-storage-header h2 {
     font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(24px, 3vw, 36px); /* Shrunk heading size */
+    font-size: clamp(20px, 2.5vw, 30px); /* A bit smaller heading */
     font-weight: 800;
     color: #1E293B; /* Dark charcoal */
     line-height: 1.25;
     letter-spacing: -0.02em;
-    max-width: 850px;
+    max-width: 800px;
     margin: 0 auto; /* Centered */
 }
 

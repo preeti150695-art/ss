@@ -2319,7 +2319,7 @@ h3 {
 .offering-image-container {
     position: relative;
     overflow: hidden;
-    height: 200px; /* Taller image space for better balance and detail */
+    height: 175px; /* Reduced to shorten overall card length */
 }
 
 .offering-image {
@@ -2348,7 +2348,7 @@ h3 {
 }
 
 .offering-content {
-    padding: 20px; /* Tightened padding */
+    padding: 16px; /* Tightened padding to shorten card length */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -2414,10 +2414,10 @@ h3 {
 .offering-highlights {
     list-style: none;
     padding: 0;
-    margin: 0 0 16px 0;
+    margin: 0 0 12px 0; /* Reduced margin */
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px; /* Tightened gap */
 }
 
 .offering-highlights li {

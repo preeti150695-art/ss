@@ -417,7 +417,7 @@ h3 {
 /* Hero Section & Background Graphics */
 .hero-container {
     max-width: 100%;
-    padding: 120px 0 var(--space-xl); /* Reduced top padding to tighten vertical space */
+    padding: 120px 0 0; /* Removed bottom padding */
     position: relative;
     overflow: hidden;
 }
@@ -2910,7 +2910,7 @@ h3 {
 
 /* FAQ Section Styles */
 .faq-section {
-    padding: 20px 0; /* Shrunk bottom padding */
+    padding: 20px 0 0 0; /* Removed bottom padding entirely */
     background-color: #ffffff;
     border-bottom: 1px solid var(--border);
 }

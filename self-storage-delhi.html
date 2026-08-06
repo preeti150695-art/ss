@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Self Storage India – Delhi Location Map</title>
+  <title>Self Storage India – Delhi Location Map & Facility Info</title>
   <!-- Google Fonts: Plus Jakarta Sans, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,13 +134,359 @@
       border-radius: 4px;
     }
 
+    /* ==========================================================================
+       REDESIGNED "SELF STORAGE IN DELHI" SECTION (ssi-delhi-)
+       ========================================================================== */
+    :root {
+      --ssi-delhi-blue: #2f5db3;
+      --ssi-delhi-dark-blue: #183b78;
+      --ssi-delhi-orange: #e57d2f;
+      --ssi-delhi-dark: #18233a;
+      --ssi-delhi-text: #58647a;
+      --ssi-delhi-light: #f7f9fd;
+      --ssi-delhi-border: #e4e9f2;
+      --ssi-delhi-white: #ffffff;
+    }
+
+    .ssi-delhi-section {
+      background-color: var(--ssi-delhi-light);
+      padding: 90px 24px;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    /* Background decorative shapes */
+    .ssi-delhi-section::before,
+    .ssi-delhi-section::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(120px);
+      z-index: 1;
+      opacity: 0.45;
+    }
+
+    .ssi-delhi-section::before {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, var(--ssi-delhi-blue) 0%, transparent 80%);
+      top: -100px;
+      left: -100px;
+    }
+
+    .ssi-delhi-section::after {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, var(--ssi-delhi-orange) 0%, transparent 80%);
+      bottom: -120px;
+      right: -120px;
+    }
+
+    .ssi-delhi-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+
+    .ssi-delhi-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .ssi-delhi-label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--ssi-delhi-orange);
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .ssi-delhi-title {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--ssi-delhi-dark);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+
+    .ssi-delhi-intro {
+      font-size: 18px;
+      color: var(--ssi-delhi-blue);
+      font-weight: 600;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+
+    .ssi-delhi-row {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    /* Left Map Card */
+    .ssi-delhi-map-card {
+      background: var(--ssi-delhi-white);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(24, 35, 58, 0.06);
+      overflow: hidden;
+      position: relative;
+      min-height: 500px;
+      border: 1px solid var(--ssi-delhi-border);
+    }
+
+    .ssi-delhi-map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      border: 0;
+      display: block;
+    }
+
+    /* Floating Location Card */
+    .ssi-delhi-floating-card {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--ssi-delhi-white);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(24, 35, 58, 0.15);
+      max-width: 320px;
+      z-index: 10;
+      border: 1px solid var(--ssi-delhi-border);
+    }
+
+    .ssi-delhi-float-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .ssi-delhi-pin-icon {
+      color: var(--ssi-delhi-orange);
+      font-size: 20px;
+      margin-top: 2px;
+    }
+
+    .ssi-delhi-float-title {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ssi-delhi-dark);
+      line-height: 1.3;
+    }
+
+    .ssi-delhi-float-address {
+      font-size: 13px;
+      color: var(--ssi-delhi-text);
+      line-height: 1.4;
+      margin-bottom: 14px;
+      padding-left: 30px;
+    }
+
+    .ssi-delhi-directions-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--ssi-delhi-blue);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      padding-left: 30px;
+      transition: color 0.2s ease;
+    }
+
+    .ssi-delhi-directions-link:hover {
+      color: var(--ssi-delhi-dark-blue);
+    }
+
+    /* Right Content Card */
+    .ssi-delhi-content-card {
+      background: var(--ssi-delhi-white);
+      border: 1px solid var(--ssi-delhi-border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(24, 35, 58, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .ssi-delhi-main-paragraph {
+      font-size: 16px;
+      color: var(--ssi-delhi-text);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .ssi-delhi-main-paragraph p {
+      margin-bottom: 16px;
+    }
+
+    .ssi-delhi-main-paragraph p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Features Grid */
+    .ssi-delhi-features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 24px;
+      margin-bottom: 35px;
+    }
+
+    .ssi-delhi-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .ssi-delhi-feature-icon-wrapper {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(47, 93, 179, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--ssi-delhi-blue);
+      font-size: 18px;
+    }
+
+    .ssi-delhi-feature-item:nth-child(even) .ssi-delhi-feature-icon-wrapper {
+      background-color: rgba(229, 125, 47, 0.08);
+      color: var(--ssi-delhi-orange);
+    }
+
+    .ssi-delhi-feature-title {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ssi-delhi-dark);
+      margin-bottom: 2px;
+    }
+
+    .ssi-delhi-feature-desc {
+      font-size: 12.5px;
+      color: var(--ssi-delhi-text);
+      line-height: 1.3;
+    }
+
+    /* Buttons Row */
+    .ssi-delhi-btn-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .ssi-delhi-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      height: 48px;
+    }
+
+    .ssi-delhi-btn-primary {
+      background-color: var(--ssi-delhi-orange);
+      color: var(--ssi-delhi-white);
+      border: none;
+    }
+
+    .ssi-delhi-btn-primary:hover {
+      background-color: #d96e1e;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(229, 125, 47, 0.2);
+    }
+
+    .ssi-delhi-btn-secondary {
+      background-color: transparent;
+      color: var(--ssi-delhi-blue);
+      border: 2px solid var(--ssi-delhi-blue);
+    }
+
+    .ssi-delhi-btn-secondary:hover {
+      background-color: rgba(47, 93, 179, 0.04);
+      color: var(--ssi-delhi-dark-blue);
+      border-color: var(--ssi-delhi-dark-blue);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Section */
+    @media (max-width: 991px) {
+      .ssi-delhi-section {
+        padding: 60px 18px;
+      }
+
+      .ssi-delhi-title {
+        font-size: 34px;
+      }
+
+      .ssi-delhi-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .ssi-delhi-map-card {
+        min-height: 380px;
+        order: 2;
+      }
+
+      .ssi-delhi-map-card iframe {
+        min-height: 380px;
+      }
+
+      .ssi-delhi-content-card {
+        order: 1;
+        padding: 30px;
+      }
+
+      .ssi-delhi-floating-card {
+        bottom: 16px;
+        left: 16px;
+        max-width: calc(100% - 32px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .ssi-delhi-features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .ssi-delhi-btn-row {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .ssi-delhi-btn {
+        width: 100%;
+      }
+    }
+
     /* =========================
        LOCATION MAP (COMPACT)
-    ========================== */
+       ========================== */
     .location-section {
       width: 100%;
       overflow: hidden;
       background: #f6f6f6;
+      border-top: 1px solid var(--border);
     }
 
     .map-wrapper {
@@ -381,67 +727,15 @@
     }
 
     /* =========================
-       RESPONSIVE DESIGN
-    ========================== */
+       RESPONSIVE DESIGN MAP
+       ========================== */
     @media (max-width: 1250px) {
-      .header-container {
-        min-height: 70px;
-      }
-
-      .logo img {
-        width: 190px;
-      }
-
-      .main-navigation {
-        gap: 20px;
-      }
-
-      .main-navigation a {
-        font-size: 15px;
-      }
-
-      .calculator-button {
-        min-width: 150px;
-        padding: 10px 15px;
+      .map-wrapper {
+        min-height: 570px;
       }
     }
 
     @media (max-width: 991px) {
-      .header-container {
-        min-height: 65px;
-        padding: 10px 16px;
-      }
-
-      .logo img {
-        width: 180px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .main-navigation {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 15px;
-        background: #ffffff;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        display: none;
-      }
-
-      .main-navigation.open {
-        display: flex;
-      }
-
-      .calculator-button {
-        width: 100%;
-      }
-
       .map-wrapper {
         min-height: auto;
         background-image: none;
@@ -525,7 +819,103 @@
     </div>
   </header>
 
-  <!-- Map Section -->
+  <!-- Redesigned "Self Storage in Delhi" Section -->
+  <section class="ssi-delhi-section" id="delhi-info">
+    <div class="ssi-delhi-container">
+      <div class="ssi-delhi-header">
+        <span class="ssi-delhi-label">DELHI STORAGE FACILITY</span>
+        <h2 class="ssi-delhi-title">Self Storage in Delhi</h2>
+        <p class="ssi-delhi-intro">Secure, flexible and affordable storage solutions near Dwarka, Delhi NCR.</p>
+      </div>
+
+      <div class="ssi-delhi-row">
+        <!-- Left Side: Map Card -->
+        <div class="ssi-delhi-map-card">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.242967964433!2d77.05051667630739!3d28.592506275685816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1ad39c63b469%3A0xe968b6e685f67a29!2sSelf%20Storage%20India%20-%20Dwarka!5e0!3m2!1sen!2sin!4v1714578901234" 
+            title="Self Storage India - Dwarka Facility Map"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- Floating Info Card -->
+          <div class="ssi-delhi-floating-card">
+            <div class="ssi-delhi-float-header">
+              <span class="ssi-delhi-pin-icon"><i class="fa-solid fa-location-dot"></i></span>
+              <span class="ssi-delhi-float-title">Self Storage India – Dwarka</span>
+            </div>
+            <p class="ssi-delhi-float-address">
+              Sector 28, Near Dabri–Gurugram Road<br />
+              New Delhi, Delhi NCR
+            </p>
+            <a href="https://maps.app.goo.gl/r6WpXn2rJ9d1zF8M9" target="_blank" rel="noopener noreferrer" class="ssi-delhi-directions-link">
+              Get Directions <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Content Card -->
+        <div class="ssi-delhi-content-card">
+          <div class="ssi-delhi-main-paragraph">
+            <p>Self Storage India provides secure and affordable storage solutions across Delhi NCR through its conveniently located Dwarka warehouse. Situated in Sector 28, near the Dabri–Gurugram Road, the facility offers easy accessibility from Dwarka, Delhi, Gurugram and nearby residential and commercial areas.</p>
+            <p>Whether you need additional space for household belongings, business inventory, office furniture or documents, the facility offers flexible storage options designed around your requirements.</p>
+          </div>
+
+          <div class="ssi-delhi-features-grid">
+            <div class="ssi-delhi-feature-item">
+              <div class="ssi-delhi-feature-icon-wrapper">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div>
+                <h4 class="ssi-delhi-feature-title">Secure Storage</h4>
+                <p class="ssi-delhi-feature-desc">24/7 monitored facility</p>
+              </div>
+            </div>
+
+            <div class="ssi-delhi-feature-item">
+              <div class="ssi-delhi-feature-icon-wrapper">
+                <i class="fa-solid fa-calendar-days"></i>
+              </div>
+              <div>
+                <h4 class="ssi-delhi-feature-title">Flexible Plans</h4>
+                <p class="ssi-delhi-feature-desc">Short & long-term options</p>
+              </div>
+            </div>
+
+            <div class="ssi-delhi-feature-item">
+              <div class="ssi-delhi-feature-icon-wrapper">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div>
+                <h4 class="ssi-delhi-feature-title">Easy Access</h4>
+                <p class="ssi-delhi-feature-desc">Close to Delhi & Gurugram</p>
+              </div>
+            </div>
+
+            <div class="ssi-delhi-feature-item">
+              <div class="ssi-delhi-feature-icon-wrapper">
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+              <div>
+                <h4 class="ssi-delhi-feature-title">Multiple Uses</h4>
+                <p class="ssi-delhi-feature-desc">Personal & business storage</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ssi-delhi-btn-row">
+            <a href="/#calculator" class="ssi-delhi-btn ssi-delhi-btn-primary">Get Storage Quote</a>
+            <a href="tel:+919090206090" class="ssi-delhi-btn ssi-delhi-btn-secondary">
+              <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>Call +91-9090206090
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Map Section -->
   <section class="location-section" id="locations">
     <div class="map-wrapper">
 

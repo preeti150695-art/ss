@@ -139,9 +139,9 @@
        REDESIGNED "SELF STORAGE IN DELHI" SECTION (ssi-delhi-)
        ========================================================================== */
     :root {
-      --ssi-delhi-blue: #2864df;      /* Set to brand blue */
-      --ssi-delhi-dark-blue: #1e4ebf; /* Set to brand dark blue hover */
-      --ssi-delhi-orange: #ef8a22;    /* Set to brand orange */
+      --ssi-delhi-blue: #2864df;      
+      --ssi-delhi-dark-blue: #1e4ebf; 
+      --ssi-delhi-orange: #ef8a22;    
       --ssi-delhi-dark: #1e293b;
       --ssi-delhi-text: #475569;
       --ssi-delhi-light: #f8fafc;
@@ -151,7 +151,7 @@
 
     .ssi-delhi-section {
       background-color: var(--ssi-delhi-light);
-      padding: 90px 24px;
+      padding: 40px 24px 70px 24px; /* Reduced top padding from 90px to 40px */
       position: relative;
       overflow: hidden;
       width: 100%;
@@ -194,17 +194,17 @@
 
     .ssi-delhi-header {
       text-align: center;
-      margin-bottom: 56px;
+      margin-bottom: 40px; /* Reduced header margin bottom from 56px to 40px */
     }
 
     .ssi-delhi-label {
       display: inline-block;
       font-family: var(--font-heading);
-      font-size: 16px; /* Made bigger as requested */
+      font-size: 16px;
       font-weight: 800;
       color: var(--ssi-delhi-orange);
       letter-spacing: 0.08em;
-      margin-bottom: 12px;
+      margin-bottom: 8px; /* Slightly reduced */
       text-transform: uppercase;
     }
 
@@ -212,8 +212,8 @@
       font-family: var(--font-heading);
       font-size: 48px;
       font-weight: 800;
-      color: var(--ssi-delhi-blue); /* Fixed to brand blue */
-      margin-bottom: 16px;
+      color: var(--ssi-delhi-blue); 
+      margin-bottom: 12px; /* Slightly reduced */
       line-height: 1.15;
       letter-spacing: -0.02em;
     }
@@ -440,7 +440,7 @@
     /* Responsive Section */
     @media (max-width: 991px) {
       .ssi-delhi-section {
-        padding: 60px 18px;
+        padding: 40px 18px 60px 18px;
       }
 
       .ssi-delhi-title {

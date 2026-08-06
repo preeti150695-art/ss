@@ -7,7 +7,7 @@
   <!-- Google Fonts: Plus Jakarta Sans, Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
@@ -17,9 +17,9 @@
       --primary-hover: #1e4ebf;
       --accent: #ef8a22;
       --accent-hover: #d97718;
-      --text: #222222;
-      --text-secondary: #555555;
-      --border: #e5e5e5;
+      --text: #1e293b;
+      --text-secondary: #475569;
+      --border: #e2e8f0;
       --font-heading: 'Plus Jakarta Sans', sans-serif;
       --font-body: 'Inter', sans-serif;
     }
@@ -34,6 +34,7 @@
       font-family: var(--font-body);
       background: #ffffff;
       color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
 
     /* =========================
@@ -82,7 +83,7 @@
       color: var(--primary);
       font-family: var(--font-heading);
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       transition: color 0.25s ease;
       white-space: nowrap;
@@ -138,13 +139,13 @@
        REDESIGNED "SELF STORAGE IN DELHI" SECTION (ssi-delhi-)
        ========================================================================== */
     :root {
-      --ssi-delhi-blue: #2f5db3;
-      --ssi-delhi-dark-blue: #183b78;
-      --ssi-delhi-orange: #e57d2f;
-      --ssi-delhi-dark: #18233a;
-      --ssi-delhi-text: #58647a;
-      --ssi-delhi-light: #f7f9fd;
-      --ssi-delhi-border: #e4e9f2;
+      --ssi-delhi-blue: #2864df;      /* Set to brand blue */
+      --ssi-delhi-dark-blue: #1e4ebf; /* Set to brand dark blue hover */
+      --ssi-delhi-orange: #ef8a22;    /* Set to brand orange */
+      --ssi-delhi-dark: #1e293b;
+      --ssi-delhi-text: #475569;
+      --ssi-delhi-light: #f8fafc;
+      --ssi-delhi-border: #e2e8f0;
       --ssi-delhi-white: #ffffff;
     }
 
@@ -165,7 +166,7 @@
       pointer-events: none;
       filter: blur(120px);
       z-index: 1;
-      opacity: 0.45;
+      opacity: 0.35;
     }
 
     .ssi-delhi-section::before {
@@ -198,29 +199,33 @@
 
     .ssi-delhi-label {
       display: inline-block;
-      font-size: 13px;
+      font-family: var(--font-heading);
+      font-size: 16px; /* Made bigger as requested */
       font-weight: 800;
       color: var(--ssi-delhi-orange);
       letter-spacing: 0.08em;
       margin-bottom: 12px;
+      text-transform: uppercase;
     }
 
     .ssi-delhi-title {
       font-family: var(--font-heading);
       font-size: 48px;
       font-weight: 800;
-      color: var(--ssi-delhi-dark);
+      color: var(--ssi-delhi-blue); /* Fixed to brand blue */
       margin-bottom: 16px;
       line-height: 1.15;
+      letter-spacing: -0.02em;
     }
 
     .ssi-delhi-intro {
+      font-family: var(--font-body);
       font-size: 18px;
-      color: var(--ssi-delhi-blue);
-      font-weight: 600;
+      color: var(--ssi-delhi-dark);
+      font-weight: 500;
       max-width: 600px;
       margin: 0 auto;
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     .ssi-delhi-row {
@@ -285,6 +290,7 @@
     }
 
     .ssi-delhi-float-address {
+      font-family: var(--font-body);
       font-size: 13px;
       color: var(--ssi-delhi-text);
       line-height: 1.4;
@@ -302,6 +308,7 @@
       text-decoration: none;
       padding-left: 30px;
       transition: color 0.2s ease;
+      font-family: var(--font-heading);
     }
 
     .ssi-delhi-directions-link:hover {
@@ -321,6 +328,7 @@
     }
 
     .ssi-delhi-main-paragraph {
+      font-family: var(--font-body);
       font-size: 16px;
       color: var(--ssi-delhi-text);
       line-height: 1.7;
@@ -353,7 +361,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: rgba(47, 93, 179, 0.08);
+      background-color: rgba(40, 100, 223, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -363,7 +371,7 @@
     }
 
     .ssi-delhi-feature-item:nth-child(even) .ssi-delhi-feature-icon-wrapper {
-      background-color: rgba(229, 125, 47, 0.08);
+      background-color: rgba(239, 138, 34, 0.08);
       color: var(--ssi-delhi-orange);
     }
 
@@ -376,6 +384,7 @@
     }
 
     .ssi-delhi-feature-desc {
+      font-family: var(--font-body);
       font-size: 12.5px;
       color: var(--ssi-delhi-text);
       line-height: 1.3;
@@ -400,6 +409,7 @@
       text-decoration: none;
       transition: all 0.25s ease;
       height: 48px;
+      font-family: var(--font-heading);
     }
 
     .ssi-delhi-btn-primary {
@@ -409,9 +419,9 @@
     }
 
     .ssi-delhi-btn-primary:hover {
-      background-color: #d96e1e;
+      background-color: var(--ssi-delhi-dark-blue);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(229, 125, 47, 0.2);
+      box-shadow: 0 4px 12px rgba(40, 100, 223, 0.2);
     }
 
     .ssi-delhi-btn-secondary {
@@ -421,7 +431,7 @@
     }
 
     .ssi-delhi-btn-secondary:hover {
-      background-color: rgba(47, 93, 179, 0.04);
+      background-color: rgba(40, 100, 223, 0.04);
       color: var(--ssi-delhi-dark-blue);
       border-color: var(--ssi-delhi-dark-blue);
       transform: translateY(-2px);

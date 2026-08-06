@@ -35,6 +35,7 @@
       background: #ffffff;
       color: var(--text);
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* =========================
@@ -51,8 +52,8 @@
     .header-container {
       max-width: 1510px;
       margin: 0 auto;
-      min-height: 80px;
-      padding: 10px 24px;
+      min-height: 70px;
+      padding: 8px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -67,7 +68,7 @@
     }
 
     .logo img {
-      width: 220px;
+      width: 200px;
       max-width: 100%;
       height: auto;
       display: block;
@@ -76,13 +77,13 @@
     .main-navigation {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 25px;
     }
 
     .main-navigation a {
       color: var(--primary);
       font-family: var(--font-heading);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       text-decoration: none;
       transition: color 0.25s ease;
@@ -102,12 +103,12 @@
     }
 
     .calculator-button {
-      min-width: 180px;
-      padding: 11px 20px;
+      min-width: 160px;
+      padding: 9px 18px;
       border-radius: 5px;
       background: var(--accent);
       color: #ffffff !important;
-      font-size: 15px !important;
+      font-size: 14px !important;
       font-weight: 700 !important;
       text-align: center;
       transition: background 0.25s ease, transform 0.25s ease;
@@ -127,8 +128,8 @@
     }
 
     .menu-toggle span {
-      width: 24px;
-      height: 2.5px;
+      width: 22px;
+      height: 2px;
       background: var(--primary);
       display: block;
       margin: 4px 0;
@@ -136,7 +137,7 @@
     }
 
     /* ==========================================================================
-       REDESIGNED "SELF STORAGE IN DELHI" SECTION (ssi-delhi-)
+       REDESIGNED "SELF STORAGE IN DELHI" SECTION (ssi-delhi-) - ONE FOLD COMPACT
        ========================================================================== */
     :root {
       --ssi-delhi-blue: #2864df;      
@@ -151,7 +152,7 @@
 
     .ssi-delhi-section {
       background-color: var(--ssi-delhi-light);
-      padding: 40px 24px 70px 24px; /* Reduced top padding from 90px to 40px */
+      padding: 24px 24px 36px 24px; /* Reduced vertical padding significantly for one fold */
       position: relative;
       overflow: hidden;
       width: 100%;
@@ -164,29 +165,29 @@
       position: absolute;
       border-radius: 50%;
       pointer-events: none;
-      filter: blur(120px);
+      filter: blur(100px);
       z-index: 1;
-      opacity: 0.35;
+      opacity: 0.25;
     }
 
     .ssi-delhi-section::before {
-      width: 320px;
-      height: 320px;
+      width: 250px;
+      height: 250px;
       background: radial-gradient(circle, var(--ssi-delhi-blue) 0%, transparent 80%);
-      top: -100px;
-      left: -100px;
+      top: -50px;
+      left: -50px;
     }
 
     .ssi-delhi-section::after {
-      width: 350px;
-      height: 350px;
+      width: 280px;
+      height: 280px;
       background: radial-gradient(circle, var(--ssi-delhi-orange) 0%, transparent 80%);
-      bottom: -120px;
-      right: -120px;
+      bottom: -60px;
+      right: -60px;
     }
 
     .ssi-delhi-container {
-      max-width: 1280px;
+      max-width: 1200px;
       margin: 0 auto;
       position: relative;
       z-index: 5;
@@ -194,76 +195,76 @@
 
     .ssi-delhi-header {
       text-align: center;
-      margin-bottom: 40px; /* Reduced header margin bottom from 56px to 40px */
+      margin-bottom: 24px; /* Reduced header margin bottom for one fold */
     }
 
     .ssi-delhi-label {
       display: inline-block;
       font-family: var(--font-heading);
-      font-size: 16px;
+      font-size: 13px;
       font-weight: 800;
       color: var(--ssi-delhi-orange);
       letter-spacing: 0.08em;
-      margin-bottom: 8px; /* Slightly reduced */
+      margin-bottom: 4px;
       text-transform: uppercase;
     }
 
     .ssi-delhi-title {
       font-family: var(--font-heading);
-      font-size: 48px;
+      font-size: 36px; /* Reduced heading size */
       font-weight: 800;
       color: var(--ssi-delhi-blue); 
-      margin-bottom: 12px; /* Slightly reduced */
+      margin-bottom: 6px;
       line-height: 1.15;
       letter-spacing: -0.02em;
     }
 
     .ssi-delhi-intro {
       font-family: var(--font-body);
-      font-size: 18px;
+      font-size: 15px; /* Reduced font size */
       color: var(--ssi-delhi-dark);
       font-weight: 500;
-      max-width: 600px;
+      max-width: 550px;
       margin: 0 auto;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     .ssi-delhi-row {
       display: grid;
-      grid-template-columns: 55% 45%;
-      gap: 40px;
+      grid-template-columns: 52% 48%;
+      gap: 30px;
       align-items: stretch;
     }
 
-    /* Left Map Card */
+    /* Left Map Card - Scaled Down */
     .ssi-delhi-map-card {
       background: var(--ssi-delhi-white);
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(24, 35, 58, 0.06);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(24, 35, 58, 0.05);
       overflow: hidden;
       position: relative;
-      min-height: 500px;
+      min-height: 380px; /* Reduced min-height */
+      height: 380px;
       border: 1px solid var(--ssi-delhi-border);
     }
 
     .ssi-delhi-map-card iframe {
       width: 100%;
       height: 100%;
-      min-height: 500px;
       border: 0;
       display: block;
     }
 
-    /* Floating Location Card */
+    /* Floating Location Card - Scaled Down */
     .ssi-delhi-floating-card {
       position: absolute;
-      bottom: 24px;
-      left: 24px;
+      bottom: 16px;
+      left: 16px;
       background: var(--ssi-delhi-white);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 8px 24px rgba(24, 35, 58, 0.15);
-      max-width: 320px;
+      border-radius: 10px;
+      padding: 14px;
+      box-shadow: 0 6px 20px rgba(24, 35, 58, 0.12);
+      max-width: 270px;
       z-index: 10;
       border: 1px solid var(--ssi-delhi-border);
     }
@@ -271,19 +272,19 @@
     .ssi-delhi-float-header {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 8px;
+      gap: 8px;
+      margin-bottom: 6px;
     }
 
     .ssi-delhi-pin-icon {
       color: var(--ssi-delhi-orange);
-      font-size: 20px;
-      margin-top: 2px;
+      font-size: 16px;
+      margin-top: 1px;
     }
 
     .ssi-delhi-float-title {
       font-family: var(--font-heading);
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700;
       color: var(--ssi-delhi-dark);
       line-height: 1.3;
@@ -291,22 +292,22 @@
 
     .ssi-delhi-float-address {
       font-family: var(--font-body);
-      font-size: 13px;
+      font-size: 11.5px;
       color: var(--ssi-delhi-text);
       line-height: 1.4;
-      margin-bottom: 14px;
-      padding-left: 30px;
+      margin-bottom: 10px;
+      padding-left: 24px;
     }
 
     .ssi-delhi-directions-link {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
       color: var(--ssi-delhi-blue);
-      font-size: 13px;
+      font-size: 11.5px;
       font-weight: 700;
       text-decoration: none;
-      padding-left: 30px;
+      padding-left: 24px;
       transition: color 0.2s ease;
       font-family: var(--font-heading);
     }
@@ -315,51 +316,52 @@
       color: var(--ssi-delhi-dark-blue);
     }
 
-    /* Right Content Card */
+    /* Right Content Card - Scaled Down */
     .ssi-delhi-content-card {
       background: var(--ssi-delhi-white);
       border: 1px solid var(--ssi-delhi-border);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(24, 35, 58, 0.04);
+      border-radius: 16px;
+      padding: 24px; /* Reduced padding from 40px to 24px */
+      box-shadow: 0 8px 24px rgba(24, 35, 58, 0.03);
       display: flex;
       flex-direction: column;
       justify-content: center;
+      height: 380px; /* Locked height matching map card */
     }
 
     .ssi-delhi-main-paragraph {
       font-family: var(--font-body);
-      font-size: 16px;
+      font-size: 13.5px; /* Scaled text down */
       color: var(--ssi-delhi-text);
-      line-height: 1.7;
-      margin-bottom: 30px;
+      line-height: 1.55;
+      margin-bottom: 18px;
     }
 
     .ssi-delhi-main-paragraph p {
-      margin-bottom: 16px;
+      margin-bottom: 10px;
     }
 
     .ssi-delhi-main-paragraph p:last-child {
       margin-bottom: 0;
     }
 
-    /* Features Grid */
+    /* Features Grid - Compact */
     .ssi-delhi-features-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px 24px;
-      margin-bottom: 35px;
+      gap: 12px 16px;
+      margin-bottom: 20px;
     }
 
     .ssi-delhi-feature-item {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
     }
 
     .ssi-delhi-feature-icon-wrapper {
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background-color: rgba(40, 100, 223, 0.08);
       display: flex;
@@ -367,7 +369,7 @@
       justify-content: center;
       flex-shrink: 0;
       color: var(--ssi-delhi-blue);
-      font-size: 18px;
+      font-size: 14px;
     }
 
     .ssi-delhi-feature-item:nth-child(even) .ssi-delhi-feature-icon-wrapper {
@@ -377,23 +379,23 @@
 
     .ssi-delhi-feature-title {
       font-family: var(--font-heading);
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--ssi-delhi-dark);
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .ssi-delhi-feature-desc {
       font-family: var(--font-body);
-      font-size: 12.5px;
+      font-size: 11px;
       color: var(--ssi-delhi-text);
       line-height: 1.3;
     }
 
-    /* Buttons Row */
+    /* Buttons Row - Compact */
     .ssi-delhi-btn-row {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
@@ -401,14 +403,14 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 28px;
-      font-size: 15px;
+      padding: 10px 20px;
+      font-size: 13.5px;
       font-weight: 700;
       border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
       transition: all 0.25s ease;
-      height: 48px;
+      height: 40px;
       font-family: var(--font-heading);
     }
 
@@ -421,13 +423,13 @@
     .ssi-delhi-btn-primary:hover {
       background-color: var(--ssi-delhi-dark-blue);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(40, 100, 223, 0.2);
+      box-shadow: 0 4px 10px rgba(40, 100, 223, 0.15);
     }
 
     .ssi-delhi-btn-secondary {
       background-color: transparent;
       color: var(--ssi-delhi-blue);
-      border: 2px solid var(--ssi-delhi-blue);
+      border: 1.5px solid var(--ssi-delhi-blue);
     }
 
     .ssi-delhi-btn-secondary:hover {
@@ -440,48 +442,50 @@
     /* Responsive Section */
     @media (max-width: 991px) {
       .ssi-delhi-section {
-        padding: 40px 18px 60px 18px;
+        padding: 30px 18px 45px 18px;
       }
 
       .ssi-delhi-title {
-        font-size: 34px;
+        font-size: 28px;
       }
 
       .ssi-delhi-row {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 24px;
+      }
+
+      .ssi-delhi-map-card,
+      .ssi-delhi-content-card {
+        height: auto;
+        min-height: auto;
       }
 
       .ssi-delhi-map-card {
-        min-height: 380px;
+        height: 320px;
         order: 2;
-      }
-
-      .ssi-delhi-map-card iframe {
-        min-height: 380px;
       }
 
       .ssi-delhi-content-card {
         order: 1;
-        padding: 30px;
+        padding: 20px;
       }
 
       .ssi-delhi-floating-card {
-        bottom: 16px;
-        left: 16px;
-        max-width: calc(100% - 32px);
+        bottom: 12px;
+        left: 12px;
+        max-width: calc(100% - 24px);
       }
     }
 
     @media (max-width: 600px) {
       .ssi-delhi-features-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 12px;
       }
 
       .ssi-delhi-btn-row {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
       }
 
       .ssi-delhi-btn {

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self Storage India – Delhi Location Map</title>
+  <!-- Google Fonts: Plus Jakarta Sans, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Material Symbols Rounded Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #2864df;
+      --primary-hover: #1e4ebf;
+      --accent: #ef8a22;
+      --accent-hover: #d97718;
+      --text: #222222;
+      --text-secondary: #555555;
+      --border: #e5e5e5;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: #ffffff;
+      color: var(--text);
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+    .site-header {
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1510px;
+      margin: 0 auto;
+      min-height: 100px;
+      padding: 15px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 280px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .main-navigation {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .main-navigation a {
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .main-navigation a:hover,
+    .main-navigation a.active {
+      color: var(--accent);
+    }
+
+    .header-phone {
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calculator-button {
+      min-width: 210px;
+      padding: 14px 24px;
+      border-radius: 6px;
+      background: var(--accent);
+      color: #ffffff !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      text-align: center;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .calculator-button:hover {
+      background: var(--accent-hover) !important;
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .menu-toggle span {
+      width: 28px;
+      height: 3px;
+      background: var(--primary);
+      display: block;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
+    /* =========================
+       LOCATION MAP
+    ========================== */
+    .location-section {
+      width: 100%;
+      overflow: hidden;
+      background: #f6f6f6;
+    }
+
+    .map-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 640px;
+      background-image: url("assets/dwarka_storage.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .map-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+    }
+
+    /* Warehouse marker */
+    .warehouse-location {
+      position: absolute;
+      left: 36%;
+      top: 22%;
+      transform: translateX(-50%);
+      z-index: 5;
+      text-align: center;
+    }
+
+    .warehouse-pin {
+      position: relative;
+      width: 100px;
+      height: 120px;
+      margin: 0 auto;
+    }
+
+    .pin-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50% 50% 50% 0;
+      background: #ff9800; /* Solid brand orange */
+      transform: rotate(-45deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .pin-inner {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(45deg);
+    }
+
+    .lock-icon {
+      font-size: 36px;
+      color: #ff9800;
+      line-height: 1;
+    }
+
+    .warehouse-title {
+      position: absolute;
+      left: 105px;
+      top: 30px;
+      width: 250px;
+      color: #d93e28;
+      font-family: var(--font-heading);
+      font-size: 24px;
+      line-height: 1.15;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    /* Connection lines */
+    .connection-line {
+      position: absolute;
+      height: 2px;
+      background: #555555;
+      transform-origin: left center;
+      z-index: 2;
+      opacity: 0.85;
+    }
+
+    .line-airport {
+      left: 36%;
+      top: 34%;
+      width: 140px;
+      transform: rotate(72deg);
+    }
+
+    .line-redfort {
+      left: 36%;
+      top: 32%;
+      width: 320px;
+      transform: rotate(-18deg);
+    }
+
+    .line-india-gate {
+      left: 36%;
+      top: 33%;
+      width: 295px;
+      transform: rotate(10deg);
+    }
+
+    .line-lotus {
+      left: 36%;
+      top: 33%;
+      width: 370px;
+      transform: rotate(26deg);
+    }
+
+    .line-qutub {
+      left: 36%;
+      top: 34%;
+      width: 325px;
+      transform: rotate(45deg);
+    }
+
+    .line-kingdom {
+      left: 36%;
+      top: 34%;
+      width: 260px;
+      transform: rotate(91deg);
+    }
+
+    /* Location cards */
+    .location-card {
+      position: absolute;
+      z-index: 4;
+      width: 220px;
+      height: 64px;
+      border-radius: 30px 8px 8px 30px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      padding-left: 64px;
+      padding-right: 15px;
+    }
+
+    .location-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .location-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 24px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .location-name {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #222222;
+    }
+
+    .location-time {
+      margin-top: 2px;
+      font-size: 13px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: #555555;
+    }
+
+    .airport-card {
+      left: 36%;
+      top: 52%;
+      transform: translateX(-50%);
+    }
+
+    .airport-card .location-icon {
+      background: #1e70e9;
+    }
+
+    .redfort-card {
+      left: 61%;
+      top: 18%;
+    }
+
+    .redfort-card .location-icon {
+      background: #ef3626;
+    }
+
+    .india-card {
+      left: 60%;
+      top: 36%;
+    }
+
+    .india-card .location-icon {
+      background: #183cc8;
+    }
+
+    .lotus-card {
+      left: 65%;
+      top: 50%;
+    }
+
+    .lotus-card .location-icon {
+      background: #4caf50;
+    }
+
+    .qutub-card {
+      left: 56%;
+      top: 61%;
+    }
+
+    .qutub-card .location-icon {
+      background: #b71c1c;
+    }
+
+    .kingdom-card {
+      left: 47%;
+      top: 78%;
+    }
+
+    .kingdom-card .location-icon {
+      background: #e040fb;
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================== */
+    @media (max-width: 1250px) {
+      .header-container {
+        min-height: 85px;
+      }
+
+      .logo img {
+        width: 240px;
+      }
+
+      .main-navigation {
+        gap: 25px;
+      }
+
+      .main-navigation a {
+        font-size: 16px;
+      }
+
+      .calculator-button {
+        min-width: 170px;
+        padding: 12px 18px;
+      }
+
+      .map-wrapper {
+        min-height: 570px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .header-container {
+        min-height: 75px;
+        padding: 15px 20px;
+      }
+
+      .logo img {
+        width: 220px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        display: none;
+      }
+
+      .main-navigation.open {
+        display: flex;
+      }
+
+      .calculator-button {
+        width: 100%;
+      }
+
+      .map-wrapper {
+        min-height: auto;
+        background-image: none;
+        padding: 40px 20px;
+      }
+
+      .map-wrapper::before,
+      .connection-line {
+        display: none;
+      }
+
+      .warehouse-location {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-bottom: 30px;
+      }
+
+      .warehouse-title {
+        position: static;
+        width: auto;
+        margin-top: 15px;
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .location-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .location-card {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        min-width: auto;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-container {
+        padding: 12px 15px;
+      }
+
+      .logo img {
+        width: 190px;
+      }
+
+      .location-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="logo" aria-label="Self Storage India Home">
+        <img src="assets/self-storage-india-logo.png" alt="Self Storage India – Creating Extra Space" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-navigation">
+        <a href="/">Storage</a>
+        <a href="#locations" class="active">Locations</a>
+        <a href="/#offerings">Offerings</a>
+        <a href="/#blogs">Blogs</a>
+        <a href="tel:+919090206090" class="header-phone">
+          <i class="fa-solid fa-phone" style="font-size: 14px; margin-right: 4px;"></i>+91-9090206090
+        </a>
+        <a href="/#calculator" class="calculator-button">
+          Storage Calculator
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Map Section -->
+  <section class="location-section" id="locations">
+    <div class="map-wrapper">
+
+      <!-- Warehouse marker -->
+      <div class="warehouse-location">
+        <div class="warehouse-pin">
+          <div class="pin-circle">
+            <div class="pin-inner">
+              <span class="lock-icon">
+                <i class="fa-solid fa-lock"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="warehouse-title">
+          Self Storage India<br />Warehouse
+        </div>
+      </div>
+
+      <!-- Connecting lines -->
+      <span class="connection-line line-airport"></span>
+      <span class="connection-line line-redfort"></span>
+      <span class="connection-line line-india-gate"></span>
+      <span class="connection-line line-lotus"></span>
+      <span class="connection-line line-qutub"></span>
+      <span class="connection-line line-kingdom"></span>
+
+      <div class="location-list">
+        <!-- Airport -->
+        <div class="location-card airport-card">
+          <div class="location-icon">
+            <i class="fa-solid fa-plane"></i>
+          </div>
+          <div class="location-text">
+            <div class="location-name">IGI Airport</div>
+            <div class="location-time">05 Minutes</div>
+          </div>
+        </div>
+
+        <!-- Red Fort -->
+        <div class="location-card redfort-card">
+          <div class="location-icon">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="location-text">
+            <div class="location-name">Red Fort</div>
+            <div class="location-time">55 Minutes</div>
+          </div>
+        </div>
+
+        <!-- India Gate -->
+        <div class="location-card india-card">
+          <div class="location-icon">
+            <i class="fa-solid fa-archway"></i>
+          </div>
+          <div class="location-text">
+            <div class="location-name">India Gate</div>
+            <div class="location-time">40 Minutes</div>
+          </div>
+        </div>
+
+        <!-- Lotus Temple -->
+        <div class="location-card lotus-card">
+          <div class="location-icon">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+          <div class="location-text">
+            <div class="location-name">Lotus Temple</div>
+            <div class="location-time">45 Minutes</div>
+          </div>
+        </div>
+
+        <!-- Qutub Minar -->
+        <div class="location-card qutub-card">
+          <div class="location-icon">
+            <i class="fa-solid fa-tower-observation"></i>
+          </div>
+          <div class="location-text">
+            <div class="location-name">Qutub Minar</div>
+            <div class="location-time">30 Minutes</div>
+          </div>
+        </div>
+
+        <!-- Kingdom of Dreams -->
+        <div class="location-card kingdom-card">
+          <div class="location-icon">
+            <i class="fa-solid fa-crown"></i>
+          </div>
+          <div class="location-text">
+            <div class="location-name">Kingdom of Dreams</div>
+            <div class="location-time">20 Minutes</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".main-navigation");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+  </script>
+</body>
+</html>

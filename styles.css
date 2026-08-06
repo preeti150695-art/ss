@@ -4149,9 +4149,9 @@ h3 {
 .back-to-top {
     position: fixed;
     bottom: 0;
-    right: 24px;
-    width: 44px;
-    height: 40px;
+    right: 0; /* Flush with right edge */
+    width: 48px;
+    height: 48px;
     background-color: #49B1E8;
     border: none;
     color: #ffffff;
@@ -4227,9 +4227,9 @@ h3 {
     }
 
     .back-to-top {
-        width: 40px;
-        height: 36px;
-        right: 12px;
+        width: 44px;
+        height: 44px;
+        right: 0;
     }
 }
 

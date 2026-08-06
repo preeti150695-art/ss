@@ -234,6 +234,7 @@
       grid-template-columns: 52% 48%;
       gap: 30px;
       align-items: stretch;
+      margin-bottom: 24px; /* Added spacing to map/content row */
     }
 
     /* Left Map Card - Scaled Down */
@@ -363,12 +364,12 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background-color: rgba(40, 100, 223, 0.08); /* Unified all icon backgrounds to blue */
+      background-color: rgba(40, 100, 223, 0.08); 
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      color: var(--ssi-delhi-blue); /* Unified all icons to brand blue */
+      color: var(--ssi-delhi-blue); 
       font-size: 14px;
     }
 
@@ -392,7 +393,7 @@
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      justify-content: center; /* Center aligned buttons */
+      justify-content: center; 
     }
 
     .ssi-delhi-btn {
@@ -435,6 +436,54 @@
       transform: translateY(-2px);
     }
 
+    /* Contact Info Strip (Same styling and border) */
+    .ssi-delhi-contact-strip {
+      background: var(--ssi-delhi-white);
+      border: 1px solid var(--ssi-delhi-border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(24, 35, 58, 0.03);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .ssi-delhi-contact-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .ssi-delhi-contact-heading {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ssi-delhi-blue); /* Brand blue color */
+      margin-bottom: 2px;
+    }
+
+    .ssi-delhi-contact-info-text {
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      color: var(--ssi-delhi-text);
+      line-height: 1.55;
+    }
+
+    .ssi-delhi-contact-info-link {
+      color: var(--ssi-delhi-blue);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ssi-delhi-contact-info-link:hover {
+      color: var(--ssi-delhi-dark-blue);
+    }
+
     /* Responsive Section */
     @media (max-width: 991px) {
       .ssi-delhi-section {
@@ -470,6 +519,12 @@
         bottom: 12px;
         left: 12px;
         max-width: calc(100% - 24px);
+      }
+
+      .ssi-delhi-contact-strip {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
       }
     }
 
@@ -922,6 +977,42 @@
           </div>
         </div>
       </div>
+
+      <!-- Contact Info Strip (Same styling and border) -->
+      <div class="ssi-delhi-contact-strip">
+        <div class="ssi-delhi-contact-col">
+          <h3 class="ssi-delhi-contact-heading">Visit us at:</h3>
+          <p class="ssi-delhi-contact-info-text">
+            Self Storage India Warehouse<br>
+            Khasra No-82, Sector 28 Dwarka,<br>
+            New Delhi -110077
+          </p>
+        </div>
+
+        <div class="ssi-delhi-contact-col">
+          <h3 class="ssi-delhi-contact-heading">Call us at:</h3>
+          <p class="ssi-delhi-contact-info-text">
+            <a href="tel:+919090206090" class="ssi-delhi-contact-info-link">
+              <i class="fa-solid fa-phone"></i> +91-9090206090
+            </a>
+          </p>
+          <p class="ssi-delhi-contact-info-text">
+            <a href="https://wa.me/919090206090" target="_blank" rel="noopener noreferrer" class="ssi-delhi-contact-info-link">
+              <i class="fa-brands fa-whatsapp"></i> +91-9090206090
+            </a>
+          </p>
+        </div>
+
+        <div class="ssi-delhi-contact-col">
+          <h3 class="ssi-delhi-contact-heading">Email us at:</h3>
+          <p class="ssi-delhi-contact-info-text">
+            <a href="mailto:info@selfstorageindia.com" class="ssi-delhi-contact-info-link">
+              <i class="fa-solid fa-envelope"></i> info@selfstorageindia.com
+            </a>
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 

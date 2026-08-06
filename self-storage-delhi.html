@@ -50,10 +50,10 @@
     }
 
     .header-container {
-      max-width: 1510px;
+      max-width: 1200px;
       margin: 0 auto;
-      min-height: 70px;
-      padding: 8px 24px;
+      min-height: 80px;
+      padding: 10px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -68,7 +68,7 @@
     }
 
     .logo img {
-      width: 200px;
+      width: 210px;
       max-width: 100%;
       height: auto;
       display: block;
@@ -77,46 +77,43 @@
     .main-navigation {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 32px;
     }
 
     .main-navigation a {
       color: var(--primary);
-      font-family: var(--font-heading);
-      font-size: 15px;
-      font-weight: 700;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none;
-      transition: color 0.25s ease;
+      transition: color 0.2s ease;
       white-space: nowrap;
     }
 
-    .main-navigation a:hover,
+    .main-navigation a:hover {
+      color: var(--accent);
+    }
+
     .main-navigation a.active {
       color: var(--accent);
     }
 
-    .header-phone {
-      color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
     .calculator-button {
-      min-width: 160px;
-      padding: 9px 18px;
-      border-radius: 5px;
+      min-width: 170px;
+      padding: 12px 22px;
+      border-radius: 6px;
       background: var(--accent);
       color: #ffffff !important;
-      font-size: 14px !important;
+      font-family: var(--font-body) !important;
+      font-size: 15px !important;
       font-weight: 700 !important;
       text-align: center;
-      transition: background 0.25s ease, transform 0.25s ease;
+      transition: background 0.2s ease, transform 0.15s ease;
+      box-shadow: 0 2px 4px rgba(239, 138, 34, 0.15);
     }
 
     .calculator-button:hover {
       background: var(--accent-hover) !important;
-      transform: translateY(-2px);
     }
 
     .menu-toggle {
@@ -406,6 +403,10 @@
       gap: 10px;
     }
 
+    .ssi-delhi-contact-col:first-child {
+      padding-right: 15px;
+    }
+
     .ssi-delhi-contact-heading {
       font-family: var(--font-heading);
       font-size: 16px;
@@ -618,6 +619,42 @@
 
     /* Responsive Section */
     @media (max-width: 991px) {
+      .header-container {
+        min-height: 70px;
+        padding: 10px 18px;
+      }
+
+      .logo img {
+        width: 180px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .main-navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .main-navigation.open {
+        display: flex;
+      }
+
+      .calculator-button {
+        width: 100%;
+        min-width: auto;
+      }
+
       .ssi-delhi-section {
         padding: 30px 18px 45px 18px;
       }
@@ -702,9 +739,7 @@
         <a href="#delhi-info" class="active">Locations</a>
         <a href="/#offerings">Offerings</a>
         <a href="/#blogs">Blogs</a>
-        <a href="tel:+919090206090" class="header-phone">
-          <i class="fa-solid fa-phone" style="font-size: 13px; margin-right: 4px;"></i>+91-9090206090
-        </a>
+        <a href="tel:+919090206090">+91-9090206090</a>
         <a href="/#calculator" class="calculator-button">
           Storage Calculator
         </a>

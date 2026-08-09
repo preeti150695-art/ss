@@ -437,6 +437,58 @@
     }
 
     /* ==========================================================================
+       OUR FACILITY SECTION (ssi-delhi-facility-)
+       ========================================================================== */
+    .ssi-delhi-facility-section {
+      background-color: var(--ssi-delhi-white);
+      padding: 48px 24px;
+      border-top: 1px solid var(--ssi-delhi-border);
+      position: relative;
+      z-index: 5;
+    }
+
+    .ssi-delhi-facility-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .ssi-delhi-facility-title {
+      font-family: var(--font-heading);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--ssi-delhi-blue);
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .ssi-delhi-facility-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .ssi-delhi-facility-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--ssi-delhi-border);
+      aspect-ratio: 3 / 2;
+    }
+
+    .ssi-delhi-facility-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .ssi-delhi-facility-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* ==========================================================================
        TESTIMONIALS SECTION (ssi-delhi-testimonials-)
        ========================================================================== */
     .ssi-delhi-testimonials-section {
@@ -696,6 +748,11 @@
         padding: 20px;
       }
 
+      .ssi-delhi-facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
       .ssi-delhi-testimonials-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -714,6 +771,10 @@
       .ssi-delhi-features-grid {
         grid-template-columns: 1fr;
         gap: 12px;
+      }
+
+      .ssi-delhi-facility-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -869,6 +930,33 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Our Facility Section -->
+  <section class="ssi-delhi-facility-section" id="facility">
+    <div class="ssi-delhi-facility-container">
+      <h2 class="ssi-delhi-facility-title">Our Facility</h2>
+      <div class="ssi-delhi-facility-grid">
+        <div class="ssi-delhi-facility-item">
+          <img src="assets/facility_1.jpg" alt="Self Storage India - Gurgaon facility exterior sign" />
+        </div>
+        <div class="ssi-delhi-facility-item">
+          <img src="assets/facility_2.jpg" alt="Self Storage India - Modern multi-story warehouse building" />
+        </div>
+        <div class="ssi-delhi-facility-item">
+          <img src="assets/facility_3.jpg" alt="Self Storage India - Staff helping load luggage into an SUV" />
+        </div>
+        <div class="ssi-delhi-facility-item">
+          <img src="assets/facility_4.jpg" alt="Self Storage India - Blue partition storage units" />
+        </div>
+        <div class="ssi-delhi-facility-item">
+          <img src="assets/facility_5.jpg" alt="Self Storage India - Corridor with orange roller shutters" />
+        </div>
+        <div class="ssi-delhi-facility-item">
+          <img src="assets/facility_6.jpg" alt="Self Storage India - Red delivery truck at loading dock" />
+        </div>
+      </div>
     </div>
   </section>
 

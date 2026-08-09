@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Main site stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 
   <style>
     :root {
@@ -1116,6 +1118,57 @@
     </div>
   </section>
 
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/about-us">About Us</a>
+        <a href="/benefits">Benefits</a>
+        <a href="self-storage-delhi.html">Delhi Storage</a>
+        <a href="self-storage-noida.html">Noida Storage</a>
+        <a href="/terms-and-conditions">Terms And Conditions</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </nav>
+
+      <div class="footer-socials" aria-label="Social media links">
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="X / Twitter">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="footer-logos">
+        <a href="/" class="footer-logo footer-logo-primary">
+          <img src="assets/self-storage-india-logo.png" alt="Self Storage India">
+        </a>
+        <a href="/" class="footer-logo footer-logo-warehouse">
+          <img src="assets/self-storage-warehouse-logo.png" alt="Self Storage Warehouse">
+        </a>
+        <div class="footer-logo footer-logo-member">
+          <img src="assets/self-storage-association-member.png" alt="Self Storage Association Member">
+        </div>
+      </div>
+
+      <p class="footer-copyright">
+        Copyright – ©2023, SelfStorage India, All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
   <script>
     const menuToggle = document.querySelector(".menu-toggle");
     const navigation = document.querySelector(".main-navigation");
@@ -1124,6 +1177,22 @@
       const isOpen = navigation.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", isOpen);
     });
+
+    // Locations Dropdown click handling
+    const dropdownTrigger = document.querySelector(".dropdown-trigger");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    if (dropdownTrigger && dropdownMenu) {
+      dropdownTrigger.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isVisible = window.getComputedStyle(dropdownMenu).display === "block";
+        dropdownMenu.style.display = isVisible ? "none" : "block";
+      });
+
+      document.addEventListener("click", function () {
+        dropdownMenu.style.display = "";
+      });
+    }
   </script>
 </body>
 </html>

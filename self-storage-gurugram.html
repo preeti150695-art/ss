@@ -105,23 +105,37 @@
       display: inline-block;
     }
 
-    .dropdown-trigger {
+    .dropdown-trigger,
+    .dropdown-trigger-offerings {
       display: flex;
       align-items: center;
       gap: 6px;
       cursor: pointer;
-      color: var(--accent) !important; /* active link color */
-      font-weight: 700 !important;
       text-decoration: none;
     }
 
-    .dropdown-menu {
+    .dropdown-trigger {
+      color: var(--accent) !important; /* active link color */
+      font-weight: 700 !important;
+    }
+
+    .dropdown-trigger-offerings {
+      color: var(--primary) !important;
+      font-weight: 600 !important;
+    }
+
+    .dropdown-trigger-offerings:hover {
+      color: var(--accent) !important;
+    }
+
+    .dropdown-menu,
+    .dropdown-menu-offerings {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
       background-color: #ffffff;
-      min-width: 160px;
+      min-width: 170px;
       box-shadow: 0 8px 24px rgba(24, 35, 58, 0.08);
       border: 1px solid var(--border);
       border-radius: 8px;
@@ -131,11 +145,13 @@
     }
 
     /* Show dropdown on hover */
-    .nav-item-dropdown:hover .dropdown-menu {
+    .nav-item-dropdown:hover .dropdown-menu,
+    .nav-item-dropdown:hover .dropdown-menu-offerings {
       display: block;
     }
 
-    .dropdown-menu a {
+    .dropdown-menu a,
+    .dropdown-menu-offerings a {
       color: var(--primary) !important;
       padding: 10px 16px;
       text-decoration: none;
@@ -145,12 +161,9 @@
       transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .dropdown-menu a:hover {
+    .dropdown-menu a:hover,
+    .dropdown-menu-offerings a:hover {
       background-color: #f8fafc;
-      color: var(--accent) !important;
-    }
-
-    .dropdown-menu a.active {
       color: var(--accent) !important;
     }
 
@@ -777,7 +790,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="header-container">
-      <a href="/" class="logo" aria-label="Self Storage India Home">
+      <a href="index.html" class="logo" aria-label="Self Storage India Home">
         <img src="assets/self-storage-india-logo.png" alt="Self Storage India – Creating Extra Space" />
       </a>
 
@@ -788,7 +801,7 @@
       </button>
 
       <nav class="main-navigation">
-        <a href="/">Storage</a>
+        <a href="index.html">Storage</a>
         <!-- Locations dropdown showing Gurugram first -->
         <div class="nav-item-dropdown">
           <a href="#" class="dropdown-trigger">Locations <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i></a>
@@ -798,10 +811,18 @@
             <a href="self-storage-noida.html">Noida</a>
           </div>
         </div>
-        <a href="/#offerings">Offerings</a>
-        <a href="/#blogs">Blogs</a>
+        <!-- Offerings dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="#" class="dropdown-trigger-offerings">Offerings <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i></a>
+          <div class="dropdown-menu-offerings">
+            <a href="offering-private-rooms.html">Private Rooms</a>
+            <a href="#">Box Storage</a>
+            <a href="#">Luggage Storage</a>
+          </div>
+        </div>
+        <a href="index.html#blogs">Blogs</a>
         <a href="tel:+919090206090">+91-9090206090</a>
-        <a href="/#calculator" class="calculator-button">
+        <a href="index.html#calculator" class="calculator-button">
           Storage Calculator
         </a>
       </nav>
@@ -1150,6 +1171,31 @@
         if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
           dropdownMenu.classList.remove("show");
           dropdownMenu.style.display = "";
+        }
+      });
+    }
+
+    // Offerings Dropdown click handling
+    const offeringsTrigger = document.querySelector(".dropdown-trigger-offerings");
+    const offeringsMenu = document.querySelector(".dropdown-menu-offerings");
+    if (offeringsTrigger && offeringsMenu) {
+      offeringsTrigger.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isVisible = offeringsMenu.classList.contains("show");
+        if (isVisible) {
+          offeringsMenu.classList.remove("show");
+          offeringsMenu.style.display = "none";
+        } else {
+          offeringsMenu.classList.add("show");
+          offeringsMenu.style.display = "block";
+        }
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!offeringsTrigger.contains(e.target) && !offeringsMenu.contains(e.target)) {
+          offeringsMenu.classList.remove("show");
+          offeringsMenu.style.display = "";
         }
       });
     }

@@ -1,1534 +1,1978 @@
-<section class="ssi-offering-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self Storage India – Private Room Storage</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Main site stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
   <style>
     /* ==========================================
-       CSS VARIABLES & RESET SCOPED TO ssi-offering
+       HEADER & NAVIGATION DROPDOWNS (GLOBAL RESETS)
        ========================================== */
-    .ssi-offering-page {
-      --ssi-offering-primary-blue: #146EF5;
-      --ssi-offering-dark-blue: #173E7A;
-      --ssi-offering-orange: #F58220;
-      --ssi-offering-dark-text: #1B2638;
-      --ssi-offering-body-text: #5E6878;
-      --ssi-offering-light-bg: #F6F8FC;
-      --ssi-offering-white: #FFFFFF;
-      --ssi-offering-border: #E7EBF1;
-
-      --ssi-offering-font-family: 'Inter', 'Poppins', sans-serif;
-      
-      font-family: var(--ssi-offering-font-family);
-      background-color: var(--ssi-offering-white);
-      color: var(--ssi-offering-body-text);
-      line-height: 1.6;
-      overflow-x: hidden;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .ssi-offering-page * {
-      box-sizing: border-box;
+    body {
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      background: #ffffff;
+      padding-top: 80px;
     }
 
-    /* ==========================================
-       GLOBAL/REUSABLE CLASSES SCOPED TO PAGE
-       ========================================== */
-    .ssi-offering-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
+    .site-header {
       width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
     }
 
-    .ssi-offering-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 15px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      cursor: pointer;
-      border: none;
-      gap: 8px;
-    }
-
-    .ssi-offering-btn-primary {
-      background-color: var(--ssi-offering-primary-blue);
-      color: var(--ssi-offering-white);
-    }
-
-    .ssi-offering-btn-primary:hover {
-      background-color: var(--ssi-offering-dark-blue);
-      transform: translateY(-2px);
-    }
-
-    .ssi-offering-btn-secondary {
-      background-color: transparent;
-      color: var(--ssi-offering-dark-text);
-      border: 1px solid var(--ssi-offering-border);
-    }
-
-    .ssi-offering-btn-secondary:hover {
-      background-color: var(--ssi-offering-light-bg);
-      transform: translateY(-2px);
-    }
-
-    .ssi-offering-eyebrow {
-      font-size: 13px;
-      font-weight: 800;
-      color: var(--ssi-offering-orange);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .ssi-offering-section-title {
-      font-family: var(--ssi-offering-font-family);
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 800;
-      color: var(--ssi-offering-dark-text);
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    /* ==========================================
-       SECTION 1: HERO
-       ========================================== */
-    .ssi-offering-hero-sec {
-      padding: 60px 0 40px;
-      background: linear-gradient(180deg, #F9FBFE 0%, var(--ssi-offering-white) 100%);
-    }
-
-    .ssi-offering-hero-row {
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 80px;
+      padding: 10px 24px;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
-    }
-
-    .ssi-offering-hero-left {
-      flex: 1 1 48%;
-      min-width: 320px;
-    }
-
-    .ssi-offering-hero-title {
-      font-size: clamp(38px, 5vw, 54px);
-      font-weight: 800;
-      color: var(--ssi-offering-dark-text);
-      line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -0.02em;
-    }
-
-    .ssi-offering-hero-title span {
-      color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-hero-desc {
-      font-size: 16px;
-      color: var(--ssi-offering-body-text);
-      margin-bottom: 30px;
-      max-width: 520px;
-      line-height: 1.6;
-    }
-
-    .ssi-offering-hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 36px;
-    }
-
-    .ssi-offering-trust-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .ssi-offering-trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13.5px;
-      font-weight: 600;
-      color: var(--ssi-offering-dark-text);
-    }
-
-    .ssi-offering-trust-item svg {
-      width: 18px;
-      height: 18px;
-      color: var(--ssi-offering-primary-blue);
-      flex-shrink: 0;
-    }
-
-    .ssi-offering-hero-right {
-      flex: 1 1 48%;
-      min-width: 320px;
-      position: relative;
-    }
-
-    .ssi-offering-image-container {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      aspect-ratio: 4 / 3;
-      box-shadow: 0 20px 40px rgba(27, 38, 56, 0.08);
-      background-color: var(--ssi-offering-light-bg);
-      border: 1px solid var(--ssi-offering-border);
-    }
-
-    .ssi-offering-image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .ssi-offering-floating-badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: var(--ssi-offering-white);
-      color: var(--ssi-offering-dark-text);
-      padding: 10px 18px;
-      border-radius: 50px;
-      font-size: 13.5px;
-      font-weight: 700;
-      box-shadow: 0 8px 24px rgba(27, 38, 56, 0.12);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      border: 1px solid var(--ssi-offering-border);
-    }
-
-    .ssi-offering-floating-badge svg {
-      width: 15px;
-      height: 15px;
-      color: var(--ssi-offering-orange);
-    }
-
-    /* ==========================================
-       SECTION 2: OFFERING NAVIGATION TABS
-       ========================================== */
-    .ssi-offering-tabs-sec {
-      padding: 24px 0;
-      border-top: 1px solid var(--ssi-offering-border);
-      border-bottom: 1px solid var(--ssi-offering-border);
-      background-color: var(--ssi-offering-white);
-    }
-
-    .ssi-offering-tabs-container {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .ssi-offering-tab-link {
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 14.5px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      color: var(--ssi-offering-body-text);
-      background-color: var(--ssi-offering-light-bg);
-      border: 1px solid var(--ssi-offering-border);
-    }
-
-    .ssi-offering-tab-link:hover {
-      background-color: var(--ssi-offering-border);
-      color: var(--ssi-offering-dark-text);
-    }
-
-    .ssi-offering-tab-link.ssi-offering-active-tab {
-      background-color: var(--ssi-offering-primary-blue);
-      color: var(--ssi-offering-white);
-      border-color: var(--ssi-offering-primary-blue);
-      box-shadow: 0 4px 12px rgba(20, 110, 245, 0.2);
-    }
-
-    /* ==========================================
-       SECTION 3: INTRODUCTION
-       ========================================== */
-    .ssi-offering-intro-sec {
-      padding: 80px 0 40px;
-      text-align: center;
-    }
-
-    .ssi-offering-intro-content {
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .ssi-offering-intro-desc {
-      font-size: 16px;
-      color: var(--ssi-offering-body-text);
-      line-height: 1.7;
-    }
-
-    /* ==========================================
-       SECTION 4: HOW IT WORKS
-       ========================================== */
-    .ssi-offering-how-sec {
-      padding: 60px 0;
-    }
-
-    .ssi-offering-how-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .ssi-offering-how-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .ssi-offering-how-card {
-      background-color: var(--ssi-offering-white);
-      border: 1px solid var(--ssi-offering-border);
-      border-radius: 16px;
-      padding: 32px 24px;
-      position: relative;
-      transition: all 0.25s ease;
-    }
-
-    .ssi-offering-how-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(27, 38, 56, 0.05);
-      border-color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-step-number {
-      font-size: 40px;
-      font-weight: 800;
-      color: rgba(20, 110, 245, 0.15);
-      font-family: var(--ssi-offering-font-family);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .ssi-offering-step-icon {
-      width: 48px;
-      height: 48px;
-      background-color: var(--ssi-offering-light-bg);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-step-icon svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    .ssi-offering-step-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--ssi-offering-dark-text);
-      margin-bottom: 10px;
-    }
-
-    .ssi-offering-step-desc {
-      font-size: 14px;
-      color: var(--ssi-offering-body-text);
-      line-height: 1.5;
-    }
-
-    /* ==========================================
-       SECTION 5: WHY PRIVATE ROOMS
-       ========================================== */
-    .ssi-offering-why-sec {
-      padding: 80px 0;
-      border-top: 1px solid var(--ssi-offering-border);
-    }
-
-    .ssi-offering-why-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .ssi-offering-why-left {
-      flex: 1 1 45%;
-      min-width: 320px;
-    }
-
-    .ssi-offering-why-image {
-      border-radius: 20px;
-      overflow: hidden;
-      aspect-ratio: 4 / 3;
-      box-shadow: 0 16px 36px rgba(27, 38, 56, 0.06);
-      border: 1px solid var(--ssi-offering-border);
-      background-color: var(--ssi-offering-light-bg);
-    }
-
-    .ssi-offering-why-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .ssi-offering-why-right {
-      flex: 1 1 50%;
-      min-width: 320px;
-    }
-
-    .ssi-offering-why-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px 24px;
-      margin-top: 36px;
-    }
-
-    .ssi-offering-why-item {
-      display: flex;
-      gap: 12px;
-    }
-
-    .ssi-offering-why-icon {
-      color: var(--ssi-offering-primary-blue);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .ssi-offering-why-icon svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .ssi-offering-why-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--ssi-offering-dark-text);
-      margin-bottom: 6px;
-    }
-
-    .ssi-offering-why-desc {
-      font-size: 13.5px;
-      color: var(--ssi-offering-body-text);
-      line-height: 1.45;
-    }
-
-    /* ==========================================
-       SECTION 6: WHAT CAN YOU STORE?
-       ========================================== */
-    .ssi-offering-what-sec {
-      background-color: var(--ssi-offering-light-bg);
-      padding: 80px 0;
-      border-top: 1px solid var(--ssi-offering-border);
-      border-bottom: 1px solid var(--ssi-offering-border);
-    }
-
-    .ssi-offering-what-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .ssi-offering-what-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 20px;
-    }
-
-    .ssi-offering-what-card {
-      background-color: var(--ssi-offering-white);
-      border: 1px solid var(--ssi-offering-border);
-      border-radius: 12px;
-      padding: 24px 16px;
-      text-align: center;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 12px rgba(27, 38, 56, 0.02);
-    }
-
-    .ssi-offering-what-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(27, 38, 56, 0.05);
-      border-color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-what-icon {
-      width: 44px;
-      height: 44px;
-      background-color: rgba(20, 110, 245, 0.06);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-what-icon svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    .ssi-offering-what-title {
-      font-size: 14.5px;
-      font-weight: 700;
-      color: var(--ssi-offering-dark-text);
-      margin-bottom: 4px;
-    }
-
-    .ssi-offering-what-desc {
-      font-size: 12px;
-      color: var(--ssi-offering-body-text);
-      line-height: 1.35;
-    }
-
-    /* ==========================================
-       SECTION 7: PERFECT FOR
-       ========================================== */
-    .ssi-offering-perfect-sec {
-      padding: 80px 0;
-    }
-
-    .ssi-offering-perfect-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .ssi-offering-perfect-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    .ssi-offering-perfect-card {
-      background-color: var(--ssi-offering-white);
-      border: 1px solid var(--ssi-offering-border);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 4px 12px rgba(27, 38, 56, 0.02);
-      transition: all 0.25s ease;
-    }
-
-    .ssi-offering-perfect-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(27, 38, 56, 0.06);
-      border-color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-perfect-img {
-      height: 160px;
-      background-color: var(--ssi-offering-light-bg);
-      position: relative;
-    }
-
-    .ssi-offering-perfect-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .ssi-offering-perfect-content {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .ssi-offering-perfect-title {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--ssi-offering-dark-text);
-      margin-bottom: 8px;
-    }
-
-    .ssi-offering-perfect-desc {
-      font-size: 13.5px;
-      color: var(--ssi-offering-body-text);
-      line-height: 1.5;
-    }
-
-    /* ==========================================
-       SECTION 8: SECURITY STRIP
-       ========================================== */
-    .ssi-offering-security-sec {
-      background-color: var(--ssi-offering-dark-blue);
-      color: var(--ssi-offering-white);
-      padding: 60px 0;
-      position: relative;
-    }
-
-    .ssi-offering-security-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 36px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .ssi-offering-security-left {
-      flex: 1 1 45%;
-      min-width: 320px;
-    }
-
-    .ssi-offering-security-title {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--ssi-offering-white);
-      line-height: 1.3;
-      margin-bottom: 8px;
-    }
-
-    .ssi-offering-security-subtitle {
-      font-size: 15px;
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .ssi-offering-security-right {
-      flex: 1 1 50%;
-      min-width: 320px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .ssi-offering-sec-point {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 14.5px;
-      font-weight: 600;
-    }
-
-    .ssi-offering-sec-point svg {
-      width: 20px;
-      height: 20px;
-      color: var(--ssi-offering-orange);
-      flex-shrink: 0;
-    }
-
-    /* ==========================================
-       SECTION 9: FAQ ACCORDION
-       ========================================== */
-    .ssi-offering-faq-sec {
-      padding: 80px 0;
-      background-color: var(--ssi-offering-white);
-    }
-
-    .ssi-offering-faq-container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .ssi-offering-faq-title-wrap {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .ssi-offering-faq-item {
-      border: 1px solid var(--ssi-offering-border);
-      border-radius: 12px;
-      margin-bottom: 16px;
-      overflow: hidden;
-      background-color: var(--ssi-offering-white);
-      transition: all 0.2s ease;
-    }
-
-    .ssi-offering-faq-item:hover {
-      border-color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-faq-trigger {
-      width: 100%;
-      padding: 20px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: none;
-      border: none;
-      text-align: left;
-      font-family: var(--ssi-offering-font-family);
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--ssi-offering-dark-text);
-      cursor: pointer;
-      outline: none;
-      transition: color 0.2s ease;
-    }
-
-    .ssi-offering-faq-trigger:hover {
-      color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-faq-trigger svg {
-      width: 20px;
-      height: 20px;
-      transition: transform 0.25s ease;
-      color: var(--ssi-offering-body-text);
-      flex-shrink: 0;
-    }
-
-    .ssi-offering-faq-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      background-color: var(--ssi-offering-light-bg);
-    }
-
-    .ssi-offering-faq-content-inner {
-      padding: 0 24px 20px 24px;
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--ssi-offering-body-text);
-    }
-
-    /* Active Accordion styling */
-    .ssi-offering-faq-item.ssi-offering-faq-active {
-      border-color: var(--ssi-offering-primary-blue);
-      box-shadow: 0 8px 20px rgba(27, 38, 56, 0.03);
-    }
-
-    .ssi-offering-faq-item.ssi-offering-faq-active .ssi-offering-faq-trigger {
-      color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-faq-item.ssi-offering-faq-active .ssi-offering-faq-trigger svg {
-      transform: rotate(180deg);
-      color: var(--ssi-offering-primary-blue);
-    }
-
-    /* ==========================================
-       SECTION 10: CROSS-SELL OTHER OFFERINGS
-       ========================================== */
-    .ssi-offering-cross-sec {
-      background-color: var(--ssi-offering-light-bg);
-      padding: 80px 0;
-      border-top: 1px solid var(--ssi-offering-border);
-      border-bottom: 1px solid var(--ssi-offering-border);
-    }
-
-    .ssi-offering-cross-header {
-      text-align: center;
-      margin-bottom: 48px;
-    }
-
-    .ssi-offering-cross-row {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
     }
 
-    .ssi-offering-cross-card {
-      background-color: var(--ssi-offering-white);
-      border: 1px solid var(--ssi-offering-border);
-      border-radius: 16px;
-      padding: 36px;
-      text-decoration: none;
+    .logo img {
+      width: 210px;
+      height: auto;
+      display: block;
+    }
+
+    .main-navigation {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 12px rgba(27, 38, 56, 0.02);
-    }
-
-    .ssi-offering-cross-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 36px rgba(27, 38, 56, 0.06);
-      border-color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-cross-title {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--ssi-offering-dark-text);
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
-    }
-
-    .ssi-offering-cross-desc {
-      font-size: 14.5px;
-      color: var(--ssi-offering-body-text);
-      line-height: 1.55;
-      margin-bottom: 24px;
-    }
-
-    .ssi-offering-cross-link-text {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--ssi-offering-primary-blue);
-      display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 32px;
     }
 
-    .ssi-offering-cross-card:hover .ssi-offering-cross-link-text {
-      color: var(--ssi-offering-dark-blue);
-    }
-
-    /* ==========================================
-       SECTION 11: FINAL CTA CARD
-       ========================================== */
-    .ssi-offering-cta-sec {
-      padding: 80px 0;
-    }
-
-    .ssi-offering-cta-card {
-      background-color: var(--ssi-offering-light-bg);
-      border: 1px solid var(--ssi-offering-border);
-      border-radius: 24px;
-      padding: 56px 40px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(27, 38, 56, 0.02);
-    }
-
-    .ssi-offering-cta-title {
-      font-size: 32px;
-      font-weight: 800;
-      color: var(--ssi-offering-dark-text);
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-
-    .ssi-offering-cta-desc {
+    .main-navigation a {
+      color: #2864df;
       font-size: 16px;
-      color: var(--ssi-offering-body-text);
-      margin-bottom: 32px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .ssi-offering-cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .ssi-offering-cta-phone {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--ssi-offering-dark-text);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .ssi-offering-cta-phone svg {
-      width: 18px;
-      height: 18px;
-      color: var(--ssi-offering-primary-blue);
-    }
-
-    .ssi-offering-cta-phone a {
-      color: var(--ssi-offering-dark-text);
+      font-weight: 600;
       text-decoration: none;
       transition: color 0.2s ease;
+      white-space: nowrap;
     }
 
-    .ssi-offering-cta-phone a:hover {
-      color: var(--ssi-offering-primary-blue);
+    .main-navigation a:hover {
+      color: #ef8a22;
     }
 
-    /* ==========================================
-       RESPONSIVE BREAKPOINTS
-       ========================================== */
-    @media (max-width: 1024px) {
-      .ssi-offering-how-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-      
-      .ssi-offering-perfect-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .ssi-offering-what-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    .nav-item-dropdown {
+      position: relative;
+      display: inline-block;
     }
 
-    @media (max-width: 768px) {
-      .ssi-offering-hero-left, 
-      .ssi-offering-hero-right {
-        flex: 1 1 100%;
-      }
+    .dropdown-trigger,
+    .dropdown-trigger-offerings {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
 
-      .ssi-offering-hero-sec {
-        padding: 40px 0;
-      }
+    .dropdown-trigger {
+      color: #2864df !important;
+      font-weight: 600 !important;
+    }
 
-      .ssi-offering-hero-ctas {
+    .dropdown-trigger-offerings {
+      color: #ef8a22 !important; /* Active link orange */
+      font-weight: 700 !important;
+    }
+
+    .dropdown-menu,
+    .dropdown-menu-offerings {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #ffffff;
+      min-width: 170px;
+      box-shadow: 0 8px 24px rgba(24, 35, 58, 0.08);
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px 0;
+      z-index: 200;
+      margin-top: 8px;
+    }
+
+    .nav-item-dropdown:hover .dropdown-menu,
+    .nav-item-dropdown:hover .dropdown-menu-offerings {
+      display: block;
+    }
+
+    .dropdown-menu a,
+    .dropdown-menu-offerings a {
+      color: #2864df !important;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu-offerings a:hover {
+      background-color: #f8fafc;
+      color: #ef8a22 !important;
+    }
+
+    .dropdown-menu-offerings a.active-offering {
+      color: #ef8a22 !important;
+    }
+
+    .calculator-button {
+      min-width: 170px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      background: #ef8a22;
+      color: #ffffff !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(239, 138, 34, 0.15);
+    }
+
+    .calculator-button:hover {
+      background: #d97718 !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    @media (max-width: 991px) {
+      .menu-toggle {
+        display: block;
+      }
+      .menu-toggle span {
+        width: 22px;
+        height: 2px;
+        background: #2864df;
+        display: block;
+        margin: 4px 0;
+      }
+      .main-navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background: #ffffff;
+        border-bottom: 1px solid #e2e8f0;
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 24px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       }
-
-      .ssi-offering-hero-ctas .ssi-offering-btn {
-        width: 100%;
-      }
-
-      .ssi-offering-why-left,
-      .ssi-offering-why-right {
-        flex: 1 1 100%;
-      }
-
-      .ssi-offering-why-sec {
-        padding: 50px 0;
-      }
-
-      .ssi-offering-cross-row {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .ssi-offering-security-left,
-      .ssi-offering-security-right {
-        flex: 1 1 100%;
-      }
-
-      .ssi-offering-security-right {
-        grid-template-columns: 1fr;
-      }
-
-      .ssi-offering-cta-card {
-        padding: 40px 20px;
-      }
-
-      .ssi-offering-cta-buttons .ssi-offering-btn {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .ssi-offering-container {
-        padding: 0 18px;
-      }
-
-      .ssi-offering-tabs-container {
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding-bottom: 8px;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .ssi-offering-tab-link {
-        flex: 0 0 auto;
-        padding: 10px 20px;
-        font-size: 13.5px;
-      }
-
-      .ssi-offering-how-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .ssi-offering-why-list {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .ssi-offering-what-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .ssi-offering-perfect-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .ssi-offering-faq-trigger {
-        padding: 16px 18px;
-        font-size: 14.5px;
-      }
-
-      .ssi-offering-faq-content-inner {
-        padding: 0 18px 16px 18px;
+      .main-navigation.open {
+        display: flex;
       }
     }
   </style>
+</head>
+<body>
 
-  <!-- SECTION 1 — HERO -->
-  <section class="ssi-offering-hero-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-hero-row">
-        <!-- Left Side: Copy and CTAs -->
-        <div class="ssi-offering-hero-left">
-          <span class="ssi-offering-eyebrow">PRIVATE STORAGE ROOMS</span>
-          <h1 class="ssi-offering-hero-title">
-            Your Space.<br>
-            <span>Your Room.</span><br>
-            Your Privacy.
-          </h1>
-          <p class="ssi-offering-hero-desc">
-            Secure private storage rooms designed for everything you need to keep safe, organised and accessible — from household belongings to business inventory.
-          </p>
-          <div class="ssi-offering-hero-ctas">
-            <a href="STORAGE_CALCULATOR_URL" class="ssi-offering-btn ssi-offering-btn-primary">
-              Find Your Storage Space
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="logo" aria-label="Self Storage India Home">
+        <img src="assets/self-storage-india-logo.png" alt="Self Storage India – Creating Extra Space" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-navigation">
+        <a href="index.html">Storage</a>
+        
+        <!-- Locations dropdown -->
+        <div class="nav-item-dropdown">
+          <a href="#" class="dropdown-trigger">Locations <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i></a>
+          <div class="dropdown-menu">
+            <a href="self-storage-gurugram.html">Gurugram</a>
+            <a href="self-storage-delhi.html">Delhi</a>
+            <a href="self-storage-noida.html">Noida</a>
+          </div>
+        </div>
+
+        <!-- Offerings dropdown (active) -->
+        <div class="nav-item-dropdown">
+          <a href="#" class="dropdown-trigger-offerings">Offerings <i class="fa-solid fa-chevron-down" style="font-size: 11px;"></i></a>
+          <div class="dropdown-menu-offerings">
+            <a href="offering-private-rooms.html" class="active-offering">Private Rooms</a>
+            <a href="#">Box Storage</a>
+            <a href="#">Luggage Storage</a>
+          </div>
+        </div>
+
+        <a href="index.html#blogs">Blogs</a>
+        <a href="tel:+919090206090">+91-9090206090</a>
+        <a href="index.html#calculator" class="calculator-button">Storage Calculator</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================================================
+       GLOBAL DESIGN SYSTEM FOR OFFERING PAGES
+       ================================================== -->
+  <section class="ssi-offering-page">
+    <style>
+      .ssi-offering-page {
+        --ssi-offering-primary-blue: #146EF5;
+        --ssi-offering-dark-blue: #173E7A;
+        --ssi-offering-orange: #F58220;
+        --ssi-offering-dark-text: #1B2638;
+        --ssi-offering-body-text: #5E6878;
+        --ssi-offering-light-bg: #F6F8FC;
+        --ssi-offering-white: #FFFFFF;
+        --ssi-offering-border: #E7EBF1;
+        --ssi-offering-font-family: 'Inter', 'Poppins', sans-serif;
+        
+        font-family: var(--ssi-offering-font-family);
+        background-color: var(--ssi-offering-white);
+        color: var(--ssi-offering-body-text);
+        line-height: 1.6;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .ssi-offering-page * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ssi-offering-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+        width: 100%;
+      }
+
+      .ssi-offering-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        border: none;
+        gap: 8px;
+      }
+
+      .ssi-offering-btn-primary {
+        background-color: var(--ssi-offering-primary-blue);
+        color: var(--ssi-offering-white);
+      }
+
+      .ssi-offering-btn-primary:hover {
+        background-color: var(--ssi-offering-dark-blue);
+        transform: translateY(-2px);
+      }
+
+      .ssi-offering-btn-secondary {
+        background-color: transparent;
+        color: var(--ssi-offering-dark-text);
+        border: 1px solid var(--ssi-offering-border);
+      }
+
+      .ssi-offering-btn-secondary:hover {
+        background-color: var(--ssi-offering-light-bg);
+        transform: translateY(-2px);
+      }
+
+      .ssi-offering-eyebrow {
+        font-size: 13px;
+        font-weight: 800;
+        color: var(--ssi-offering-orange);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .ssi-offering-section-title {
+        font-size: clamp(28px, 4vw, 36px);
+        font-weight: 800;
+        color: var(--ssi-offering-dark-text);
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+
+      /* HERO */
+      .ssi-offering-hero-sec {
+        padding: 60px 0 40px;
+        background: linear-gradient(180deg, #F9FBFE 0%, var(--ssi-offering-white) 100%);
+      }
+
+      .ssi-offering-hero-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .ssi-offering-hero-left {
+        flex: 1 1 48%;
+        min-width: 320px;
+      }
+
+      .ssi-offering-hero-title {
+        font-size: clamp(38px, 5vw, 54px);
+        font-weight: 800;
+        color: var(--ssi-offering-dark-text);
+        line-height: 1.15;
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      .ssi-offering-hero-title span {
+        color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-hero-desc {
+        font-size: 16px;
+        color: var(--ssi-offering-body-text);
+        margin-bottom: 30px;
+        max-width: 520px;
+      }
+
+      .ssi-offering-hero-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+
+      .ssi-offering-trust-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .ssi-offering-trust-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--ssi-offering-dark-text);
+      }
+
+      .ssi-offering-trust-item svg {
+        width: 18px;
+        height: 18px;
+        color: var(--ssi-offering-primary-blue);
+        flex-shrink: 0;
+      }
+
+      .ssi-offering-hero-right {
+        flex: 1 1 48%;
+        min-width: 320px;
+      }
+
+      .ssi-offering-image-container {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        aspect-ratio: 4 / 3;
+        box-shadow: 0 20px 40px rgba(27, 38, 56, 0.08);
+        border: 1px solid var(--ssi-offering-border);
+      }
+
+      .ssi-offering-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .ssi-offering-floating-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: var(--ssi-offering-white);
+        color: var(--ssi-offering-dark-text);
+        padding: 10px 18px;
+        border-radius: 50px;
+        font-size: 13.5px;
+        font-weight: 700;
+        box-shadow: 0 8px 24px rgba(27, 38, 56, 0.12);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid var(--ssi-offering-border);
+      }
+
+      .ssi-offering-floating-badge svg {
+        width: 15px;
+        height: 15px;
+        color: var(--ssi-offering-orange);
+      }
+
+      /* NAVIGATION TABS */
+      .ssi-offering-tabs-sec {
+        padding: 24px 0;
+        border-top: 1px solid var(--ssi-offering-border);
+        border-bottom: 1px solid var(--ssi-offering-border);
+        background-color: var(--ssi-offering-white);
+      }
+
+      .ssi-offering-tabs-container {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .ssi-offering-tab-link {
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 14.5px;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        color: var(--ssi-offering-body-text);
+        background-color: var(--ssi-offering-light-bg);
+        border: 1px solid var(--ssi-offering-border);
+      }
+
+      .ssi-offering-tab-link:hover {
+        background-color: var(--ssi-offering-border);
+        color: var(--ssi-offering-dark-text);
+      }
+
+      .ssi-offering-tab-link.ssi-offering-active-tab {
+        background-color: var(--ssi-offering-primary-blue);
+        color: var(--ssi-offering-white);
+        border-color: var(--ssi-offering-primary-blue);
+        box-shadow: 0 4px 12px rgba(20, 110, 245, 0.2);
+      }
+
+      /* PROCESS: HOW IT WORKS */
+      .ssi-offering-how-sec {
+        padding: 80px 0;
+      }
+
+      .ssi-offering-how-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .ssi-offering-how-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .ssi-offering-how-card {
+        background-color: var(--ssi-offering-white);
+        border: 1px solid var(--ssi-offering-border);
+        border-radius: 16px;
+        padding: 32px 24px;
+        position: relative;
+        transition: all 0.25s ease;
+      }
+
+      .ssi-offering-how-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(27, 38, 56, 0.05);
+        border-color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-step-number {
+        font-size: 40px;
+        font-weight: 800;
+        color: rgba(20, 110, 245, 0.15);
+        margin-bottom: 16px;
+      }
+
+      .ssi-offering-step-icon {
+        width: 48px;
+        height: 48px;
+        background-color: var(--ssi-offering-light-bg);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-step-icon svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .ssi-offering-step-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--ssi-offering-dark-text);
+        margin-bottom: 10px;
+      }
+
+      .ssi-offering-step-desc {
+        font-size: 14px;
+        color: var(--ssi-offering-body-text);
+        line-height: 1.5;
+      }
+
+      /* WHAT CAN YOU STORE */
+      .ssi-offering-what-sec {
+        background-color: var(--ssi-offering-light-bg);
+        padding: 80px 0;
+        border-top: 1px solid var(--ssi-offering-border);
+        border-bottom: 1px solid var(--ssi-offering-border);
+      }
+
+      .ssi-offering-what-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .ssi-offering-what-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+      }
+
+      .ssi-offering-what-card {
+        background-color: var(--ssi-offering-white);
+        border: 1px solid var(--ssi-offering-border);
+        border-radius: 12px;
+        padding: 24px 16px;
+        text-align: center;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 12px rgba(27, 38, 56, 0.02);
+      }
+
+      .ssi-offering-what-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(27, 38, 56, 0.05);
+        border-color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-what-icon {
+        width: 44px;
+        height: 44px;
+        background-color: rgba(20, 110, 245, 0.06);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-what-icon svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .ssi-offering-what-title {
+        font-size: 14.5px;
+        font-weight: 700;
+        color: var(--ssi-offering-dark-text);
+        margin-bottom: 4px;
+      }
+
+      .ssi-offering-what-desc {
+        font-size: 12px;
+        color: var(--ssi-offering-body-text);
+        line-height: 1.35;
+      }
+
+      /* PERFECT FOR */
+      .ssi-offering-perfect-sec {
+        padding: 80px 0;
+      }
+
+      .ssi-offering-perfect-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .ssi-offering-perfect-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .ssi-offering-perfect-card {
+        background-color: var(--ssi-offering-white);
+        border: 1px solid var(--ssi-offering-border);
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 12px rgba(27, 38, 56, 0.02);
+        transition: all 0.25s ease;
+      }
+
+      .ssi-offering-perfect-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(27, 38, 56, 0.06);
+        border-color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-perfect-img {
+        height: 160px;
+        background-color: var(--ssi-offering-light-bg);
+      }
+
+      .ssi-offering-perfect-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .ssi-offering-perfect-content {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .ssi-offering-perfect-title {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--ssi-offering-dark-text);
+        margin-bottom: 8px;
+      }
+
+      .ssi-offering-perfect-desc {
+        font-size: 13.5px;
+        color: var(--ssi-offering-body-text);
+        line-height: 1.5;
+      }
+
+      /* SECURITY STRIP */
+      .ssi-offering-security-sec {
+        background-color: var(--ssi-offering-dark-blue);
+        color: var(--ssi-offering-white);
+        padding: 60px 0;
+      }
+
+      .ssi-offering-security-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .ssi-offering-security-left {
+        flex: 1 1 45%;
+        min-width: 320px;
+      }
+
+      .ssi-offering-security-title {
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--ssi-offering-white);
+        line-height: 1.3;
+        margin-bottom: 8px;
+      }
+
+      .ssi-offering-security-subtitle {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .ssi-offering-security-right {
+        flex: 1 1 50%;
+        min-width: 320px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .ssi-offering-sec-point {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14.5px;
+        font-weight: 600;
+      }
+
+      .ssi-offering-sec-point svg {
+        width: 20px;
+        height: 20px;
+        color: var(--ssi-offering-orange);
+        flex-shrink: 0;
+      }
+
+      /* FAQ ACCORDION */
+      .ssi-offering-faq-sec {
+        padding: 80px 0;
+        background-color: var(--ssi-offering-white);
+      }
+
+      .ssi-offering-faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .ssi-offering-faq-title-wrap {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .ssi-offering-faq-item {
+        border: 1px solid var(--ssi-offering-border);
+        border-radius: 12px;
+        margin-bottom: 16px;
+        overflow: hidden;
+        background-color: var(--ssi-offering-white);
+        transition: all 0.2s ease;
+      }
+
+      .ssi-offering-faq-item:hover {
+        border-color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-faq-trigger {
+        width: 100%;
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        text-align: left;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--ssi-offering-dark-text);
+        cursor: pointer;
+      }
+
+      .ssi-offering-faq-trigger svg {
+        width: 20px;
+        height: 20px;
+        transition: transform 0.25s ease;
+        color: var(--ssi-offering-body-text);
+      }
+
+      .ssi-offering-faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: var(--ssi-offering-light-bg);
+      }
+
+      .ssi-offering-faq-content-inner {
+        padding: 0 24px 20px 24px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--ssi-offering-body-text);
+      }
+
+      .ssi-offering-faq-item.ssi-offering-faq-active {
+        border-color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-faq-item.ssi-offering-faq-active .ssi-offering-faq-trigger {
+        color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-faq-item.ssi-offering-faq-active .ssi-offering-faq-trigger svg {
+        transform: rotate(180deg);
+        color: var(--ssi-offering-primary-blue);
+      }
+
+      /* CROSS SELL */
+      .ssi-offering-cross-sec {
+        background-color: var(--ssi-offering-light-bg);
+        padding: 80px 0;
+        border-top: 1px solid var(--ssi-offering-border);
+        border-bottom: 1px solid var(--ssi-offering-border);
+      }
+
+      .ssi-offering-cross-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .ssi-offering-cross-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .ssi-offering-cross-card {
+        background-color: var(--ssi-offering-white);
+        border: 1px solid var(--ssi-offering-border);
+        border-radius: 16px;
+        padding: 36px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.25s ease;
+      }
+
+      .ssi-offering-cross-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 36px rgba(27, 38, 56, 0.06);
+        border-color: var(--ssi-offering-primary-blue);
+      }
+
+      .ssi-offering-cross-title {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--ssi-offering-dark-text);
+        margin-bottom: 12px;
+      }
+
+      .ssi-offering-cross-desc {
+        font-size: 14.5px;
+        color: var(--ssi-offering-body-text);
+        line-height: 1.55;
+        margin-bottom: 24px;
+      }
+
+      .ssi-offering-cross-link-text {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--ssi-offering-primary-blue);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      /* FINAL CTA */
+      .ssi-offering-cta-sec {
+        padding: 80px 0;
+      }
+
+      .ssi-offering-cta-card {
+        background-color: var(--ssi-offering-light-bg);
+        border: 1px solid var(--ssi-offering-border);
+        border-radius: 24px;
+        padding: 56px 40px;
+        text-align: center;
+      }
+
+      .ssi-offering-cta-title {
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--ssi-offering-dark-text);
+        margin-bottom: 12px;
+      }
+
+      .ssi-offering-cta-desc {
+        font-size: 16px;
+        color: var(--ssi-offering-body-text);
+        margin-bottom: 32px;
+        max-width: 600px;
+        margin: 0 auto 32px;
+      }
+
+      .ssi-offering-cta-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .ssi-offering-cta-phone {
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--ssi-offering-dark-text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .ssi-offering-cta-phone a {
+        color: var(--ssi-offering-dark-text);
+        text-decoration: none;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 1024px) {
+        .ssi-offering-how-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .ssi-offering-perfect-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .ssi-offering-what-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .ssi-offering-hero-left, .ssi-offering-hero-right {
+          flex: 1 1 100%;
+        }
+        .ssi-offering-hero-sec {
+          padding: 40px 0;
+        }
+        .ssi-offering-hero-ctas .ssi-offering-btn {
+          width: 100%;
+        }
+        .ssi-offering-cross-row {
+          grid-template-columns: 1fr;
+        }
+        .ssi-offering-security-left, .ssi-offering-security-right {
+          flex: 1 1 100%;
+        }
+        .ssi-offering-security-right {
+          grid-template-columns: 1fr;
+        }
+        .ssi-offering-cta-card {
+          padding: 40px 20px;
+        }
+        .ssi-offering-cta-buttons .ssi-offering-btn {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .ssi-offering-tabs-container {
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          padding-bottom: 8px;
+        }
+        .ssi-offering-tab-link {
+          flex: 0 0 auto;
+        }
+        .ssi-offering-how-grid {
+          grid-template-columns: 1fr;
+        }
+        .ssi-offering-what-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .ssi-offering-perfect-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <!-- SECTION 1 — HERO -->
+    <section class="ssi-offering-hero-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-hero-row">
+          <!-- Left Side: Copy and CTAs -->
+          <div class="ssi-offering-hero-left">
+            <span class="ssi-offering-eyebrow">PRIVATE STORAGE ROOMS</span>
+            <h1 class="ssi-offering-hero-title">
+              Your Space.<br>
+              <span>Your Room.</span><br>
+              Your Privacy.
+            </h1>
+            <p class="ssi-offering-hero-desc">
+              Secure private storage rooms designed for everything you need to keep safe, organised and accessible — from household belongings to business inventory.
+            </p>
+            <div class="ssi-offering-hero-ctas">
+              <a href="index.html#calculator" class="ssi-offering-btn ssi-offering-btn-primary">
+                Find Your Storage Space
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+              <a href="tel:+919090206090" class="ssi-offering-btn ssi-offering-btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px; height:16px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 0 1-7.108-7.108c-.145-.44.02-1.099.387-1.381l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+                Call +91-9090206090
+              </a>
+            </div>
+            <div style="height: 1px; background-color: var(--ssi-offering-border); margin-bottom: 24px;"></div>
+            <div class="ssi-offering-trust-strip">
+              <div class="ssi-offering-trust-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                </svg>
+                Secure & monitored
+              </div>
+              <div class="ssi-offering-trust-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                </svg>
+                Flexible storage duration
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Large Premium Image -->
+          <div class="ssi-offering-hero-right">
+            <div class="ssi-offering-image-container">
+              <img src="assets/private_rooms.png" alt="Clean and organised private storage room containing household boxes">
+              <div class="ssi-offering-floating-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                </svg>
+                100% Private Space
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — OFFERING NAVIGATION -->
+    <nav class="ssi-offering-tabs-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-tabs-container">
+          <a href="offering-private-rooms.html" class="ssi-offering-tab-link ssi-offering-active-tab">Private Rooms</a>
+          <a href="#" class="ssi-offering-tab-link">Box Storage</a>
+          <a href="#" class="ssi-offering-tab-link">Luggage Storage</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==========================================
+         SECTION 3 — REDESIGNED PRIVATE ROOM INTRO SECTION
+         ========================================== -->
+    <section class="ssi-private-intro">
+      <style>
+        .ssi-private-intro {
+          --ssi-private-primary-blue: #1D4FA8;
+          --ssi-private-dark-blue: #163A72;
+          --ssi-private-orange: #F58220;
+          --ssi-private-dark-text: #1F2937;
+          --ssi-private-body-text: #5F6C7B;
+          --ssi-private-border: #E7EDF4;
+          --ssi-private-bg: #F8FAFD;
+          --ssi-private-white: #FFFFFF;
+          --ssi-private-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+
+          font-family: var(--ssi-private-font-family);
+          background-color: var(--ssi-private-white);
+          color: var(--ssi-private-body-text);
+          line-height: 1.6;
+          padding: 100px 0;
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .ssi-private-gradient-tr {
+          position: absolute;
+          top: -10%;
+          right: -10%;
+          width: 400px;
+          height: 400px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(29, 79, 168, 0.08) 0%, transparent 70%);
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .ssi-private-gradient-bl {
+          position: absolute;
+          bottom: -10%;
+          left: -10%;
+          width: 450px;
+          height: 450px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(245, 130, 32, 0.06) 0%, transparent 70%);
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .ssi-private-container {
+          max-width: 1280px;
+          margin: 0 auto;
+          padding: 0 24px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .ssi-private-main-row {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 70px;
+          margin-bottom: 60px;
+        }
+
+        .ssi-private-col-left {
+          flex: 1 1 52%;
+          min-width: 320px;
+          position: relative;
+        }
+
+        .ssi-private-img-wrapper {
+          position: relative;
+          border-radius: 26px;
+          overflow: hidden;
+          aspect-ratio: 4 / 3;
+          box-shadow: 0 20px 40px rgba(22, 58, 114, 0.06);
+          background-color: var(--ssi-private-bg);
+          border: 1px solid var(--ssi-private-border);
+        }
+
+        .ssi-private-img-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .ssi-private-img-wrapper:hover img {
+          transform: scale(1.03);
+        }
+
+        .ssi-private-floating-card {
+          position: absolute;
+          bottom: 24px;
+          left: 24px;
+          background-color: var(--ssi-private-white);
+          border-radius: 16px;
+          padding: 20px 24px;
+          box-shadow: 0 12px 30px rgba(22, 58, 114, 0.12);
+          max-width: 340px;
+          z-index: 10;
+          border: 1px solid var(--ssi-private-border);
+        }
+
+        .ssi-private-float-title {
+          font-size: 15px;
+          font-weight: 700;
+          color: var(--ssi-private-dark-text);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 6px;
+        }
+
+        .ssi-private-float-desc {
+          font-size: 12.5px;
+          color: var(--ssi-private-body-text);
+          line-height: 1.5;
+        }
+
+        .ssi-private-col-right {
+          flex: 1 1 48%;
+          min-width: 320px;
+        }
+
+        .ssi-private-eyebrow {
+          font-size: 13px;
+          font-weight: 800;
+          color: var(--ssi-private-orange);
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-bottom: 14px;
+          display: block;
+        }
+
+        .ssi-private-heading {
+          font-size: 52px;
+          font-weight: 800;
+          color: var(--ssi-private-dark-text);
+          line-height: 1.15;
+          margin-bottom: 20px;
+          letter-spacing: -0.02em;
+        }
+
+        .ssi-private-heading span {
+          color: var(--ssi-private-primary-blue);
+        }
+
+        .ssi-private-desc {
+          font-size: 16px;
+          color: var(--ssi-private-body-text);
+          line-height: 1.65;
+          margin-bottom: 32px;
+          max-width: 520px;
+        }
+
+        .ssi-private-features-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          margin-bottom: 36px;
+        }
+
+        .ssi-private-feature-card {
+          background-color: var(--ssi-private-white);
+          border: 1px solid var(--ssi-private-border);
+          border-radius: 18px;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .ssi-private-feature-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 24px rgba(22, 58, 114, 0.04);
+          border-color: var(--ssi-private-primary-blue);
+        }
+
+        .ssi-private-feat-icon-wrapper {
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+          background-color: rgba(29, 79, 168, 0.06);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--ssi-private-primary-blue);
+          flex-shrink: 0;
+        }
+
+        .ssi-private-feat-icon-wrapper svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        .ssi-private-feat-title {
+          font-size: 15px;
+          font-weight: 700;
+          color: var(--ssi-private-dark-text);
+        }
+
+        .ssi-private-feat-desc {
+          font-size: 13px;
+          color: var(--ssi-private-body-text);
+          line-height: 1.45;
+        }
+
+        .ssi-private-ctas {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+        }
+
+        .ssi-private-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 14px 28px;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 15px;
+          text-decoration: none;
+          transition: all 0.25s ease;
+          cursor: pointer;
+          border: none;
+          gap: 8px;
+        }
+
+        .ssi-private-btn-primary {
+          background-color: var(--ssi-private-orange);
+          color: var(--ssi-private-white);
+        }
+
+        .ssi-private-btn-primary:hover {
+          background-color: #e27216;
+          transform: translateY(-2px);
+        }
+
+        .ssi-private-btn-secondary {
+          background-color: var(--ssi-private-white);
+          color: var(--ssi-private-primary-blue);
+          border: 1.5px solid var(--ssi-private-primary-blue);
+        }
+
+        .ssi-private-btn-secondary:hover {
+          background-color: rgba(29, 79, 168, 0.04);
+          transform: translateY(-2px);
+        }
+
+        .ssi-private-trust-strip {
+          background-color: var(--ssi-private-bg);
+          border: 1px solid var(--ssi-private-border);
+          border-radius: 20px;
+          padding: 28px 40px;
+          margin-top: 50px;
+          text-align: center;
+        }
+
+        .ssi-private-trust-title {
+          font-size: 12px;
+          font-weight: 800;
+          text-transform: uppercase;
+          color: var(--ssi-private-body-text);
+          letter-spacing: 0.1em;
+          margin-bottom: 20px;
+        }
+
+        .ssi-private-logos-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 20px 30px;
+        }
+
+        .ssi-private-logo-item {
+          font-size: 16px;
+          font-weight: 700;
+          color: #94A3B8;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          transition: all 0.3s ease;
+          cursor: default;
+        }
+
+        .ssi-private-logos-row:hover .ssi-private-logo-item {
+          opacity: 0.5;
+        }
+
+        .ssi-private-logos-row .ssi-private-logo-item:hover {
+          opacity: 1;
+          color: var(--ssi-private-primary-blue);
+          transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+          .ssi-private-main-row { gap: 40px; }
+          .ssi-private-heading { font-size: 42px; }
+        }
+
+        @media (max-width: 768px) {
+          .ssi-private-main-row { flex-direction: column; gap: 36px; }
+          .ssi-private-col-left, .ssi-private-col-right { flex: 1 1 100%; }
+          .ssi-private-col-left { order: 1; }
+          .ssi-private-col-right { order: 2; }
+          .ssi-private-features-grid { grid-template-columns: 1fr; }
+          .ssi-private-ctas .ssi-private-btn { width: 100%; }
+          .ssi-private-logos-row { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; }
+          .ssi-private-logo-item { flex: 0 0 auto; }
+        }
+      </style>
+
+      <div class="ssi-private-gradient-tr"></div>
+      <div class="ssi-private-gradient-bl"></div>
+
+      <div class="ssi-private-container">
+        <div class="ssi-private-main-row">
+          <!-- LEFT COLUMN: IMAGE SECTION -->
+          <div class="ssi-private-col-left">
+            <div class="ssi-private-img-wrapper">
+              <img src="assets/home_storage_new.png" alt="Monitored secure private self storage rooms interior structure">
+            </div>
+            <!-- FLOATING OVERLAY CARD -->
+            <div class="ssi-private-floating-card">
+              <div class="ssi-private-float-title">
+                🔒 100% Private Storage
+              </div>
+              <p class="ssi-private-float-desc">
+                Your belongings remain inside a dedicated room accessible only through authorised access.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: CONTENT & FEATURES -->
+          <div class="ssi-private-col-right">
+            <span class="ssi-private-eyebrow">PRIVATE ROOM STORAGE</span>
+            <h2 class="ssi-private-heading">
+              Private Room Storage<br>
+              <span>Designed Around Your Life.</span>
+            </h2>
+            <p class="ssi-private-desc">
+              Store household belongings, furniture, business inventory, seasonal items and personal valuables inside a secure private storage room. Enjoy flexible rental durations, professional handling and complete peace of mind with easy accessibility whenever required.
+            </p>
+
+            <!-- FEATURE CARDS -->
+            <div class="ssi-private-features-grid">
+              <div class="ssi-private-feature-card">
+                <div class="ssi-private-feat-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="ssi-private-feat-title">Private Storage</h4>
+                  <p class="ssi-private-feat-desc">Dedicated rooms exclusively for your belongings.</p>
+                </div>
+              </div>
+              <div class="ssi-private-feature-card">
+                <div class="ssi-private-feat-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="ssi-private-feat-title">24/7 Security</h4>
+                  <p class="ssi-private-feat-desc">Monitored facility with controlled access.</p>
+                </div>
+              </div>
+              <div class="ssi-private-feature-card">
+                <div class="ssi-private-feat-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008Z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="ssi-private-feat-title">Flexible Duration</h4>
+                  <p class="ssi-private-feat-desc">Store for weeks, months or longer.</p>
+                </div>
+              </div>
+              <div class="ssi-private-feature-card">
+                <div class="ssi-private-feat-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.129-1.125v-3.75c0-.621-.508-1.125-1.129-1.125H16.5m-9-3h9M16.5 6.75V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="ssi-private-feat-title">Pickup Assistance</h4>
+                  <p class="ssi-private-feat-desc">Optional packing and transportation support.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA BUTTONS -->
+            <div class="ssi-private-ctas">
+              <a href="index.html#calculator" class="ssi-private-btn ssi-private-btn-primary">
+                Get Free Quote
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+              <a href="tel:+919090206090" class="ssi-private-btn ssi-private-btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 0 1-7.108-7.108c-.145-.44.02-1.099.387-1.381l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+                Call +91-9090206090
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRUST STRIP -->
+        <div class="ssi-private-trust-strip">
+          <h3 class="ssi-private-trust-title">Trusted & Featured By</h3>
+          <div class="ssi-private-logos-row">
+            <span class="ssi-private-logo-item pti">PTI</span>
+            <span class="ssi-private-logo-item theweek">The Week</span>
+            <span class="ssi-private-logo-item toi">Times of India</span>
+            <span class="ssi-private-logo-item republic">Republic</span>
+            <span class="ssi-private-logo-item et">Economic Times</span>
+            <span class="ssi-private-logo-item iss">Inside Self Storage</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — HOW IT WORKS -->
+    <section class="ssi-offering-how-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-how-header">
+          <span class="ssi-offering-eyebrow">PROCESS</span>
+          <h2 class="ssi-offering-section-title">Storage Without the Complications</h2>
+        </div>
+        <div class="ssi-offering-how-grid">
+          <!-- Step 1 -->
+          <div class="ssi-offering-how-card">
+            <div class="ssi-offering-step-number">01</div>
+            <div class="ssi-offering-step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v16.5h16.5V3.75H3.75Zm1.5 1.5h13.5v13.5H5.25V5.25Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 9h6v6H9V9Z" />
+              </svg>
+            </div>
+            <h3 class="ssi-offering-step-title">Choose Your Space</h3>
+            <p class="ssi-offering-step-desc">Select a storage room based on the volume of belongings you need to store.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="ssi-offering-how-card">
+            <div class="ssi-offering-step-number">02</div>
+            <div class="ssi-offering-step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0.621 0 1.125.504 1.125 1.125Z" />
+              </svg>
+            </div>
+            <h3 class="ssi-offering-step-title">Pack Your Belongings</h3>
+            <p class="ssi-offering-step-desc">Pack your belongings yourself or opt for professional packing support.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="ssi-offering-how-card">
+            <div class="ssi-offering-step-number">03</div>
+            <div class="ssi-offering-step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.129-1.125v-3.75c0-.621-.508-1.125-1.129-1.125H16.5m-9-3h9M16.5 6.75V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18" />
+              </svg>
+            </div>
+            <h3 class="ssi-offering-step-title">We Move It</h3>
+            <p class="ssi-offering-step-desc">Our team can assist with convenient pickup and transportation.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="ssi-offering-how-card">
+            <div class="ssi-offering-step-number">04</div>
+            <div class="ssi-offering-step-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <h3 class="ssi-offering-step-title">Store Securely</h3>
+            <p class="ssi-offering-step-desc">Your belongings stay protected in a dedicated monitored storage space.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — WHAT CAN YOU STORE? -->
+    <section class="ssi-offering-what-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-what-header">
+          <span class="ssi-offering-eyebrow">STORE WHAT MATTERS</span>
+          <h2 class="ssi-offering-section-title">One Space. Many Possibilities.</h2>
+        </div>
+        <div class="ssi-offering-what-grid">
+          <!-- Item 1 -->
+          <div class="ssi-offering-what-card">
+            <div class="ssi-offering-what-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12h19.5M4.5 12V6.75A2.25 2.25 0 0 1 6.75 4.5h10.5a2.25 2.25 0 0 1 2.25 2.25V12M6 18.75h12M9 12v6.75M15 12v6.75" />
+              </svg>
+            </div>
+            <h4 class="ssi-offering-what-title">Furniture</h4>
+            <p class="ssi-offering-what-desc">Sofas, tables, beds and cabinets.</p>
+          </div>
+          <!-- Item 2 -->
+          <div class="ssi-offering-what-card">
+            <div class="ssi-offering-what-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0.621 0 1.125.504 1.125 1.125Z" />
+              </svg>
+            </div>
+            <h4 class="ssi-offering-what-title">Household Items</h4>
+            <p class="ssi-offering-what-desc">Clothes, books, kitchenware.</p>
+          </div>
+          <!-- Item 3 -->
+          <div class="ssi-offering-what-card">
+            <div class="ssi-offering-what-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+              </svg>
+            </div>
+            <h4 class="ssi-offering-what-title">Electronics</h4>
+            <p class="ssi-offering-what-desc">TVs, computer setups, appliances.</p>
+          </div>
+          <!-- Item 4 -->
+          <div class="ssi-offering-what-card">
+            <div class="ssi-offering-what-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+              </svg>
+            </div>
+            <h4 class="ssi-offering-what-title">Documents</h4>
+            <p class="ssi-offering-what-desc">Files, folders, archives safely stored.</p>
+          </div>
+          <!-- Item 5 -->
+          <div class="ssi-offering-what-card">
+            <div class="ssi-offering-what-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.008 1.24l.885 1.77a2.25 2.25 0 0 0 2.007 1.24h1.98a2.25 2.25 0 0 0 2.007-1.24l.885-1.77a2.25 2.25 0 0 1 2.007-1.24h3.86m-18 0h18m-18 0v-7.5A2.25 2.25 0 0 1 4.25 3.75h15.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-18 0v7.5A2.25 2.25 0 0 0 4.25 20.25h15.5a2.25 2.25 0 0 0 2.25-2.25v-7.5" />
+              </svg>
+            </div>
+            <h4 class="ssi-offering-what-title">Business Inventory</h4>
+            <p class="ssi-offering-what-desc">Stock, raw materials, spare parts.</p>
+          </div>
+          <!-- Item 6 -->
+          <div class="ssi-offering-what-card">
+            <div class="ssi-offering-what-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 .9-.6 1.6-1.5 1.6H5.25c-.9 0-1.5-.7-1.5-1.6v-4.25m16.5 0c0-.9-.6-1.6-1.5-1.6H5.25c-.9 0-1.5.7-1.5 1.6m16.5 0V9.65c0-.9-.6-1.6-1.5-1.6H5.25c-.9 0-1.5.7-1.5 1.6v4.5m16.5-4.5V6.15c0-.9-.6-1.6-1.5-1.6H5.25c-.9 0-1.5.7-1.5 1.6v3.5" />
+              </svg>
+            </div>
+            <h4 class="ssi-offering-what-title">Luggage & Seasonal</h4>
+            <p class="ssi-offering-what-desc">Suitcases, festive decorations, gear.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — PERFECT FOR -->
+    <section class="ssi-offering-perfect-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-perfect-header">
+          <span class="ssi-offering-eyebrow">USE CASES</span>
+          <h2 class="ssi-offering-section-title">Private Rooms Built Around Real Life</h2>
+        </div>
+        <div class="ssi-offering-perfect-grid">
+          <!-- Card 1 -->
+          <div class="ssi-offering-perfect-card">
+            <div class="ssi-offering-perfect-img">
+              <img src="assets/private_rooms.png" alt="Moving home boxes and items packed together in a private storage unit">
+            </div>
+            <div class="ssi-offering-perfect-content">
+              <h3 class="ssi-offering-perfect-title">Moving Home</h3>
+              <p class="ssi-offering-perfect-desc">Keep your belongings secure between moving dates.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="ssi-offering-perfect-card">
+            <div class="ssi-offering-perfect-img">
+              <img src="assets/facility_5.png" alt="Furniture covered and protected during home renovation inside private storage room">
+            </div>
+            <div class="ssi-offering-perfect-content">
+              <h3 class="ssi-offering-perfect-title">Renovation</h3>
+              <p class="ssi-offering-perfect-desc">Protect furniture and valuables while your home is being transformed.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="ssi-offering-perfect-card">
+            <div class="ssi-offering-perfect-img">
+              <img src="assets/private_rooms.png" alt="Packed luggage suitcases and traveling boxes safely kept inside private storage room">
+            </div>
+            <div class="ssi-offering-perfect-content">
+              <h3 class="ssi-offering-perfect-title">Travelling</h3>
+              <p class="ssi-offering-perfect-desc">Store household belongings safely while you’re away.</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="ssi-offering-perfect-card">
+            <div class="ssi-offering-perfect-img">
+              <img src="assets/facility_5.png" alt="Business inventories and organized documentation stacked inside private business storage room">
+            </div>
+            <div class="ssi-offering-perfect-content">
+              <h3 class="ssi-offering-perfect-title">Businesses</h3>
+              <p class="ssi-offering-perfect-desc">Create extra space for inventory, files or equipment without renting another office.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — SECURITY STRIP -->
+    <section class="ssi-offering-security-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-security-row">
+          <div class="ssi-offering-security-left">
+            <h2 class="ssi-offering-security-title">Your Belongings Deserve More Than Just Space.</h2>
+            <p class="ssi-offering-security-subtitle">They deserve security, privacy and professional care.</p>
+          </div>
+          <div class="ssi-offering-security-right">
+            <div class="ssi-offering-sec-point">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              CCTV Monitoring
+            </div>
+            <div class="ssi-offering-sec-point">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Controlled Facility Access
+            </div>
+            <div class="ssi-offering-sec-point">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Professional Handling
+            </div>
+            <div class="ssi-offering-sec-point">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+              </svg>
+              Clean & Maintained Storage
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9 — FAQ ACCORDION -->
+    <section class="ssi-offering-faq-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-faq-title-wrap">
+          <span class="ssi-offering-eyebrow">QUESTIONS</span>
+          <h2 class="ssi-offering-section-title">Private Room Storage FAQs</h2>
+        </div>
+        
+        <div class="ssi-offering-faq-container">
+          <div class="ssi-offering-faq-item">
+            <button class="ssi-offering-faq-trigger">
+              What is a private storage room?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="ssi-offering-faq-content">
+              <div class="ssi-offering-faq-content-inner">
+                A private storage room is a lockable, dedicated brick-and-mortar unit inside our secure facility. Unlike open warehouse storage, only you hold the keys to your room, ensuring 100% privacy and full control over access to your belongings.
+              </div>
+            </div>
+          </div>
+
+          <div class="ssi-offering-faq-item">
+            <button class="ssi-offering-faq-trigger">
+              How much storage space do I need?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="ssi-offering-faq-content">
+              <div class="ssi-offering-faq-content-inner">
+                The space you need depends entirely on the volume and type of goods you plan to store. We offer room sizes ranging from small locker-type spaces to large rooms capable of storing the contents of a 3BHK+ house or business stock. Use our online Storage Calculator or talk to our team for exact estimations.
+              </div>
+            </div>
+          </div>
+
+          <div class="ssi-offering-faq-item">
+            <button class="ssi-offering-faq-trigger">
+              Can I access my belongings while they are stored?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="ssi-offering-faq-content">
+              <div class="ssi-offering-faq-content-inner">
+                Yes, our facilities offer convenient access hours, allowing you to retrieve or add items to your private room whenever necessary. Access is restricted and monitored, ensuring that only authorised keyholders can enter the premises.
+              </div>
+            </div>
+          </div>
+
+          <div class="ssi-offering-faq-item">
+            <button class="ssi-offering-faq-trigger">
+              How long can I rent a private storage room?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="ssi-offering-faq-content">
+              <div class="ssi-offering-faq-content-inner">
+                We offer highly flexible rental terms. You can rent on a short-term basis (monthly) or select long-term storage options depending on your specific requirements, with no complex lock-in contracts.
+              </div>
+            </div>
+          </div>
+
+          <div class="ssi-offering-faq-item">
+            <button class="ssi-offering-faq-trigger">
+              Can you help with packing and transportation?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="ssi-offering-faq-content">
+              <div class="ssi-offering-faq-content-inner">
+                Absolutely. We provide end-to-end support, including professional packing, loading, pickup, transportation, and unpacking. Our space experts will guide you through the entire process to make it hassle-free.
+              </div>
+            </div>
+          </div>
+
+          <div class="ssi-offering-faq-item">
+            <button class="ssi-offering-faq-trigger">
+              What items cannot be stored?
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            <div class="ssi-offering-faq-content">
+              <div class="ssi-offering-faq-content-inner">
+                For safety and regulatory compliance, you cannot store perishable goods (like food items), hazardous substances, explosives, firearms, chemicals, illegal goods, or live plants/animals.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10 — CROSS-SELL -->
+    <section class="ssi-offering-cross-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-cross-header">
+          <span class="ssi-offering-eyebrow">EXPLORE OTHER STORAGE OPTIONS</span>
+          <h2 class="ssi-offering-section-title">Need Something Different?</h2>
+        </div>
+        <div class="ssi-offering-cross-row">
+          <a href="#" class="ssi-offering-cross-card">
+            <div>
+              <h3 class="ssi-offering-cross-title">BOX STORAGE</h3>
+              <p class="ssi-offering-cross-desc">Ideal when you have fewer belongings and don't need an entire private room.</p>
+            </div>
+            <span class="ssi-offering-cross-link-text">
+              Explore Box Storage
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="#" class="ssi-offering-cross-card">
+            <div>
+              <h3 class="ssi-offering-cross-title">LUGGAGE STORAGE</h3>
+              <p class="ssi-offering-cross-desc">A convenient solution for keeping suitcases and travel belongings safe.</p>
+            </div>
+            <span class="ssi-offering-cross-link-text">
+              Explore Luggage Storage
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11 — FINAL CTA -->
+    <section class="ssi-offering-cta-sec">
+      <div class="ssi-offering-container">
+        <div class="ssi-offering-cta-card">
+          <h2 class="ssi-offering-cta-title">Not Sure How Much Space You Need?</h2>
+          <p class="ssi-offering-cta-desc">Tell us what you need to store and we'll help you find the right storage solution.</p>
+          <div class="ssi-offering-cta-buttons">
+            <a href="index.html#calculator" class="ssi-offering-btn ssi-offering-btn-primary">
+              Calculate Storage Space
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </a>
-            <a href="tel:+919090206090" class="ssi-offering-btn ssi-offering-btn-secondary">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px; height:16px;">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 0 1-7.108-7.108c-.145-.44.02-1.099.387-1.381l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-              </svg>
-              Call +91-9090206090
-            </a>
+            <a href="index.html#calculator" class="ssi-offering-btn ssi-offering-btn-secondary">Get a Quote</a>
           </div>
-          <div class="ssi-offering-blue-separator" style="height: 1px; background-color: var(--ssi-offering-border); margin-bottom: 24px;"></div>
-          <div class="ssi-offering-trust-strip">
-            <div class="ssi-offering-trust-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-              </svg>
-              Secure & monitored
-            </div>
-            <div class="ssi-offering-trust-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-              </svg>
-              Flexible storage duration
-            </div>
-            <div class="ssi-offering-trust-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
-              </svg>
-              Easy access to your belongings
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Side: Large Premium Image with Float Badge -->
-        <div class="ssi-offering-hero-right">
-          <div class="ssi-offering-image-container">
-            <img src="PRIVATE_ROOM_HERO_IMAGE" alt="Clean and organised private storage room containing household boxes and luggage">
-            <div class="ssi-offering-floating-badge">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-              </svg>
-              100% Private Space
-            </div>
+          <div class="ssi-offering-cta-phone">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:18px; height:18px; color:#146EF5; margin-right:8px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 0 1-7.108-7.108c-.145-.44.02-1.099.387-1.381l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+            <a href="tel:+919090206090">+91-9090206090</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
   </section>
 
-  <!-- SECTION 2 — OFFERING NAVIGATION -->
-  <nav class="ssi-offering-tabs-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-tabs-container">
-        <a href="PRIVATE_ROOMS_URL" class="ssi-offering-tab-link ssi-offering-active-tab">Private Rooms</a>
-        <a href="BOX_STORAGE_URL" class="ssi-offering-tab-link">Box Storage</a>
-        <a href="LUGGAGE_STORAGE_URL" class="ssi-offering-tab-link">Luggage Storage</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/about-us">About Us</a>
+        <a href="/benefits">Benefits</a>
+        <a href="self-storage-delhi.html">Locations</a>
+        <a href="/terms-and-conditions">Terms And Conditions</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+      </nav>
 
-  <!-- SECTION 3 — INTRODUCTION -->
-  <section class="ssi-offering-intro-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-intro-content">
-        <span class="ssi-offering-eyebrow">PRIVATE STORAGE, MADE SIMPLE</span>
-        <h2 class="ssi-offering-section-title">A Room That’s Completely Yours</h2>
-        <p class="ssi-offering-intro-desc">
-          Whether you're moving homes, renovating, travelling, decluttering or simply running out of space, our private storage rooms give you a dedicated space for your belongings without compromising on security or accessibility.
-        </p>
+      <div class="footer-socials" aria-label="Social media links">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
-    </div>
-  </section>
 
-  <!-- SECTION 4 — HOW IT WORKS -->
-  <section class="ssi-offering-how-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-how-header">
-        <span class="ssi-offering-eyebrow">PROCESS</span>
-        <h2 class="ssi-offering-section-title">Storage Without the Complications</h2>
-      </div>
-      <div class="ssi-offering-how-grid">
-        <!-- Step 1 -->
-        <div class="ssi-offering-how-card">
-          <div class="ssi-offering-step-number">01</div>
-          <div class="ssi-offering-step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v16.5h16.5V3.75H3.75Zm1.5 1.5h13.5v13.5H5.25V5.25Z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 9h6v6H9V9Z" />
-            </svg>
-          </div>
-          <h3 class="ssi-offering-step-title">Choose Your Space</h3>
-          <p class="ssi-offering-step-desc">Select a storage room based on the volume of belongings you need to store.</p>
-        </div>
-        <!-- Step 2 -->
-        <div class="ssi-offering-how-card">
-          <div class="ssi-offering-step-number">02</div>
-          <div class="ssi-offering-step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0.621 0 1.125.504 1.125 1.125Z" />
-            </svg>
-          </div>
-          <h3 class="ssi-offering-step-title">Pack Your Belongings</h3>
-          <p class="ssi-offering-step-desc">Pack your belongings yourself or opt for professional packing support.</p>
-        </div>
-        <!-- Step 3 -->
-        <div class="ssi-offering-how-card">
-          <div class="ssi-offering-step-number">03</div>
-          <div class="ssi-offering-step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.129-1.125v-3.75c0-.621-.508-1.125-1.129-1.125H16.5m-9-3h9M16.5 6.75V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18" />
-            </svg>
-          </div>
-          <h3 class="ssi-offering-step-title">We Move It</h3>
-          <p class="ssi-offering-step-desc">Our team can assist with convenient pickup and transportation.</p>
-        </div>
-        <!-- Step 4 -->
-        <div class="ssi-offering-how-card">
-          <div class="ssi-offering-step-number">04</div>
-          <div class="ssi-offering-step-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-            </svg>
-          </div>
-          <h3 class="ssi-offering-step-title">Store Securely</h3>
-          <p class="ssi-offering-step-desc">Your belongings stay protected in a dedicated monitored storage space.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5 — WHY PRIVATE ROOMS -->
-  <section class="ssi-offering-why-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-why-row">
-        <!-- Left Side: Image -->
-        <div class="ssi-offering-why-left">
-          <div class="ssi-offering-why-image">
-            <img src="PRIVATE_ROOM_INTERIOR_IMAGE" alt="Clean interior corridor of a modern self storage facility showing orange lockable private rooms">
-          </div>
-        </div>
-        <!-- Right Side: Features -->
-        <div class="ssi-offering-why-right">
-          <span class="ssi-offering-eyebrow">WHY PRIVATE ROOMS?</span>
-          <h2 class="ssi-offering-section-title">More Than Extra Space</h2>
-          <div class="ssi-offering-why-list">
-            <!-- Benefit 1 -->
-            <div class="ssi-offering-why-item">
-              <div class="ssi-offering-why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="ssi-offering-why-title">Complete Privacy</h4>
-                <p class="ssi-offering-why-desc">Your belongings remain inside your dedicated storage room.</p>
-              </div>
-            </div>
-            <!-- Benefit 2 -->
-            <div class="ssi-offering-why-item">
-              <div class="ssi-offering-why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A4 4 0 0 1 10.686 3h2.628a4 4 0 0 1 2.822 1.243l3.622 3.622A4 4 0 0 1 21 10.686v2.628a4 4 0 0 1-1.243 2.822l-3.622 3.622a4 4 0 0 1-2.822 1.243h-2.628a4 4 0 0 1-2.822-1.243L4.243 16.3A4 4 0 0 1 3 13.478v-2.628a4 4 0 0 1 1.243-2.822l3.622-3.622ZM12 9v4m0 4h.01" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="ssi-offering-why-title">24/7 Security</h4>
-                <p class="ssi-offering-why-desc">CCTV-monitored facility with controlled access.</p>
-              </div>
-            </div>
-            <!-- Benefit 3 -->
-            <div class="ssi-offering-why-item">
-              <div class="ssi-offering-why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="ssi-offering-why-title">Flexible Storage</h4>
-                <p class="ssi-offering-why-desc">Choose storage duration according to your needs.</p>
-              </div>
-            </div>
-            <!-- Benefit 4 -->
-            <div class="ssi-offering-why-item">
-              <div class="ssi-offering-why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 8.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="ssi-offering-why-title">Multiple Room Sizes</h4>
-                <p class="ssi-offering-why-desc">Select the right space instead of paying for unused capacity.</p>
-              </div>
-            </div>
-            <!-- Benefit 5 -->
-            <div class="ssi-offering-why-item">
-              <div class="ssi-offering-why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h18v3H3V3Z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="ssi-offering-why-title">Personal & Business Use</h4>
-                <p class="ssi-offering-why-desc">Ideal for goods, furniture, documents and inventory.</p>
-              </div>
-            </div>
-            <!-- Benefit 6 -->
-            <div class="ssi-offering-why-item">
-              <div class="ssi-offering-why-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.005 9.005 0 0 0-3.375-1.125 9.005 9.005 0 0 0-4.65 0A9 9 0 0 0 6.6 18.72m11.4 0H6.6m11.4 0a9.005 9.005 0 0 1-3.375 1.125 9 9 0 0 1-4.65 0A9 9 0 0 1 6.6 18.72M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm.75-12h-1.5L8.25 6h7.5L12.75 3Z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="ssi-offering-why-title">Professional Support</h4>
-                <p class="ssi-offering-why-desc">Packing, pickup and storage assistance when required.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 6 — WHAT CAN YOU STORE? -->
-  <section class="ssi-offering-what-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-what-header">
-        <span class="ssi-offering-eyebrow">STORE WHAT MATTERS</span>
-        <h2 class="ssi-offering-section-title">One Space. Many Possibilities.</h2>
-      </div>
-      <div class="ssi-offering-what-grid">
-        <!-- Item 1 -->
-        <div class="ssi-offering-what-card">
-          <div class="ssi-offering-what-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12h19.5M4.5 12V6.75A2.25 2.25 0 0 1 6.75 4.5h10.5a2.25 2.25 0 0 1 2.25 2.25V12M6 18.75h12M9 12v6.75M15 12v6.75" />
-            </svg>
-          </div>
-          <h4 class="ssi-offering-what-title">Furniture</h4>
-          <p class="ssi-offering-what-desc">Sofas, tables, beds and cabinets.</p>
-        </div>
-        <!-- Item 2 -->
-        <div class="ssi-offering-what-card">
-          <div class="ssi-offering-what-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0.621 0 1.125.504 1.125 1.125Z" />
-            </svg>
-          </div>
-          <h4 class="ssi-offering-what-title">Household Items</h4>
-          <p class="ssi-offering-what-desc">Clothes, books, kitchenware.</p>
-        </div>
-        <!-- Item 3 -->
-        <div class="ssi-offering-what-card">
-          <div class="ssi-offering-what-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-            </svg>
-          </div>
-          <h4 class="ssi-offering-what-title">Electronics</h4>
-          <p class="ssi-offering-what-desc">TVs, computer setups, appliances.</p>
-        </div>
-        <!-- Item 4 -->
-        <div class="ssi-offering-what-card">
-          <div class="ssi-offering-what-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-            </svg>
-          </div>
-          <h4 class="ssi-offering-what-title">Documents</h4>
-          <p class="ssi-offering-what-desc">Files, folders, archives safely stored.</p>
-        </div>
-        <!-- Item 5 -->
-        <div class="ssi-offering-what-card">
-          <div class="ssi-offering-what-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.008 1.24l.885 1.77a2.25 2.25 0 0 0 2.007 1.24h1.98a2.25 2.25 0 0 0 2.007-1.24l.885-1.77a2.25 2.25 0 0 1 2.007-1.24h3.86m-18 0h18m-18 0v-7.5A2.25 2.25 0 0 1 4.25 3.75h15.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-18 0v7.5A2.25 2.25 0 0 0 4.25 20.25h15.5a2.25 2.25 0 0 0 2.25-2.25v-7.5" />
-            </svg>
-          </div>
-          <h4 class="ssi-offering-what-title">Business Inventory</h4>
-          <p class="ssi-offering-what-desc">Stock, raw materials, spare parts.</p>
-        </div>
-        <!-- Item 6 -->
-        <div class="ssi-offering-what-card">
-          <div class="ssi-offering-what-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 .9-.6 1.6-1.5 1.6H5.25c-.9 0-1.5-.7-1.5-1.6v-4.25m16.5 0c0-.9-.6-1.6-1.5-1.6H5.25c-.9 0-1.5.7-1.5 1.6m16.5 0V9.65c0-.9-.6-1.6-1.5-1.6H5.25c-.9 0-1.5.7-1.5 1.6v4.5m16.5-4.5V6.15c0-.9-.6-1.6-1.5-1.6H5.25c-.9 0-1.5.7-1.5 1.6v3.5" />
-            </svg>
-          </div>
-          <h4 class="ssi-offering-what-title">Luggage & Seasonal</h4>
-          <p class="ssi-offering-what-desc">Suitcases, festive decorations, gear.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 7 — PERFECT FOR -->
-  <section class="ssi-offering-perfect-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-perfect-header">
-        <span class="ssi-offering-eyebrow">USE CASES</span>
-        <h2 class="ssi-offering-section-title">Private Rooms Built Around Real Life</h2>
-      </div>
-      <div class="ssi-offering-perfect-grid">
-        <!-- Card 1 -->
-        <div class="ssi-offering-perfect-card">
-          <div class="ssi-offering-perfect-img">
-            <img src="PRIVATE_ROOM_HERO_IMAGE" alt="Moving home boxes and items packed together in a private storage unit">
-          </div>
-          <div class="ssi-offering-perfect-content">
-            <h3 class="ssi-offering-perfect-title">Moving Home</h3>
-            <p class="ssi-offering-perfect-desc">Keep your belongings secure between moving dates.</p>
-          </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="ssi-offering-perfect-card">
-          <div class="ssi-offering-perfect-img">
-            <img src="PRIVATE_ROOM_INTERIOR_IMAGE" alt="Furniture covered and protected during home renovation inside private storage room">
-          </div>
-          <div class="ssi-offering-perfect-content">
-            <h3 class="ssi-offering-perfect-title">Renovation</h3>
-            <p class="ssi-offering-perfect-desc">Protect furniture and valuables while your home is being transformed.</p>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="ssi-offering-perfect-card">
-          <div class="ssi-offering-perfect-img">
-            <img src="PRIVATE_ROOM_HERO_IMAGE" alt="Packed luggage suitcases and traveling boxes safely kept inside private storage room">
-          </div>
-          <div class="ssi-offering-perfect-content">
-            <h3 class="ssi-offering-perfect-title">Travelling</h3>
-            <p class="ssi-offering-perfect-desc">Store household belongings safely while you’re away.</p>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="ssi-offering-perfect-card">
-          <div class="ssi-offering-perfect-img">
-            <img src="PRIVATE_ROOM_INTERIOR_IMAGE" alt="Business inventories and organized documentation stacked inside private business storage room">
-          </div>
-          <div class="ssi-offering-perfect-content">
-            <h3 class="ssi-offering-perfect-title">Businesses</h3>
-            <p class="ssi-offering-perfect-desc">Create extra space for inventory, files or equipment without renting another office.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 8 — SECURITY STRIP -->
-  <section class="ssi-offering-security-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-security-row">
-        <div class="ssi-offering-security-left">
-          <h2 class="ssi-offering-security-title">Your Belongings Deserve More Than Just Space.</h2>
-          <p class="ssi-offering-security-subtitle">They deserve security, privacy and professional care.</p>
-        </div>
-        <div class="ssi-offering-security-right">
-          <div class="ssi-offering-sec-point">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-            </svg>
-            CCTV Monitoring
-          </div>
-          <div class="ssi-offering-sec-point">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-            </svg>
-            Controlled Facility Access
-          </div>
-          <div class="ssi-offering-sec-point">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-            </svg>
-            Professional Handling
-          </div>
-          <div class="ssi-offering-sec-point">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-            </svg>
-            Clean & Maintained Storage
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 9 — FAQ ACCORDION -->
-  <section class="ssi-offering-faq-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-faq-title-wrap">
-        <span class="ssi-offering-eyebrow">QUESTIONS</span>
-        <h2 class="ssi-offering-section-title">Private Room Storage FAQs</h2>
-      </div>
-      
-      <div class="ssi-offering-faq-container">
-        <!-- Item 1 -->
-        <div class="ssi-offering-faq-item">
-          <button class="ssi-offering-faq-trigger">
-            What is a private storage room?
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-            </svg>
-          </button>
-          <div class="ssi-offering-faq-content">
-            <div class="ssi-offering-faq-content-inner">
-              A private storage room is a lockable, dedicated brick-and-mortar unit inside our secure facility. Unlike open warehouse storage, only you hold the keys to your room, ensuring 100% privacy and full control over access to your belongings.
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="ssi-offering-faq-item">
-          <button class="ssi-offering-faq-trigger">
-            How much storage space do I need?
-          </button>
-          <div class="ssi-offering-faq-content">
-            <div class="ssi-offering-faq-content-inner">
-              The space you need depends entirely on the volume and type of goods you plan to store. We offer room sizes ranging from small locker-type spaces to large rooms capable of storing the contents of a 3BHK+ house or business stock. Use our online Storage Calculator or talk to our team for exact estimations.
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="ssi-offering-faq-item">
-          <button class="ssi-offering-faq-trigger">
-            Can I access my belongings while they are stored?
-          </button>
-          <div class="ssi-offering-faq-content">
-            <div class="ssi-offering-faq-content-inner">
-              Yes, our facilities offer convenient access hours, allowing you to retrieve or add items to your private room whenever necessary. Access is restricted and monitored, ensuring that only authorised keyholders can enter the premises.
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="ssi-offering-faq-item">
-          <button class="ssi-offering-faq-trigger">
-            How long can I rent a private storage room?
-          </button>
-          <div class="ssi-offering-faq-content">
-            <div class="ssi-offering-faq-content-inner">
-              We offer highly flexible rental terms. You can rent on a short-term basis (monthly) or select long-term storage options depending on your specific requirements, with no complex lock-in contracts.
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="ssi-offering-faq-item">
-          <button class="ssi-offering-faq-trigger">
-            Can you help with packing and transportation?
-          </button>
-          <div class="ssi-offering-faq-content">
-            <div class="ssi-offering-faq-content-inner">
-              Absolutely. We provide end-to-end support, including professional packing, loading, pickup, transportation, and unpacking. Our space experts will guide you through the entire process to make it hassle-free.
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="ssi-offering-faq-item">
-          <button class="ssi-offering-faq-trigger">
-            What items cannot be stored?
-          </button>
-          <div class="ssi-offering-faq-content">
-            <div class="ssi-offering-faq-content-inner">
-              For safety and regulatory compliance, you cannot store perishable goods (like food items), hazardous substances, explosives, firearms, chemicals, illegal goods, or live plants/animals.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 10 — CROSS-SELL OTHER OFFERINGS -->
-  <section class="ssi-offering-cross-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-cross-header">
-        <span class="ssi-offering-eyebrow">EXPLORE OTHER STORAGE OPTIONS</span>
-        <h2 class="ssi-offering-section-title">Need Something Different?</h2>
-      </div>
-      <div class="ssi-offering-cross-row">
-        <!-- Box Storage -->
-        <a href="BOX_STORAGE_URL" class="ssi-offering-cross-card">
-          <div>
-            <h3 class="ssi-offering-cross-title">BOX STORAGE</h3>
-            <p class="ssi-offering-cross-desc">Ideal when you have fewer belongings and don't need an entire private room.</p>
-          </div>
-          <span class="ssi-offering-cross-link-text">
-            Explore Box Storage
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </span>
+      <div class="footer-logos">
+        <a href="index.html" class="footer-logo footer-logo-primary">
+          <img src="assets/self-storage-india-logo.png" alt="Self Storage India">
         </a>
-
-        <!-- Luggage Storage -->
-        <a href="LUGGAGE_STORAGE_URL" class="ssi-offering-cross-card">
-          <div>
-            <h3 class="ssi-offering-cross-title">LUGGAGE STORAGE</h3>
-            <p class="ssi-offering-cross-desc">A convenient solution for keeping suitcases and travel belongings safe.</p>
-          </div>
-          <span class="ssi-offering-cross-link-text">
-            Explore Luggage Storage
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </span>
+        <a href="index.html" class="footer-logo footer-logo-warehouse">
+          <img src="assets/self-storage-warehouse-logo.png" alt="Self Storage Warehouse">
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 11 — FINAL CTA -->
-  <section class="ssi-offering-cta-sec">
-    <div class="ssi-offering-container">
-      <div class="ssi-offering-cta-card">
-        <h2 class="ssi-offering-cta-title">Not Sure How Much Space You Need?</h2>
-        <p class="ssi-offering-cta-desc">Tell us what you need to store and we'll help you find the right storage solution.</p>
-        <div class="ssi-offering-cta-buttons">
-          <a href="STORAGE_CALCULATOR_URL" class="ssi-offering-btn ssi-offering-btn-primary">
-            Calculate Storage Space
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" style="width:16px; height:16px;">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
-          <a href="QUOTE_URL" class="ssi-offering-btn ssi-offering-btn-secondary">Get a Quote</a>
-        </div>
-        <div class="ssi-offering-cta-phone">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 0 1-7.108-7.108c-.145-.44.02-1.099.387-1.381l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-          </svg>
-          <a href="tel:+919090206090">+91-9090206090</a>
+        <div class="footer-logo footer-logo-member">
+          <img src="assets/self-storage-association-member.png" alt="Self Storage Association Member">
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Accordion JavaScript -->
+      <p class="footer-copyright">
+        Copyright – ©2023, SelfStorage India, All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
   <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector(".main-navigation");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navigation.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Locations Dropdown click handling
+    const dropdownTrigger = document.querySelector(".dropdown-trigger");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    if (dropdownTrigger && dropdownMenu) {
+      dropdownTrigger.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isVisible = dropdownMenu.classList.contains("show");
+        if (isVisible) {
+          dropdownMenu.classList.remove("show");
+          dropdownMenu.style.display = "none";
+        } else {
+          dropdownMenu.classList.add("show");
+          dropdownMenu.style.display = "block";
+        }
+      });
+      document.addEventListener("click", function (e) {
+        if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.remove("show");
+          dropdownMenu.style.display = "";
+        }
+      });
+    }
+
+    // Offerings Dropdown click handling
+    const offeringsTrigger = document.querySelector(".dropdown-trigger-offerings");
+    const offeringsMenu = document.querySelector(".dropdown-menu-offerings");
+    if (offeringsTrigger && offeringsMenu) {
+      offeringsTrigger.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const isVisible = offeringsMenu.classList.contains("show");
+        if (isVisible) {
+          offeringsMenu.classList.remove("show");
+          offeringsMenu.style.display = "none";
+        } else {
+          offeringsMenu.classList.add("show");
+          offeringsMenu.style.display = "block";
+        }
+      });
+      document.addEventListener("click", function (e) {
+        if (!offeringsTrigger.contains(e.target) && !offeringsMenu.contains(e.target)) {
+          offeringsMenu.classList.remove("show");
+          offeringsMenu.style.display = "";
+        }
+      });
+    }
+
+    // Accordion FAQ script
     (function() {
-      const triggers = document.querySelectorAll('.ssi-offering-faq-trigger');
-      
-      triggers.forEach(trigger => {
+      const faqTriggers = document.querySelectorAll('.ssi-offering-faq-trigger');
+      faqTriggers.forEach(trigger => {
         trigger.addEventListener('click', function() {
           const item = this.parentElement;
           const content = this.nextElementSibling;
           const isActive = item.classList.contains('ssi-offering-faq-active');
           
-          // Close all FAQ items
           document.querySelectorAll('.ssi-offering-faq-item').forEach(el => {
             el.classList.remove('ssi-offering-faq-active');
             el.querySelector('.ssi-offering-faq-content').style.maxHeight = null;
           });
           
-          // Open clicked one if it wasn't already open
           if (!isActive) {
             item.classList.add('ssi-offering-faq-active');
             content.style.maxHeight = content.scrollHeight + "px";
@@ -1537,4 +1981,5 @@
       });
     })();
   </script>
-</section>
+</body>
+</html>

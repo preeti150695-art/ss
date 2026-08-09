@@ -1661,7 +1661,7 @@
         .ssi-private-need-card {
           position: relative;
           background-color: #ffffff;
-          border: 2.5px solid #1D4FA8;
+          border: 2px solid #1D4FA8;
           border-radius: 24px;
           padding: 110px 24px 30px;
           text-align: center;
@@ -1669,6 +1669,14 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+          box-shadow: 0 4px 20px rgba(29, 79, 168, 0.03);
+        }
+
+        .ssi-private-need-card:hover {
+          transform: translateY(-8px);
+          border-color: #146EF5;
+          box-shadow: 0 20px 40px rgba(20, 110, 245, 0.12);
         }
 
         .ssi-private-need-img-box {
@@ -1680,7 +1688,14 @@
           height: 155px;
           border-radius: 20px;
           overflow: hidden;
+          border: 5px solid #ffffff;
           box-shadow: 0 10px 25px rgba(29, 79, 168, 0.12);
+          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .ssi-private-need-card:hover .ssi-private-need-img-box {
+          transform: translateX(-50%) translateY(-5px) scale(1.03);
+          box-shadow: 0 15px 30px rgba(20, 110, 245, 0.2);
         }
 
         .ssi-private-need-img-box img {
@@ -1695,6 +1710,11 @@
           font-weight: 700;
           color: #1D4FA8;
           margin-bottom: 14px;
+          transition: color 0.3s ease;
+        }
+
+        .ssi-private-need-card:hover .ssi-private-need-card-title {
+          color: #146EF5;
         }
 
         .ssi-private-need-card-desc {

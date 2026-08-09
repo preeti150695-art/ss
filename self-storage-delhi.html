@@ -1243,12 +1243,21 @@
       dropdownTrigger.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
-        const isVisible = window.getComputedStyle(dropdownMenu).display === "block";
-        dropdownMenu.style.display = isVisible ? "none" : "block";
+        const isVisible = dropdownMenu.classList.contains("show");
+        if (isVisible) {
+          dropdownMenu.classList.remove("show");
+          dropdownMenu.style.display = "none";
+        } else {
+          dropdownMenu.classList.add("show");
+          dropdownMenu.style.display = "block";
+        }
       });
 
-      document.addEventListener("click", function () {
-        dropdownMenu.style.display = "";
+      document.addEventListener("click", function (e) {
+        if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.classList.remove("show");
+          dropdownMenu.style.display = "";
+        }
       });
     }
   </script>

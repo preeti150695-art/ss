@@ -1793,6 +1793,155 @@
       </div>
     </section>
 
+    <!-- ==========================================
+         SECTION 3C — MORE SCENARIOS (HOME OFFICE, RENOVATION, DOWNSIZING)
+         ========================================== -->
+    <section class="ssi-private-need-section-two">
+      <style>
+        .ssi-private-need-section-two {
+          background-color: #ffffff;
+          padding: 30px 24px 80px; /* reduced top padding as it flows from previous header block */
+          width: 100%;
+          box-sizing: border-box;
+          font-family: 'Poppins', 'Inter', sans-serif;
+        }
+
+        .ssi-private-need-container-two {
+          max-width: 1280px;
+          margin: 0 auto;
+        }
+
+        .ssi-private-need-grid-two {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 40px;
+          width: 100%;
+        }
+
+        .ssi-private-need-card-two {
+          position: relative;
+          background-color: #ffffff;
+          border: 2px solid #1D4FA8;
+          border-radius: 24px;
+          padding: 110px 24px 30px;
+          text-align: center;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+          box-shadow: 0 4px 20px rgba(29, 79, 168, 0.03);
+        }
+
+        .ssi-private-need-card-two:hover {
+          transform: translateY(-8px);
+          border-color: #146EF5;
+          box-shadow: 0 20px 40px rgba(20, 110, 245, 0.12);
+        }
+
+        .ssi-private-need-img-box-two {
+          position: absolute;
+          top: -65px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 155px;
+          height: 155px;
+          border-radius: 20px;
+          overflow: hidden;
+          border: 5px solid #ffffff;
+          box-shadow: 0 10px 25px rgba(29, 79, 168, 0.12);
+          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .ssi-private-need-card-two:hover .ssi-private-need-img-box-two {
+          transform: translateX(-50%) translateY(-5px) scale(1.03);
+          box-shadow: 0 15px 30px rgba(20, 110, 245, 0.2);
+        }
+
+        .ssi-private-need-img-box-two img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .ssi-private-need-card-title-two {
+          font-size: 22px;
+          font-weight: 700;
+          color: #1D4FA8;
+          margin-bottom: 14px;
+          transition: color 0.3s ease;
+        }
+
+        .ssi-private-need-card-two:hover .ssi-private-need-card-title-two {
+          color: #146EF5;
+        }
+
+        .ssi-private-need-card-desc-two {
+          font-size: 14.5px;
+          color: #374151;
+          line-height: 1.6;
+          max-width: 280px;
+        }
+
+        @media (max-width: 1024px) {
+          .ssi-private-need-grid-two {
+            gap: 30px;
+          }
+          .ssi-private-need-card-two {
+            padding-top: 100px;
+          }
+          .ssi-private-need-img-box-two {
+            width: 135px;
+            height: 135px;
+            top: -55px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .ssi-private-need-section-two {
+            padding: 20px 20px 60px;
+          }
+          .ssi-private-need-grid-two {
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin-top: 40px;
+          }
+        }
+      </style>
+
+      <div class="ssi-private-need-container-two">
+        <div class="ssi-private-need-grid-two">
+          <!-- CARD 1: HOME OFFICE NEEDS -->
+          <div class="ssi-private-need-card-two">
+            <div class="ssi-private-need-img-box-two">
+              <img src="assets/scen_home_office.png" alt="Home Office Needs scenario - Furniture stored cleanly">
+            </div>
+            <h3 class="ssi-private-need-card-title-two">Home Office Needs</h3>
+            <p class="ssi-private-need-card-desc-two">Expand your home office space by safely storing extra items with us.</p>
+          </div>
+
+          <!-- CARD 2: RENOVATION -->
+          <div class="ssi-private-need-card-two">
+            <div class="ssi-private-need-img-box-two">
+              <img src="assets/scen_renovation.png" alt="Renovation scenario - Corrugated walls and roller shutter">
+            </div>
+            <h3 class="ssi-private-need-card-title-two">Renovation</h3>
+            <p class="ssi-private-need-card-desc-two">Store your items safely with us during home renovations or refurbishing.</p>
+          </div>
+
+          <!-- CARD 3: DOWNSIZING -->
+          <div class="ssi-private-need-card-two">
+            <div class="ssi-private-need-img-box-two">
+              <img src="assets/scen_downsizing.png" alt="Downsizing scenario - Packing services handling pallet">
+            </div>
+            <h3 class="ssi-private-need-card-title-two">Downsizing</h3>
+            <p class="ssi-private-need-card-desc-two">Simplify downsizing by storing excess items with our convenient solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION 4 — HOW IT WORKS -->
     <section class="ssi-offering-how-sec">
       <div class="ssi-offering-container">

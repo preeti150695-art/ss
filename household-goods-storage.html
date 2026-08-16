@@ -268,182 +268,24 @@
                     gap: 30px;
                 }
 
+                .self-storage-homepage-section__logo-link {
+                    display: block;
+                    text-decoration: none;
+                }
+
                 .self-storage-homepage-section__logo {
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 90px;
                     height: 48px;
-                    cursor: default;
-                    transition: transform 0.2s ease;
-                    flex-shrink: 0;
+                    width: auto;
+                    max-width: 130px;
+                    object-fit: contain;
+                    opacity: 0.9;
+                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    display: block;
                 }
 
                 .self-storage-homepage-section__logo:hover {
-                    transform: scale(1.05);
-                }
-
-                /* PTI */
-                .self-storage-homepage-section__logo.pti .pti-wrapper {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-                }
-
-                .self-storage-homepage-section__logo.pti .pti-grid {
-                    display: grid;
-                    grid-template-columns: repeat(3, 3px);
-                    gap: 2px;
-                    flex-shrink: 0;
-                }
-
-                .self-storage-homepage-section__logo.pti .pti-grid span {
-                    width: 3px;
-                    height: 3px;
-                    background-color: #c8102e;
-                    display: block;
-                }
-
-                .self-storage-homepage-section__logo.pti .pti-text {
-                    color: #c8102e;
-                    font-weight: 900;
-                    font-size: 16px;
-                    letter-spacing: 0.2px;
-                    line-height: 1;
-                }
-
-                .self-storage-homepage-section__logo.pti .pti-sub {
-                    font-size: 5px;
-                    font-family: sans-serif;
-                    color: #555555;
-                    text-transform: uppercase;
-                    display: block;
-                    margin-top: 1px;
-                    letter-spacing: 0px;
-                }
-
-                /* THE WEEK */
-                .self-storage-homepage-section__logo.theweek {
-                    font-family: 'Poppins', sans-serif;
-                }
-
-                .self-storage-homepage-section__logo.theweek .theweek-box {
-                    background-color: #d52b1e;
-                    color: #ffffff;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 36px;
-                    height: 36px;
-                    border-radius: 2px;
-                    line-height: 1;
-                }
-
-                .self-storage-homepage-section__logo.theweek .theweek-main {
-                    font-size: 6px;
-                    font-weight: 900;
-                    letter-spacing: 0.2px;
-                    margin-bottom: 2px;
-                    text-align: center;
-                }
-
-                .self-storage-homepage-section__logo.theweek .theweek-sub {
-                    font-size: 7px;
-                    font-weight: 900;
-                    background-color: #ffffff;
-                    color: #d52b1e;
-                    padding: 1px 3px;
-                    border-radius: 1px;
-                }
-
-                /* TOI */
-                .self-storage-homepage-section__logo.toi {
-                    font-family: serif;
-                }
-
-                .self-storage-homepage-section__logo.toi .toi-box {
-                    background: linear-gradient(180deg, #f03e3e 0%, #a20808 100%);
-                    color: #ffffff;
-                    font-weight: 900;
-                    font-size: 16px;
-                    font-style: italic;
-                    padding: 6px 10px;
-                    border-radius: 2px;
-                    line-height: 1;
-                    letter-spacing: 0.5px;
-                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-                }
-
-                /* REPUBLIC */
-                .self-storage-homepage-section__logo.republic {
-                    font-family: 'Inter', sans-serif;
-                }
-
-                .self-storage-homepage-section__logo.republic .republic-box {
-                    background-color: #0c1c24;
-                    color: #ffffff;
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 16px;
-                    font-weight: 900;
-                    width: 36px;
-                    height: 36px;
-                    border-radius: 2px;
-                    position: relative;
-                }
-
-                .self-storage-homepage-section__logo.republic .republic-plus {
-                    color: #8cd65b;
-                    font-size: 12px;
-                    position: absolute;
-                    top: 4px;
-                    right: 4px;
-                    font-weight: 900;
-                    line-height: 1;
-                }
-
-                /* ET */
-                .self-storage-homepage-section__logo.et {
-                    font-family: serif;
-                }
-
-                .self-storage-homepage-section__logo.et .et-box {
-                    background-color: #e31b23;
-                    color: #ffffff;
-                    font-weight: 900;
-                    font-size: 18px;
-                    padding: 4px 8px;
-                    border-radius: 2px;
-                    line-height: 1;
-                    letter-spacing: 0.5px;
-                }
-
-                /* ISS */
-                .self-storage-homepage-section__logo.iss {
-                    font-family: 'Inter', sans-serif;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    line-height: 1;
-                }
-
-                .self-storage-homepage-section__logo.iss .iss-main {
-                    color: #005fa9;
-                    font-weight: 900;
-                    font-size: 18px;
-                    letter-spacing: -0.5px;
-                }
-
-                .self-storage-homepage-section__logo.iss .iss-sub {
-                    font-size: 4px;
-                    color: #005fa9;
-                    font-weight: 800;
-                    text-transform: uppercase;
-                    margin-top: 2px;
-                    letter-spacing: 0.2px;
+                    opacity: 1;
+                    transform: scale(1.06);
                 }
 
                 /* Responsive design */
@@ -523,51 +365,24 @@
                 <div class="self-storage-homepage-section__media-container">
                     <h2 class="self-storage-homepage-section__media-label">As seen on</h2>
                     <div class="self-storage-homepage-section__logos">
-                        <!-- PTI -->
-                        <span class="self-storage-homepage-section__logo pti">
-                            <div class="pti-wrapper">
-                                <div class="pti-grid">
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                </div>
-                                <div>
-                                    <div class="pti-text">PTI</div>
-                                    <div class="pti-sub">Press Trust of India</div>
-                                </div>
-                            </div>
-                        </span>
-                        
-                        <!-- THE WEEK -->
-                        <span class="self-storage-homepage-section__logo theweek">
-                            <div class="theweek-box">
-                                <div class="theweek-main">THE WEEK</div>
-                                <div class="theweek-sub">LIVE</div>
-                            </div>
-                        </span>
-                        
-                        <!-- TOI -->
-                        <span class="self-storage-homepage-section__logo toi">
-                            <div class="toi-box">TOI</div>
-                        </span>
-                        
-                        <!-- REPUBLIC -->
-                        <span class="self-storage-homepage-section__logo republic">
-                            <div class="republic-box">
-                                R<span class="republic-plus">+</span>
-                            </div>
-                        </span>
-                        
-                        <!-- ET -->
-                        <span class="self-storage-homepage-section__logo et">
-                            <div class="et-box">ET</div>
-                        </span>
-                        
-                        <!-- ISS -->
-                        <span class="self-storage-homepage-section__logo iss">
-                            <div class="iss-main">ISS</div>
-                            <div class="iss-sub">Inside Self-Storage</div>
-                        </span>
+                        <a href="#" class="self-storage-homepage-section__logo-link">
+                            <img src="images/media/pti.png" alt="PTI" class="self-storage-homepage-section__logo">
+                        </a>
+                        <a href="#" class="self-storage-homepage-section__logo-link">
+                            <img src="images/media/the-week.png" alt="THE WEEK" class="self-storage-homepage-section__logo">
+                        </a>
+                        <a href="#" class="self-storage-homepage-section__logo-link">
+                            <img src="images/media/toi.png" alt="TOI" class="self-storage-homepage-section__logo">
+                        </a>
+                        <a href="#" class="self-storage-homepage-section__logo-link">
+                            <img src="images/media/rplus.png" alt="R+" class="self-storage-homepage-section__logo">
+                        </a>
+                        <a href="#" class="self-storage-homepage-section__logo-link">
+                            <img src="images/media/economic-times.png" alt="Economic Times" class="self-storage-homepage-section__logo">
+                        </a>
+                        <a href="#" class="self-storage-homepage-section__logo-link">
+                            <img src="images/media/iss.png" alt="Inside Self-Storage" class="self-storage-homepage-section__logo">
+                        </a>
                     </div>
                 </div>
             </div>

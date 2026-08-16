@@ -1824,7 +1824,7 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-xl);
     max-width: 1280px;
-    margin: var(--space-3xl) auto;
+    margin: var(--space-3xl) auto 0;
     padding: 0 var(--space-xl);
 }
 

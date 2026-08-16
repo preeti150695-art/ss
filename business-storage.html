@@ -248,10 +248,11 @@
                     object-fit: cover;
                     display: block;
                     transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    transform: scale(1.15) translate(-4%, -4%); /* Zoom and shift to crop the top-left watermark */
                 }
 
                 .self-storage-homepage-section__image-container:hover .self-storage-homepage-section__image {
-                    transform: scale(1.03);
+                    transform: scale(1.22) translate(-4%, -4%);
                 }
 
                 /* Media strip */
@@ -400,9 +401,7 @@
                         </div>
                     </div>
 
-                    <a href="#calculator" class="self-storage-homepage-section__cta">
-                        Calculate Business Space <span class="self-storage-homepage-section__cta-arrow">→</span>
-                    </a>
+
                 </div>
 
                 <!-- RIGHT COLUMN: IMAGE -->

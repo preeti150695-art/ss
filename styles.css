@@ -58,7 +58,7 @@
     --space-2xl: 32px;
     --space-3xl: 48px;
     --space-4xl: 64px;
-    --space-section: 90px; /* Consistent premium 90px padding between sections */
+    --space-section: 50px; /* Consistent premium 50px padding between sections */
 
     /* Modern SaaS Elevation Shadows */
     --shadow-sm: 0 4px 6px -1px rgba(15, 22, 34, 0.03), 0 2px 4px -1px rgba(15, 22, 34, 0.02);
@@ -2269,7 +2269,7 @@ h3 {
 
 /* Our Offerings Section */
 .offerings-section {
-    padding: 40px 0 96px 0; /* Reduced top padding from 96px */
+    padding: 40px 0 50px 0; /* Reduced top/bottom padding */
     background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%); /* Soft blue gradient background */
     border-bottom: 1px solid var(--border);
 }

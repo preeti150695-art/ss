@@ -511,92 +511,111 @@
 
                 .household-need__header {
                     text-align: center;
-                    margin-bottom: 50px;
+                    margin-bottom: 60px;
                 }
 
                 .household-need__heading {
-                    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-                    color: #1e3a8a;
+                    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: #2563EB;
+                    line-height: 1.25;
                     margin-bottom: 12px;
-                    font-weight: 800;
                 }
 
                 .household-need__subtitle {
-                    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-                    color: #4b5563;
-                    max-width: 700px;
-                    margin: 0 auto;
-                    line-height: 1.5;
+                    font-size: 16px;
+                    color: #5f6c7b;
+                    font-weight: 400;
                 }
 
                 .household-need__grid {
                     display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    gap: 32px;
-                    margin-top: 20px;
+                    grid-template-columns: repeat(3, 1fr);
+                    row-gap: 100px;
+                    column-gap: 40px;
+                    width: 100%;
                 }
 
                 .household-need__card {
+                    position: relative;
                     background-color: #ffffff;
-                    border: 1.5px solid #e5e7eb;
-                    border-radius: 12px;
-                    padding: 28px 24px;
-                    transition: all 0.3s ease;
-                    text-align: left;
-                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+                    border: 2px solid #2563EB;
+                    border-radius: 24px;
+                    padding: 110px 24px 30px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.03);
                 }
 
                 .household-need__card:hover {
-                    transform: translateY(-5px);
-                    border-color: #2563eb;
-                    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+                    transform: translateY(-8px);
+                    border-color: #F97316;
+                    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.12);
                 }
 
                 .household-need__img-box {
-                    height: 140px;
-                    width: 100%;
-                    margin-bottom: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    position: absolute;
+                    top: -65px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 155px;
+                    height: 155px;
+                    border-radius: 20px;
                     overflow: hidden;
-                    border-radius: 8px;
-                    background-color: #f8fafc;
+                    border: 5px solid #ffffff;
+                    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
+                    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+                }
+
+                .household-need__card:hover .household-need__img-box {
+                    transform: translateX(-50%) scale(1.05);
+                    box-shadow: 0 15px 35px rgba(249, 115, 22, 0.2);
                 }
 
                 .household-need__img-box img {
-                    height: 100%;
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
-                    transition: transform 0.3s ease;
-                }
-
-                .household-need__card:hover .household-need__img-box img {
-                    transform: scale(1.05);
                 }
 
                 .household-need__card-title {
-                    font-size: 1.15rem;
-                    color: #1e3a8a;
-                    margin-bottom: 8px;
-                    font-weight: 750;
+                    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #1E293B;
+                    margin-bottom: 12px;
                 }
 
                 .household-need__card:hover .household-need__card-title {
-                    color: #2563eb;
+                    color: #F97316;
                 }
 
                 .household-need__card-desc {
-                    font-size: 0.92rem;
-                    color: #4b5563;
-                    line-height: 1.5;
-                    margin: 0;
+                    font-size: 14.5px;
+                    color: #64748B;
+                    line-height: 1.6;
+                    max-width: 280px;
                 }
 
                 @media (max-width: 1024px) {
                     .household-need__grid {
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 24px;
+                        gap: 30px;
+                    }
+                    .household-need__card {
+                        padding-top: 100px;
+                    }
+                    .household-need__img-box {
+                        width: 135px;
+                        height: 135px;
+                        top: -55px;
+                    }
+                    .household-need__heading {
+                        font-size: 30px;
                     }
                 }
 
@@ -622,40 +641,58 @@
                 </div>
 
                 <div class="household-need__grid">
-                    <!-- Scenario 1 -->
+                    <!-- CARD 1: RELOCATION -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_home_office.png" alt="Office Shifting & Renovation">
+                            <img src="assets/scen_relocation.png" alt="Relocation scenario">
                         </div>
-                        <h3 class="household-need__card-title">Office Shifting</h3>
-                        <p class="household-need__card-desc">Safely store office desks, ergonomic chairs, and delicate IT hardware during company relocations or space remodeling.</p>
+                        <h3 class="household-need__card-title">Relocation</h3>
+                        <p class="household-need__card-desc">Use household storage for a smooth transition when switching homes.</p>
                     </div>
 
-                    <!-- Scenario 2 -->
+                    <!-- CARD 2: TRAVELLING ABROAD -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_renovation.png" alt="Document Archiving & Compliance">
+                            <img src="assets/scen_travel.png" alt="Travelling Abroad scenario">
                         </div>
-                        <h3 class="household-need__card-title">Document Archiving</h3>
-                        <p class="household-need__card-desc">Store tax audits, legal contracts, and financial archives securely to satisfy regulatory compliance guidelines.</p>
+                        <h3 class="household-need__card-title">Travelling Abroad</h3>
+                        <p class="household-need__card-desc">Secure your home items with our storage while you travel abroad, worry-free.</p>
                     </div>
 
-                    <!-- Scenario 3 -->
+                    <!-- CARD 3: SAFETY -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_declutter.png" alt="E-commerce & Stock Inventory">
+                            <img src="assets/scen_safety.png" alt="Safety scenario">
                         </div>
-                        <h3 class="household-need__card-title">E-commerce Stock</h3>
-                        <p class="household-need__card-desc">Store retail goods, inventory stock, and packaging materials with flexible, on-demand space scaling options.</p>
+                        <h3 class="household-need__card-title">Safety</h3>
+                        <p class="household-need__card-desc">Choose our storage solutions for the ultimate safety of your household items.</p>
                     </div>
 
-                    <!-- Scenario 4 -->
+                    <!-- CARD 4: HOME OFFICE NEEDS -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_downsizing.png" alt="Event & Promotional Gear">
+                            <img src="assets/scen_home_office.png" alt="Home Office Needs scenario">
                         </div>
-                        <h3 class="household-need__card-title">Promotional Gear</h3>
-                        <p class="household-need__card-desc">Store exhibition stalls, event trade stands, banners, and excess marketing merchandise between campaigns.</p>
+                        <h3 class="household-need__card-title">Home Office Needs</h3>
+                        <p class="household-need__card-desc">Expand your home office space by safely storing extra items with us.</p>
+                    </div>
+
+                    <!-- CARD 5: RENOVATION -->
+                    <div class="household-need__card">
+                        <div class="household-need__img-box">
+                            <img src="assets/scen_renovation.png" alt="Renovation scenario">
+                        </div>
+                        <h3 class="household-need__card-title">Renovation</h3>
+                        <p class="household-need__card-desc">Store your items safely with us during home renovations or refurbishing.</p>
+                    </div>
+
+                    <!-- CARD 6: DOWNSIZING -->
+                    <div class="household-need__card">
+                        <div class="household-need__img-box">
+                            <img src="assets/scen_downsizing.png" alt="Downsizing scenario">
+                        </div>
+                        <h3 class="household-need__card-title">Downsizing</h3>
+                        <p class="household-need__card-desc">Simplify downsizing by storing excess items with our convenient solutions.</p>
                     </div>
                 </div>
             </div>

@@ -58,7 +58,7 @@
     --space-2xl: 32px;
     --space-3xl: 48px;
     --space-4xl: 64px;
-    --space-section: 60px; /* Consistent premium 60px padding between sections */
+    --space-section: 90px; /* Consistent premium 90px padding between sections */
 
     /* Modern SaaS Elevation Shadows */
     --shadow-sm: 0 4px 6px -1px rgba(15, 22, 34, 0.03), 0 2px 4px -1px rgba(15, 22, 34, 0.02);
@@ -843,7 +843,7 @@ h3 {
 .section-header-centered {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto var(--space-xl); /* Reduced gap */
+    margin: 0 auto 50px; /* Unified premium bottom margin */
     display: flex;
     flex-direction: column;
     align-items: center;

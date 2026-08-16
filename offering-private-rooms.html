@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Material Symbols Rounded -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <!-- Main site stylesheet -->
@@ -1622,332 +1624,122 @@
       </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 3B — WHY THERE IS A NEED FOR PRIVATE STORAGE
-         ========================================== -->
-    <section class="ssi-private-need-section">
-      <style>
-        .ssi-private-need-section {
-          background-color: #FAFCFF;
-          padding: 80px 24px;
-          width: 100%;
-          box-sizing: border-box;
-          font-family: 'Poppins', 'Inter', sans-serif;
-        }
+    <!-- When Self Storage Makes Sense Section -->
+    <section id="services" class="sense-section">
+        <div class="container">
+            <div class="section-header-centered">
+                <h2>When Do You Need Self Storage?</h2>
+                <p>Whether you are decluttering your home, managing a major life transition, or scaling your business, we provide secure rooms tailored to your exact needs.</p>
+                
+                <!-- Elegant Statistic Badge -->
+                <div class="stat-badge-wrapper">
+                    <span class="stat-badge">
+                        <span class="stars">★★★★★</span> Trusted by 5,000+ homeowners and businesses across Delhi NCR.
+                    </span>
+                </div>
+            </div>
 
-        .ssi-private-need-container {
-          max-width: 1280px;
-          margin: 0 auto;
-        }
+            <div class="sense-grid">
+                <!-- Card 1: Relocating -->
+                <div class="sense-card shadow-sm" data-category="home">
+                    <div class="sense-icon-box theme-blue">
+                        <span class="material-symbols-rounded">moving</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Relocating</h3>
+                        <p>Move without the stress. Store your belongings safely until you're ready.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-header {
-          text-align: center;
-          margin-bottom: 90px;
-        }
+                <!-- Card 2: Home Renovation -->
+                <div class="sense-card shadow-sm" data-category="home">
+                    <div class="sense-icon-box theme-blue">
+                        <span class="material-symbols-rounded">home_repair_service</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Home Renovation</h3>
+                        <p>Protect your furniture and valuables while transforming your home.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-heading {
-          font-size: 36px;
-          font-weight: 700;
-          color: #1d4fa8;
-          line-height: 1.25;
-          margin-bottom: 12px;
-        }
+                <!-- Card 3: Work From Home -->
+                <div class="sense-card shadow-sm" data-category="lifestyle">
+                    <div class="sense-icon-box theme-orange">
+                        <span class="material-symbols-rounded">home_work</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Work From Home</h3>
+                        <p>Create a productive workspace by freeing up extra rooms.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-subtitle {
-          font-size: 16.5px;
-          color: #5f6c7b;
-          font-weight: 400;
-        }
+                <!-- Card 4: Extra Household Storage -->
+                <div class="sense-card shadow-sm" data-category="home">
+                    <div class="sense-icon-box theme-blue">
+                        <span class="material-symbols-rounded">inventory_2</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Extra Household Storage</h3>
+                        <p>Store seasonal items, furniture and belongings you don't use every day.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 40px;
-          width: 100%;
-        }
+                <!-- Card 5: Business Expansion -->
+                <div class="sense-card shadow-sm" data-category="business">
+                    <div class="sense-icon-box theme-orange">
+                        <span class="material-symbols-rounded">business_center</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Business Expansion</h3>
+                        <p>Free up office space and securely store inventory, files and equipment.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-card {
-          position: relative;
-          background-color: #ffffff;
-          border: 2px solid #1D4FA8;
-          border-radius: 24px;
-          padding: 110px 24px 30px;
-          text-align: center;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-          box-shadow: 0 4px 20px rgba(29, 79, 168, 0.03);
-        }
+                <!-- Card 6: Business Transition -->
+                <div class="sense-card shadow-sm" data-category="business">
+                    <div class="sense-icon-box theme-orange">
+                        <span class="material-symbols-rounded">currency_exchange</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Business Transition</h3>
+                        <p>Temporary storage during office relocation, liquidation or restructuring.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-card:hover {
-          transform: translateY(-8px);
-          border-color: #146EF5;
-          box-shadow: 0 20px 40px rgba(20, 110, 245, 0.12);
-        }
+                <!-- Card 7: Downsizing -->
+                <div class="sense-card shadow-sm" data-category="lifestyle">
+                    <div class="sense-icon-box theme-blue">
+                        <span class="material-symbols-rounded">house</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Downsizing</h3>
+                        <p>Keep what matters without overcrowding your new home.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-img-box {
-          position: absolute;
-          top: -65px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 155px;
-          height: 155px;
-          border-radius: 20px;
-          overflow: hidden;
-          border: 5px solid #ffffff;
-          box-shadow: 0 10px 25px rgba(29, 79, 168, 0.12);
-          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
+                <!-- Card 8: Decluttering -->
+                <div class="sense-card shadow-sm" data-category="lifestyle">
+                    <div class="sense-icon-box theme-orange">
+                        <span class="material-symbols-rounded">cleaning_services</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Decluttering</h3>
+                        <p>Enjoy a cleaner, more organised home without giving away valuable belongings.</p>
+                    </div>
+                </div>
 
-        .ssi-private-need-card:hover .ssi-private-need-img-box {
-          transform: translateX(-50%) translateY(-5px) scale(1.03);
-          box-shadow: 0 15px 30px rgba(20, 110, 245, 0.2);
-        }
-
-        .ssi-private-need-img-box img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
-
-        .ssi-private-need-card-title {
-          font-size: 22px;
-          font-weight: 700;
-          color: #1D4FA8;
-          margin-bottom: 14px;
-          transition: color 0.3s ease;
-        }
-
-        .ssi-private-need-card:hover .ssi-private-need-card-title {
-          color: #146EF5;
-        }
-
-        .ssi-private-need-card-desc {
-          font-size: 14.5px;
-          color: #374151;
-          line-height: 1.6;
-          max-width: 280px;
-        }
-
-        @media (max-width: 1024px) {
-          .ssi-private-need-grid {
-            gap: 30px;
-          }
-          .ssi-private-need-card {
-            padding-top: 100px;
-          }
-          .ssi-private-need-img-box {
-            width: 135px;
-            height: 135px;
-            top: -55px;
-          }
-          .ssi-private-need-heading {
-            font-size: 30px;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .ssi-private-need-section {
-            padding: 60px 20px;
-          }
-          .ssi-private-need-grid {
-            grid-template-columns: 1fr;
-            gap: 80px; /* larger gap because of overlapping images */
-            margin-top: 40px;
-          }
-          .ssi-private-need-header {
-            margin-bottom: 70px;
-          }
-        }
-      </style>
-
-      <div class="ssi-private-need-container">
-        <div class="ssi-private-need-header">
-          <h2 class="ssi-private-need-heading">Why There is a Need for Private Room Storage?</h2>
-          <p class="ssi-private-need-subtitle">Here are some scenarios where you are likely to encounter the need for private room storage.</p>
+                <!-- Card 9: Growing Family -->
+                <div class="sense-card shadow-sm" data-category="lifestyle">
+                    <div class="sense-icon-box theme-blue">
+                        <span class="material-symbols-rounded">family_restroom</span>
+                    </div>
+                    <div class="sense-card-content">
+                        <h3>Growing Family</h3>
+                        <p>Create space for every new chapter without letting go of treasured possessions.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="ssi-private-need-grid">
-          <!-- CARD 1: RELOCATION -->
-          <div class="ssi-private-need-card">
-            <div class="ssi-private-need-img-box">
-              <img src="assets/scen_relocation.png" alt="Relocation scenario - Packing home belongings">
-            </div>
-            <h3 class="ssi-private-need-card-title">Relocation</h3>
-            <p class="ssi-private-need-card-desc">Use household storage for a smooth transition when switching homes.</p>
-          </div>
-
-          <!-- CARD 2: TRAVELLING ABROAD -->
-          <div class="ssi-private-need-card">
-            <div class="ssi-private-need-img-box">
-              <img src="assets/scen_travel.png" alt="Travelling Abroad scenario - Storage units with boxes">
-            </div>
-            <h3 class="ssi-private-need-card-title">Travelling Abroad</h3>
-            <p class="ssi-private-need-card-desc">Secure your home items with our storage while you travel abroad, worry-free.</p>
-          </div>
-
-          <!-- CARD 3: SAFETY -->
-          <div class="ssi-private-need-card">
-            <div class="ssi-private-need-img-box">
-              <img src="assets/scen_safety.png" alt="Safety scenario - Workers handling packages securely">
-            </div>
-            <h3 class="ssi-private-need-card-title">Safety</h3>
-            <p class="ssi-private-need-card-desc">Choose our storage solutions for the ultimate safety of your household items.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================
-         SECTION 3C — MORE SCENARIOS (HOME OFFICE, RENOVATION, DOWNSIZING)
-         ========================================== -->
-    <section class="ssi-private-need-section-two">
-      <style>
-        .ssi-private-need-section-two {
-          background-color: #ffffff;
-          padding: 30px 24px 80px; /* reduced top padding as it flows from previous header block */
-          width: 100%;
-          box-sizing: border-box;
-          font-family: 'Poppins', 'Inter', sans-serif;
-        }
-
-        .ssi-private-need-container-two {
-          max-width: 1280px;
-          margin: 0 auto;
-        }
-
-        .ssi-private-need-grid-two {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 40px;
-          width: 100%;
-        }
-
-        .ssi-private-need-card-two {
-          position: relative;
-          background-color: #ffffff;
-          border: 2px solid #1D4FA8;
-          border-radius: 24px;
-          padding: 110px 24px 30px;
-          text-align: center;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-          box-shadow: 0 4px 20px rgba(29, 79, 168, 0.03);
-        }
-
-        .ssi-private-need-card-two:hover {
-          transform: translateY(-8px);
-          border-color: #146EF5;
-          box-shadow: 0 20px 40px rgba(20, 110, 245, 0.12);
-        }
-
-        .ssi-private-need-img-box-two {
-          position: absolute;
-          top: -65px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 155px;
-          height: 155px;
-          border-radius: 20px;
-          overflow: hidden;
-          border: 5px solid #ffffff;
-          box-shadow: 0 10px 25px rgba(29, 79, 168, 0.12);
-          transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        .ssi-private-need-card-two:hover .ssi-private-need-img-box-two {
-          transform: translateX(-50%) translateY(-5px) scale(1.03);
-          box-shadow: 0 15px 30px rgba(20, 110, 245, 0.2);
-        }
-
-        .ssi-private-need-img-box-two img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
-
-        .ssi-private-need-card-title-two {
-          font-size: 22px;
-          font-weight: 700;
-          color: #1D4FA8;
-          margin-bottom: 14px;
-          transition: color 0.3s ease;
-        }
-
-        .ssi-private-need-card-two:hover .ssi-private-need-card-title-two {
-          color: #146EF5;
-        }
-
-        .ssi-private-need-card-desc-two {
-          font-size: 14.5px;
-          color: #374151;
-          line-height: 1.6;
-          max-width: 280px;
-        }
-
-        @media (max-width: 1024px) {
-          .ssi-private-need-grid-two {
-            gap: 30px;
-          }
-          .ssi-private-need-card-two {
-            padding-top: 100px;
-          }
-          .ssi-private-need-img-box-two {
-            width: 135px;
-            height: 135px;
-            top: -55px;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .ssi-private-need-section-two {
-            padding: 20px 20px 60px;
-          }
-          .ssi-private-need-grid-two {
-            grid-template-columns: 1fr;
-            gap: 80px;
-            margin-top: 40px;
-          }
-        }
-      </style>
-
-      <div class="ssi-private-need-container-two">
-        <div class="ssi-private-need-grid-two">
-          <!-- CARD 1: HOME OFFICE NEEDS -->
-          <div class="ssi-private-need-card-two">
-            <div class="ssi-private-need-img-box-two">
-              <img src="assets/scen_home_office.png" alt="Home Office Needs scenario - Furniture stored cleanly">
-            </div>
-            <h3 class="ssi-private-need-card-title-two">Home Office Needs</h3>
-            <p class="ssi-private-need-card-desc-two">Expand your home office space by safely storing extra items with us.</p>
-          </div>
-
-          <!-- CARD 2: RENOVATION -->
-          <div class="ssi-private-need-card-two">
-            <div class="ssi-private-need-img-box-two">
-              <img src="assets/scen_renovation.png" alt="Renovation scenario - Corrugated walls and roller shutter">
-            </div>
-            <h3 class="ssi-private-need-card-title-two">Renovation</h3>
-            <p class="ssi-private-need-card-desc-two">Store your items safely with us during home renovations or refurbishing.</p>
-          </div>
-
-          <!-- CARD 3: DOWNSIZING -->
-          <div class="ssi-private-need-card-two">
-            <div class="ssi-private-need-img-box-two">
-              <img src="assets/scen_downsizing.png" alt="Downsizing scenario - Packing services handling pallet">
-            </div>
-            <h3 class="ssi-private-need-card-title-two">Downsizing</h3>
-            <p class="ssi-private-need-card-desc-two">Simplify downsizing by storing excess items with our convenient solutions.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- SECTION 4 — HOW IT WORKS -->

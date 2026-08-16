@@ -646,6 +646,167 @@
                 </div>
             </div>
         </section>
+
+        <!-- ==========================================
+             SECTION 5 — FEATURE HIGHLIGHTS BAR
+             ========================================== -->
+        <section class="household-features">
+            <style>
+                .household-features {
+                    background-color: #2563EB;
+                    padding: 40px 24px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    color: #ffffff;
+                    font-family: 'Inter', sans-serif;
+                }
+
+                .household-features__container {
+                    max-width: 1140px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 30px;
+                }
+
+                .household-features__item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 10px;
+                }
+
+                .household-features__title-box {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                .household-features__icon {
+                    font-size: 24px;
+                    color: #ffffff;
+                    font-weight: normal;
+                }
+
+                .household-features__title {
+                    font-family: 'Plus Jakarta Sans', sans-serif;
+                    font-size: 16.5px;
+                    font-weight: 700;
+                    margin: 0;
+                }
+
+                .household-features__desc {
+                    font-size: 13.5px;
+                    line-height: 1.5;
+                    color: #e0e7ff;
+                    margin: 0;
+                }
+
+                @media (max-width: 991px) {
+                    .household-features__container {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 40px 30px;
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    .household-features__container {
+                        grid-template-columns: 1fr;
+                        gap: 30px;
+                    }
+                }
+            </style>
+
+            <div class="household-features__container">
+                <!-- FEATURE 1: 24/7 SECURITY -->
+                <div class="household-features__item">
+                    <div class="household-features__title-box">
+                        <span class="material-symbols-rounded household-features__icon">lock</span>
+                        <h4 class="household-features__title">24/7 Security</h4>
+                    </div>
+                    <p class="household-features__desc">Secure your belongings with round-the-clock security protection.</p>
+                </div>
+
+                <!-- FEATURE 2: CCTV MONITORING -->
+                <div class="household-features__item">
+                    <div class="household-features__title-box">
+                        <span class="material-symbols-rounded household-features__icon">videocam</span>
+                        <h4 class="household-features__title">CCTV Monitoring</h4>
+                    </div>
+                    <p class="household-features__desc">Continuous surveillance ensures the safety of your stored items.</p>
+                </div>
+
+                <!-- FEATURE 3: PEST CONTROL -->
+                <div class="household-features__item">
+                    <div class="household-features__title-box">
+                        <span class="material-symbols-rounded household-features__icon">pest_control</span>
+                        <h4 class="household-features__title">Pest Control</h4>
+                    </div>
+                    <p class="household-features__desc">Regular pest control keeps your items in pristine condition.</p>
+                </div>
+
+                <!-- FEATURE 4: CONVENIENT LOCATIONS -->
+                <div class="household-features__item">
+                    <div class="household-features__title-box">
+                        <span class="material-symbols-rounded household-features__icon">location_on</span>
+                        <h4 class="household-features__title">Convenient Locations</h4>
+                    </div>
+                    <p class="household-features__desc">Easily accessible facilities near major residential and business hubs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 6 — OUR OFFERINGS HEADER
+             ========================================== -->
+        <section class="household-offerings">
+            <style>
+                .household-offerings {
+                    background-color: #ffffff;
+                    padding: 80px 24px 20px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: center;
+                }
+
+                .household-offerings__container {
+                    max-width: 1140px;
+                    margin: 0 auto;
+                }
+
+                .household-offerings__heading {
+                    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                    font-size: 36px;
+                    font-weight: 700;
+                    color: #2563EB;
+                    line-height: 1.25;
+                    margin-bottom: 16px;
+                }
+
+                .household-offerings__subtitle {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 16.5px;
+                    color: #4b5563;
+                    line-height: 1.6;
+                    max-width: 780px;
+                    margin: 0 auto;
+                }
+
+                @media (max-width: 768px) {
+                    .household-offerings {
+                        padding: 60px 20px 10px;
+                    }
+                    .household-offerings__heading {
+                        font-size: 30px;
+                    }
+                }
+            </style>
+
+            <div class="household-offerings__container">
+                <h2 class="household-offerings__heading">Our Offerings</h2>
+                <p class="household-offerings__subtitle">Comprehensive and Flexible Storage Solutions Tailored to Fit Your Unique Personal and Business Needs</p>
+            </div>
+        </section>
     </main>
 
     <!-- Footer Section -->

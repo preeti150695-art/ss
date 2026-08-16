@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Household Goods Storage in Delhi NCR | Self Storage India</title>
+    <title>Business Storage & Office Archive Storage in Delhi NCR | Self Storage India</title>
     <!-- Fonts pairing: Plus Jakarta Sans (Headings) & Inter (Body UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -439,7 +439,7 @@
         </section>
 
         <!-- ==========================================
-             SECTION 4 — WHY THERE IS A NEED FOR HOUSEHOLD STORAGE
+             SECTION 4 — WHY THERE IS A NEED FOR BUSINESS STORAGE
              ========================================== -->
         <section class="household-need">
             <style>
@@ -458,113 +458,92 @@
 
                 .household-need__header {
                     text-align: center;
-                    margin-bottom: 60px;
+                    margin-bottom: 50px;
                 }
 
                 .household-need__heading {
-                    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                    font-size: 32px;
-                    font-weight: 700;
-                    color: #2563EB;
-                    line-height: 1.25;
+                    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+                    color: #1e3a8a;
                     margin-bottom: 12px;
+                    font-weight: 800;
                 }
 
                 .household-need__subtitle {
-                    font-size: 16px;
-                    color: #5f6c7b;
-                    font-weight: 400;
+                    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+                    color: #4b5563;
+                    max-width: 700px;
+                    margin: 0 auto;
+                    line-height: 1.5;
                 }
 
                 .household-need__grid {
                     display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    row-gap: 100px;
-                    column-gap: 40px;
-                    width: 100%;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 32px;
+                    margin-top: 20px;
                 }
 
                 .household-need__card {
-                    position: relative;
                     background-color: #ffffff;
-                    border: 2px solid #2563EB;
-                    border-radius: 24px;
-                    padding: 110px 24px 30px;
-                    text-align: center;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-                    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.03);
+                    border: 1.5px solid #e5e7eb;
+                    border-radius: 12px;
+                    padding: 28px 24px;
+                    transition: all 0.3s ease;
+                    text-align: left;
+                    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
                 }
 
                 .household-need__card:hover {
-                    transform: translateY(-8px);
-                    border-color: #F97316;
-                    box-shadow: 0 20px 40px rgba(249, 115, 22, 0.12);
+                    transform: translateY(-5px);
+                    border-color: #2563eb;
+                    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
                 }
 
                 .household-need__img-box {
-                    position: absolute;
-                    top: -65px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 155px;
-                    height: 155px;
-                    border-radius: 20px;
+                    height: 140px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     overflow: hidden;
-                    border: 5px solid #ffffff;
-                    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
-                    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-                }
-
-                .household-need__card:hover .household-need__img-box {
-                    transform: translateX(-50%) translateY(-5px) scale(1.03);
-                    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.2);
+                    border-radius: 8px;
+                    background-color: #f8fafc;
                 }
 
                 .household-need__img-box img {
-                    width: 100%;
                     height: 100%;
+                    width: 100%;
                     object-fit: cover;
-                    display: block;
+                    transition: transform 0.3s ease;
+                }
+
+                .household-need__card:hover .household-need__img-box img {
+                    transform: scale(1.05);
                 }
 
                 .household-need__card-title {
-                    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-                    font-size: 22px;
-                    font-weight: 700;
-                    color: #2563EB;
-                    margin-bottom: 14px;
-                    transition: color 0.3s ease;
+                    font-size: 1.15rem;
+                    color: #1e3a8a;
+                    margin-bottom: 8px;
+                    font-weight: 750;
                 }
 
                 .household-need__card:hover .household-need__card-title {
-                    color: #F97316;
+                    color: #2563eb;
                 }
 
                 .household-need__card-desc {
-                    font-size: 14.5px;
-                    color: #374151;
-                    line-height: 1.6;
-                    max-width: 280px;
+                    font-size: 0.92rem;
+                    color: #4b5563;
+                    line-height: 1.5;
+                    margin: 0;
                 }
 
                 @media (max-width: 1024px) {
                     .household-need__grid {
-                        gap: 30px;
-                    }
-                    .household-need__card {
-                        padding-top: 100px;
-                    }
-                    .household-need__img-box {
-                        width: 135px;
-                        height: 135px;
-                        top: -55px;
-                    }
-                    .household-need__heading {
-                        font-size: 30px;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 24px;
                     }
                 }
 
@@ -585,63 +564,45 @@
 
             <div class="household-need__container">
                 <div class="household-need__header">
-                    <h2 class="household-need__heading">Why There is a Need for Household Storage?</h2>
-                    <p class="household-need__subtitle">Here are some scenarios where you are likely to encounter the need for household goods storage.</p>
+                    <h2 class="household-need__heading">Why There is a Need for Business Storage?</h2>
+                    <p class="household-need__subtitle">Optimize your retail or corporate workspace footprint. Discover common scenarios where businesses in NCR require secure storage space.</p>
                 </div>
 
                 <div class="household-need__grid">
-                    <!-- CARD 1: RELOCATION -->
+                    <!-- Scenario 1 -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_relocation.png" alt="Relocation scenario">
+                            <img src="assets/scen_home_office.png" alt="Office Shifting & Renovation">
                         </div>
-                        <h3 class="household-need__card-title">Relocation</h3>
-                        <p class="household-need__card-desc">Use household storage for a smooth transition when switching homes.</p>
+                        <h3 class="household-need__card-title">Office Shifting</h3>
+                        <p class="household-need__card-desc">Safely store office desks, ergonomic chairs, and delicate IT hardware during company relocations or space remodeling.</p>
                     </div>
 
-                    <!-- CARD 2: TRAVELLING ABROAD -->
+                    <!-- Scenario 2 -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_travel.png" alt="Travelling Abroad scenario">
+                            <img src="assets/scen_renovation.png" alt="Document Archiving & Compliance">
                         </div>
-                        <h3 class="household-need__card-title">Travelling Abroad</h3>
-                        <p class="household-need__card-desc">Secure your home items with our storage while you travel abroad, worry-free.</p>
+                        <h3 class="household-need__card-title">Document Archiving</h3>
+                        <p class="household-need__card-desc">Store tax audits, legal contracts, and financial archives securely to satisfy regulatory compliance guidelines.</p>
                     </div>
 
-                    <!-- CARD 3: SAFETY -->
+                    <!-- Scenario 3 -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_safety.png" alt="Safety scenario">
+                            <img src="assets/scen_declutter.png" alt="E-commerce & Stock Inventory">
                         </div>
-                        <h3 class="household-need__card-title">Safety</h3>
-                        <p class="household-need__card-desc">Choose our storage solutions for the ultimate safety of your household items.</p>
+                        <h3 class="household-need__card-title">E-commerce Stock</h3>
+                        <p class="household-need__card-desc">Store retail goods, inventory stock, and packaging materials with flexible, on-demand space scaling options.</p>
                     </div>
 
-                    <!-- CARD 4: HOME OFFICE NEEDS -->
+                    <!-- Scenario 4 -->
                     <div class="household-need__card">
                         <div class="household-need__img-box">
-                            <img src="assets/scen_home_office.png" alt="Home Office Needs scenario">
+                            <img src="assets/scen_downsizing.png" alt="Event & Promotional Gear">
                         </div>
-                        <h3 class="household-need__card-title">Home Office Needs</h3>
-                        <p class="household-need__card-desc">Expand your home office space by safely storing extra items with us.</p>
-                    </div>
-
-                    <!-- CARD 5: RENOVATION -->
-                    <div class="household-need__card">
-                        <div class="household-need__img-box">
-                            <img src="assets/scen_renovation.png" alt="Renovation scenario">
-                        </div>
-                        <h3 class="household-need__card-title">Renovation</h3>
-                        <p class="household-need__card-desc">Store your items safely with us during home renovations or refurbishing.</p>
-                    </div>
-
-                    <!-- CARD 6: DOWNSIZING -->
-                    <div class="household-need__card">
-                        <div class="household-need__img-box">
-                            <img src="assets/scen_downsizing.png" alt="Downsizing scenario">
-                        </div>
-                        <h3 class="household-need__card-title">Downsizing</h3>
-                        <p class="household-need__card-desc">Simplify downsizing by storing excess items with our convenient solutions.</p>
+                        <h3 class="household-need__card-title">Promotional Gear</h3>
+                        <p class="household-need__card-desc">Store exhibition stalls, event trade stands, banners, and excess marketing merchandise between campaigns.</p>
                     </div>
                 </div>
             </div>
@@ -1052,29 +1013,11 @@
 
                 <!-- Testimonial Cards Carousel / Grid -->
                 <div class="testimonials-grid">
-                    <!-- Card 1: Nandini Saha -->
+                    <!-- Card 1: Nitin Gupta -->
                     <div class="testimonial-card shadow-sm">
                         <span class="material-symbols-rounded quote-icon">format_quote</span>
                         <div class="rating-stars">★★★★★</div>
-                        <p class="testimonial-text">"The entire experience was seamless—from booking the storage room to collecting my belongings months later. Everything remained in perfect condition, and the staff was incredibly professional."</p>
-                        <div class="testimonial-profile">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Nandini Saha" class="profile-img">
-                            <div class="profile-info">
-                                <h4>Nandini Saha</h4>
-                                <p>Delhi</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-footer">
-                            <span class="storage-badge">Private Room Storage</span>
-                            <span class="verified-badge"><span class="material-symbols-rounded">verified</span> Verified Customer</span>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Nitin Gupta -->
-                    <div class="testimonial-card shadow-sm">
-                        <span class="material-symbols-rounded quote-icon">format_quote</span>
-                        <div class="rating-stars">★★★★★</div>
-                        <p class="testimonial-text">"We used Self Storage India during our office relocation. The facility was secure, easy to access, and made the entire move stress-free."</p>
+                        <p class="testimonial-text">"We used Self Storage India during our office relocation. The facility was secure, easy to access, and made the entire transition for our team completely stress-free."</p>
                         <div class="testimonial-profile">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150" alt="Nitin Gupta" class="profile-img">
                             <div class="profile-info">
@@ -1084,25 +1027,43 @@
                         </div>
                         <div class="testimonial-footer">
                             <span class="storage-badge">Business Storage</span>
-                            <span class="verified-badge"><span class="material-symbols-rounded">verified</span> Verified Customer</span>
+                            <span class="verified-badge"><span class="material-symbols-rounded">verified</span> Verified Business</span>
                         </div>
                     </div>
 
-                    <!-- Card 3: Roselin Kiro -->
+                    <!-- Card 2: Aarav Mehta -->
                     <div class="testimonial-card shadow-sm">
                         <span class="material-symbols-rounded quote-icon">format_quote</span>
                         <div class="rating-stars">★★★★★</div>
-                        <p class="testimonial-text">"My luggage and furniture stayed safe for over a year. The rooms were clean, secure, and exactly what I needed while relocating."</p>
+                        <p class="testimonial-text">"Storing our e-commerce inventory here saved us thousands in warehouse leases. The flexibility to upgrade space on a monthly basis is a lifesaver for small businesses."</p>
                         <div class="testimonial-profile">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" alt="Roselin Kiro" class="profile-img">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150" alt="Aarav Mehta" class="profile-img">
                             <div class="profile-info">
-                                <h4>Roselin Kiro</h4>
+                                <h4>Aarav Mehta</h4>
                                 <p>Gurugram</p>
                             </div>
                         </div>
                         <div class="testimonial-footer">
-                            <span class="storage-badge">Household Storage</span>
-                            <span class="verified-badge"><span class="material-symbols-rounded">verified</span> Verified Customer</span>
+                            <span class="storage-badge">Inventory Storage</span>
+                            <span class="verified-badge"><span class="material-symbols-rounded">verified</span> Verified Business</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Priya Sharma -->
+                    <div class="testimonial-card shadow-sm">
+                        <span class="material-symbols-rounded quote-icon">format_quote</span>
+                        <div class="rating-stars">★★★★★</div>
+                        <p class="testimonial-text">"The document archiving rooms are clean, pest-controlled, and highly secure. Perfect for keeping our corporate records compliant without overcrowding our workspace."</p>
+                        <div class="testimonial-profile">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Priya Sharma" class="profile-img">
+                            <div class="profile-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Delhi</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <span class="storage-badge">Document Storage</span>
+                            <span class="verified-badge"><span class="material-symbols-rounded">verified</span> Verified Business</span>
                         </div>
                     </div>
                 </div>
@@ -1199,13 +1160,13 @@
         </section>
 
         <!-- ==========================================
-             SECTION 5 — HOUSEHOLD STORAGE DETAILS (SEO CONTENT)
+             SECTION 5 — BUSINESS STORAGE DETAILS (SEO CONTENT)
              ========================================== -->
         <section class="seo-details-section">
             <style>
                 .seo-details-section {
-                    padding: 30px 0;
-                    background-color: #F8FAFC;
+                    padding: 40px 0;
+                    background-color: #ffffff;
                     border-top: 1px solid var(--border);
                     border-bottom: 1px solid var(--border);
                     color: var(--text-muted);
@@ -1214,7 +1175,10 @@
                 .seo-details-section__container {
                     max-width: 1140px;
                     margin: 0 auto;
-                    padding: 0 var(--space-xl);
+                    padding: 40px;
+                    background-color: transparent;
+                    border: 1.5px solid var(--border);
+                    border-radius: 12px;
                     text-align: left;
                 }
                 .seo-details-section h2 {
@@ -1254,99 +1218,58 @@
                 }
                 @media (max-width: 768px) {
                     .seo-details-section {
-                        padding: 40px 0;
+                        padding: 20px 0;
+                    }
+                    .seo-details-section__container {
+                        padding: 24px var(--space-xl);
+                        border-left: none;
+                        border-right: none;
+                        border-radius: 0;
                     }
                     .seo-details-section h2 {
-                        font-size: 1.5rem;
+                        font-size: 1.4rem;
                     }
                     .seo-details-section h3 {
-                        font-size: 1.25rem;
+                        font-size: 1.2rem;
                     }
                 }
             </style>
             <div class="seo-details-section__container">
-                <h2>Household Goods Storage in NCR</h2>
-                <p>When you're looking for space to store your household goods, finding a reliable and secure solution is important. Whether you're dealing with a home renovation, relocating to a new city, or simply decluttering to make more room, the need for extra storage can arise unexpectedly. That's where Self Storage India comes in, offering top-notch storage facilities tailored to meet your specific needs.</p>
-                <p>With busy urban lifestyles in NCR, having a dedicated and safe space to store your valuables not only brings peace of mind but also frees up room at home, allowing you to focus on living comfortably. Our services are designed to provide secure, convenient, and accessible storage options for individuals and families alike, ensuring your belongings remain protected for as long as you need them stored.</p>
-                <p>Self Storage India has earned a reputation for providing hassle-free storage experiences, with various options that cater to different storage requirements, making it easier than ever to keep your household goods in order.</p>
+                <h2>Business Storage in NCR | Corporate Archive & Stock Space</h2>
+                <p>When you are looking for premium commercial space to store your corporate records, retail inventory, or trade show gear, finding a safe, compliant, and cost-effective solution is key. Renting traditional commercial warehouse space in prime NCR areas often requires long-term commitments and huge capital expenditure. Self Storage India provides a flexible, secure, and GST-compliant alternative designed around modern business demands.</p>
+                <p>Our business storage services across Delhi, Noida, and Gurugram offer private rooms and lockers that help you streamline retail distribution, store excess office assets during office relocation, or archive years of compliance logs. Having a dedicated storage unit keeps your primary office space organized, boosts team productivity, and allows your company to scale operations fluidly.</p>
 
-                <h2>Flexible Household Storage Units in NCR</h2>
-                <p>At Self Storage India, we understand the importance of keeping your items secure while freeing up space in your home. Our home storage services cater to individuals and families who need a flexible and affordable storage solution, offering:</p>
+                <h2>Secure Document Archiving & Records Management</h2>
+                <p>Maintaining financial, accounting, and legal records is a mandatory regulatory requirement for businesses. However, paper archives can quickly clutter high-rent corporate offices. Self Storage India offers professional document storage units equipped to store document boxes, archive folders, and regulatory files safely:</p>
                 <ul>
-                    <li>Short-term and long-term storage plans</li>
-                    <li>Secure facilities with 24/7 surveillance</li>
-                    <li>Spacious units to accommodate household goods of all sizes</li>
-                    <li>Transportation assistance to help move your items into storage</li>
-                </ul>
-                <p>Whether it's furniture, electronics, or personal belongings, our home storage services in NCR ensure that your items are well-protected, easily accessible, and ready for use whenever required.</p>
-
-                <h2>Personal Storage Space NCR | Safe and Reliable</h2>
-                <p>In a bustling city like NCR, it's easy for personal belongings to accumulate over time, quickly filling up valuable space in your home. Whether it's off-season clothing, treasured books, or sports equipment, finding room for everything can become a challenge. This is where personal storage space in NCR from Self Storage India offers a practical solution.</p>
-                <p>Our individual storage units are ideal for safely storing items like seasonal clothing, personal collections, sports gear, or even art and décor that you may not use every day but still want to keep.</p>
-                <p>Our storage spaces come in a variety of sizes, allowing you to store anything from a few boxes to larger items of furniture, depending on your needs. With secure facilities, easy access, and affordable pricing, you can declutter your home. Self Storage India is here to provide you with the extra space you need without the stress of overcrowding your living areas.</p>
-
-                <h2>Household Storage India NCR | Protect Your Valuables</h2>
-                <p>As more people in India, especially in NCR, look for efficient ways to store their household belongings, the demand for reliable household storage has skyrocketed. Self Storage India offers a smart and professional solution to manage your household storage needs. Whether you're moving to a new home, renovating your current space, or simply need a temporary solution while traveling, our storage services are designed to provide you with peace of mind.</p>
-                <p>Our household storage spaces are perfect for:</p>
-                <ul>
-                    <li>Safeguarding delicate or valuable items, ensuring they remain in pristine condition.</li>
-                    <li>Offering extra storage space while you’re remodeling or reorganizing your home.</li>
-                    <li>Storing your household belongings during long trips or extended stays abroad.</li>
-                </ul>
-                <p>With 24/7 CCTV monitoring, advanced fire safety systems, and secure access controls, we take every precaution to keep your belongings safe and sound.</p>
-
-                <h2>Furniture Storage Services NCR | Hassle-Free Storage Solutions</h2>
-                <p>Furniture can take up a lot of room in your home, and sometimes you just need a secure place to store it. Whether you're in between homes or just need a temporary space, Self Storage India offers the perfect solution. Our furniture storage services in NCR provide the ideal environment for storing large and bulky items like: sofas, Dining tables and other large furnishings.</p>
-                <p>We ensure that your furniture is stored in a clean and secure environment, protecting it from dust and damage. Whether you need short-term storage while you move or a longer-term solution, we’ve got you covered. Plus, our spacious units can handle even the largest pieces, giving you the flexibility to store as much or as little as you need.</p>
-
-                <h2>Home Storage Units NCR</h2>
-                <p>When your home feels cluttered and you need additional space to store your belongings, home storage units in NCR from Self Storage India provide the perfect solution. Our units come in different sizes, catering to everything from small household items to large furniture. With flexible rental options, you can choose a plan that fits your needs without being locked into a long-term contract.</p>
-                <p>Additionally, our storage units are equipped with high-security systems, including digital access controls, ensuring that your items are safe and protected at all times. Whether you are a student needing extra space, a professional looking to store work-related items, or a family requiring storage during a move, Self Storage India has the ideal unit to keep your home organized and clutter-free.</p>
-
-                <h2>Household Storage Services NCR</h2>
-                <p>For many homeowners and renters, space can quickly become a concern. Our household storage services in NCR are designed to help you manage your excess belongings without the stress of overcrowding your living space. Self Storage India offers a range of services to simplify your storage experience. We provide packing assistance to ensure that your fragile and valuable items are stored safely.</p>
-                <p>With flexible contracts and no long-term commitments, you can store your items for as little or as long as you need. Additionally, we offer transportation solutions to make moving your items into storage easier and more convenient.</p>
-
-                <h2>Storage for Household Goods NCR</h2>
-                <p>When you need a reliable place to store your household items, storage for household goods in NCR at Self Storage India offers a practical and secure solution. We provide storage spaces for a variety of items, including furniture, kitchen appliances, and home décor. Our modern storage facilities are equipped with top-notch security measures to safeguard your belongings, ensuring they remain in excellent condition while in storage.</p>
-                <p>Whether you are decluttering, renovating, or in the process of moving, our storage services provide a safe and accessible option for storing your household goods.</p>
-
-                <h2>Why Choose Self Storage India?</h2>
-                <p>Self Storage India is a trusted name in household storage services in NCR, offering tailored solutions for individuals, families, and businesses. Here’s why so many choose us:</p>
-                <ul>
-                    <li><strong>Security:</strong> 24/7 CCTV surveillance and biometric access for top-notch safety.</li>
-                    <li><strong>Flexible Plans:</strong> Short-term and long-term rental options to fit your needs.</li>
-                    <li><strong>Convenience:</strong> Easily accessible storage units in prime NCR locations.</li>
-                    <li><strong>Affordable Pricing:</strong> Competitive rates without compromising on quality.</li>
-                    <li><strong>Variety of Unit Sizes:</strong> Storage options that fit everything from small items to large furniture.</li>
-                    <li><strong>Professional Assistance:</strong> Expert help with packing and organizing your belongings.</li>
-                    <li><strong>Hassle-Free Transport:</strong> Convenient transportation options to move items in and out.</li>
-                    <li><strong>Clean and Well-Maintained:</strong> Our storage units are regularly cleaned and pest-controlled for your peace of mind.</li>
-                    <li><strong>Dedicated Customer Support:</strong> Friendly and reliable service whenever you need assistance.</li>
-                    <li><strong>Trusted Reputation:</strong> Thousands of satisfied customers across NCR rely on us for secure storage solutions.</li>
+                    <li>Secure rooms with strict biometric or keypad access controls</li>
+                    <li>Climate-managed environments that protect paper records from dampness and humidity</li>
+                    <li>Regular pest control and sanitation services for document protection</li>
+                    <li>Flexible monthly plans to expand archiving capacity as your data footprint grows</li>
                 </ul>
 
-                <h2>How Self Storage India Can Help You</h2>
-                <p>At Self Storage India, we make storing your household goods simple and hassle-free. Our team of professionals is here to assist you every step of the way, from selecting the right storage unit to ensuring that your items are properly stored and protected. Whether you need to store just a few boxes or an entire houseful of furniture, we have the perfect solution for you.</p>
-                <ul>
-                    <li>Secure and accessible storage units</li>
-                    <li>Flexible rental options to suit your needs</li>
-                    <li>Affordable pricing for all household storage requirements</li>
-                </ul>
+                <h2>E-commerce Fulfillment & Commercial Stock Units</h2>
+                <p>For growing e-commerce businesses and retailers in NCR, managing inventory fluctuations requires rapid workspace scaling. Our clean e-commerce storage units serve as the ideal micro-warehouse or stock room. Located close to major expressways in Gurgaon, Noida, and Delhi, our facilities ensure quick stock dispatch and easy transit access. We provide loading docks, trolleys, and transport partnerships to make unloading commercial freight hassle-free.</p>
 
-                <h2>The Smart Choice for Storing Your Belongings</h2>
-                <p>When it comes to storing your household goods in NCR, Self Storage India offers the best in security, convenience, and affordability. Whether you need short-term storage while moving or a long-term solution to keep your home organized, our home storage services provide everything you need to safely store your belongings. From home storage units to furniture storage services, we are dedicated to ensuring that your storage experience is as seamless and stress-free as possible.</p>
-                <p>If you're looking for reliable and affordable household storage services in NCR, Self Storage India is your trusted partner in keeping your items safe and secure. Contact us today to learn more about our storage solutions and find the perfect unit for your needs!</p>
+                <h2>Why Choose Self Storage India for Business?</h2>
+                <p>Self Storage India is trusted by thousands of corporate managers, retailers, and entrepreneurs across NCR for these premium benefits:</p>
+                <ul>
+                    <li><strong>Security:</strong> Multi-tiered safety featuring 24/7 CCTV surveillance, biometric locks, and security guards.</li>
+                    <li><strong>GST Compliance:</strong> We provide full GST billing and invoices to help you claim Input Tax Credit easily.</li>
+                    <li><strong>Flexible Scaling:</strong> Upgrade or downgrade unit size dynamically based on seasonal sales spikes.</li>
+                    <li><strong>Convenient Accessibility:</strong> Prime locations with easy drive-up access and cargo-handling facilities.</li>
+                    <li><strong>Document Protection:</strong> Clean, dry, and regularly sanitized spaces to prevent dust or pest damage.</li>
+                </ul>
             </div>
         </section>
-
+        
         <!-- FAQ Section -->
         <section id="faq" class="faq-section">
             <div class="container">
                 <div class="section-header-centered">
                     <span class="calc-tag">QUESTIONS & ANSWERS</span>
                     <h2>Frequently Asked Questions</h2>
-                    <p>Find answers to common questions about space options, security parameters, flexibility, and booking details.</p>
+                    <p>Find answers to common questions about commercial space renting, security parameters, and business compliance.</p>
                 </div>
 
                 <!-- Center Accordion Container (max-width: 800px) -->
@@ -1354,93 +1277,71 @@
                     <!-- Accordion 1 -->
                     <div class="faq-accordion-item shadow-sm">
                         <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>How does Self Storage India work?</span>
+                            <span>Can we register our corporate GST address at the storage unit?</span>
                             <span class="material-symbols-rounded accordion-arrow">add</span>
                         </button>
                         <div class="faq-content-box">
-                            <p>Select your desired room size, pack your items (or request our team's help), and move them in. You lock the room and keep the key, ensuring complete privacy and exclusive access.</p>
+                            <p>Our storage spaces are meant exclusively for physical inventory, documents, and equipment storage. While you cannot register a business address at the unit, we provide complete, GST-compliant invoices for all rentals so your company can easily claim Input Tax Credit (ITC).</p>
                         </div>
                     </div>
 
                     <!-- Accordion 2 -->
                     <div class="faq-accordion-item shadow-sm">
                         <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>What can I store?</span>
+                            <span>How secure is our stored business inventory?</span>
                             <span class="material-symbols-rounded accordion-arrow">add</span>
                         </button>
                         <div class="faq-content-box">
-                            <p>You can store household furniture, appliances, electronics, business inventory, documents, office equipment, luggage, and packed boxes. Prohibited items include hazardous, illegal, or perishable goods.</p>
+                            <p>We implement strict security measures, including 24/7 CCTV monitoring, biometric access checkpoints, fire alarm networks, pest control, and round-the-clock physical security guards. You place your own lock and key on the unit, ensuring exclusive access to your inventory.</p>
                         </div>
                     </div>
 
                     <!-- Accordion 3 -->
                     <div class="faq-accordion-item shadow-sm">
                         <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>How secure are my belongings?</span>
+                            <span>Can multiple team members be authorized to access the unit?</span>
                             <span class="material-symbols-rounded accordion-arrow">add</span>
                         </button>
                         <div class="faq-content-box">
-                            <p>Our facilities feature 24/7 CCTV surveillance, perimeter alarms, secure access control, fire safety measures, and on-site security guards. You hold the only key to your lock.</p>
+                            <p>Yes. You can nominate and authorize specific employees or delivery staff from your team to access the storage facility. They will need to complete security check-ins at our reception to access the unit.</p>
                         </div>
                     </div>
 
                     <!-- Accordion 4 -->
                     <div class="faq-accordion-item shadow-sm">
                         <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>Can I access my storage whenever I need?</span>
+                            <span>Do you offer climate control for paper documents?</span>
                             <span class="material-symbols-rounded accordion-arrow">add</span>
                         </button>
                         <div class="faq-content-box">
-                            <p>Yes! We offer easy access 7 days a week during our extended operating hours, allowing you to retrieve or add items whenever it's convenient.</p>
+                            <p>Yes. We have climate-managed storage rooms designed to maintain dry, temperature-regulated environments. This protects corporate paper archives, books, and delicate office IT hardware from humidity, dampness, or deterioration.</p>
                         </div>
                     </div>
 
                     <!-- Accordion 5 -->
                     <div class="faq-accordion-item shadow-sm">
                         <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>Do you provide packing and pickup services?</span>
+                            <span>Is there support for freight unloading or transportation?</span>
                             <span class="material-symbols-rounded accordion-arrow">add</span>
                         </button>
                         <div class="faq-content-box">
-                            <p>Yes, we offer professional packing and door-to-door pickup services across Delhi NCR, making your storage transition completely hassle-free.</p>
+                            <p>Yes. All of our facilities are equipped with cargo lifts, transport pallets, and loading ramps. We also have partnerships with trusted logistics companies in NCR to assist with cargo packing, pickup, and moving.</p>
                         </div>
                     </div>
 
                     <!-- Accordion 6 -->
                     <div class="faq-accordion-item shadow-sm">
                         <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>Is insurance available?</span>
+                            <span>How flexible are the lease contracts?</span>
                             <span class="material-symbols-rounded accordion-arrow">add</span>
                         </button>
                         <div class="faq-content-box">
-                            <p>Yes, we offer flexible insurance options to protect your stored goods against unforeseen events, giving you complete peace of mind.</p>
-                        </div>
-                    </div>
-
-                    <!-- Accordion 7 -->
-                    <div class="faq-accordion-item shadow-sm">
-                        <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>What storage sizes are available?</span>
-                            <span class="material-symbols-rounded accordion-arrow">add</span>
-                        </button>
-                        <div class="faq-content-box">
-                            <p>We offer a wide range of unit sizes, from small lockers for personal items or documents, up to large rooms capable of storing 3BHK+ households or business stocks.</p>
-                        </div>
-                    </div>
-                    <!-- Accordion 8 -->
-                    <div class="faq-accordion-item shadow-sm">
-                        <button class="faq-trigger" onclick="toggleFaq(this)">
-                            <span>How do I get started?</span>
-                            <span class="material-symbols-rounded accordion-arrow">add</span>
-                        </button>
-                        <div class="faq-content-box">
-                            <p>Simply request a callback, use our online size calculator, or visit one of our facilities. Our storage specialists will help you select the perfect unit and arrange your move-in.</p>
+                            <p>We offer highly flexible monthly rental contracts. There is no long-term lease commitment, allowing you to upgrade, downgrade, or close your unit as retail seasons change.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
 
     <!-- Footer Section -->
     <footer class="site-footer">

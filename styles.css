@@ -2286,7 +2286,7 @@ h3 {
 .offering-card {
     background: #ffffff;
     border: 1px solid rgba(226, 232, 240, 0.8);
-    border-radius: 24px; /* Rounded corners between 20px and 24px */
+    border-radius: 12px; /* Less rounded corners */
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);

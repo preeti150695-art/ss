@@ -2910,7 +2910,7 @@ h3 {
 
 /* FAQ Section Styles */
 .faq-section {
-    padding: 20px 0 0 0; /* Removed bottom padding entirely */
+    padding: 20px 0 40px 0; /* Added bottom padding of 40px */
     background-color: #ffffff;
     border-bottom: 1px solid var(--border);
 }

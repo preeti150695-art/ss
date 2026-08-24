@@ -1,0 +1,404 @@
+<section class="ssi-private-hero-section">
+  <style>
+    /* ==================================================
+       DESIGN SYSTEM & BASE STYLE SCOPED TO HERO SECTION
+       ================================================== */
+    .ssi-private-hero-section {
+      --ssi-private-primary-blue: #146EF5;
+      --ssi-private-dark-blue: #1D4FA8;
+      --ssi-private-orange: #F58220;
+      --ssi-private-dark-text: #172033;
+      --ssi-private-body: #5F6C7B;
+      --ssi-private-light-border: #E5EAF1;
+      --ssi-private-light-bg: #F7F9FC;
+      --ssi-private-white: #FFFFFF;
+      
+      --ssi-private-font-family: 'Poppins', 'Inter', sans-serif;
+      
+      font-family: var(--ssi-private-font-family);
+      background-color: #FAFCFF;
+      padding: 70px 24px 50px;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .ssi-private-hero-section * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .ssi-private-hero-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    /* ==================================================
+       LEFT COLUMN — IMAGE
+       ================================================== */
+    .ssi-private-hero-left {
+      position: relative;
+      width: 100%;
+    }
+
+    .ssi-private-hero-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 430px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(29, 79, 168, 0.05);
+      border: 1px solid var(--ssi-private-light-border);
+    }
+
+    .ssi-private-hero-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Floating Image Badge */
+    .ssi-private-image-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: var(--ssi-private-white);
+      color: var(--ssi-private-dark-text);
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(23, 32, 51, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--ssi-private-light-border);
+    }
+
+    .ssi-private-image-badge svg {
+      width: 14px;
+      height: 14px;
+      color: var(--ssi-private-primary-blue);
+    }
+
+    /* ==================================================
+       RIGHT COLUMN — CONTENT
+       ================================================== */
+    .ssi-private-hero-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 600px;
+    }
+
+    .ssi-private-hero-eyebrow {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ssi-private-orange);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .ssi-private-hero-heading {
+      font-size: 46px;
+      font-weight: 700;
+      color: var(--ssi-private-dark-blue);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .ssi-private-hero-desc {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--ssi-private-body);
+      margin-bottom: 24px;
+    }
+
+    /* Feature Items */
+    .ssi-private-hero-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 20px;
+      margin-bottom: 30px;
+    }
+
+    .ssi-private-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--ssi-private-dark-text);
+    }
+
+    .ssi-private-feature-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--ssi-private-primary-blue);
+      flex-shrink: 0;
+    }
+
+    /* CTA Buttons */
+    .ssi-private-hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .ssi-private-hero-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 54px;
+      padding: 0 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      gap: 8px;
+    }
+
+    .ssi-private-hero-btn-primary {
+      background-color: var(--ssi-private-primary-blue);
+      color: var(--ssi-private-white);
+    }
+
+    .ssi-private-hero-btn-primary:hover {
+      background-color: var(--ssi-private-dark-blue);
+      transform: translateY(-2px);
+    }
+
+    .ssi-private-hero-btn-secondary {
+      background-color: var(--ssi-private-white);
+      border: 1.5px solid var(--ssi-private-primary-blue);
+      color: var(--ssi-private-dark-blue);
+    }
+
+    .ssi-private-hero-btn-secondary:hover {
+      background-color: rgba(20, 110, 245, 0.04);
+      transform: translateY(-2px);
+    }
+
+    /* Trust Micro-Copy */
+    .ssi-private-hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      color: var(--ssi-private-body);
+    }
+
+    .ssi-private-hero-trust svg {
+      width: 15px;
+      height: 15px;
+      color: #94A3B8;
+    }
+
+    /* ==================================================
+       OFFERING NAVIGATION PILLS
+       ================================================== */
+    .ssi-private-offering-nav {
+      max-width: 1280px;
+      margin: 40px auto 0;
+      padding-top: 30px;
+      border-top: 1px solid var(--ssi-private-light-border);
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .ssi-private-nav-pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      border-radius: 50px;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-sizing: border-box;
+    }
+
+    .ssi-private-nav-pill-active {
+      width: 190px;
+      background-color: var(--ssi-private-primary-blue);
+      color: var(--ssi-private-white);
+      box-shadow: 0 4px 12px rgba(20, 110, 245, 0.15);
+    }
+
+    .ssi-private-nav-pill-inactive {
+      width: 185px;
+      background-color: var(--ssi-private-light-bg);
+      color: var(--ssi-private-body);
+      border: 1px solid var(--ssi-private-light-border);
+    }
+
+    .ssi-private-nav-pill-inactive:hover {
+      border-color: var(--ssi-private-primary-blue);
+      color: var(--ssi-private-primary-blue);
+      background-color: var(--ssi-private-white);
+    }
+
+    /* ==================================================
+       RESPONSIVE BREAKPOINTS
+       ================================================== */
+    @media (max-width: 1024px) {
+      .ssi-private-hero-container {
+        gap: 40px;
+      }
+
+      .ssi-private-hero-img-wrapper {
+        height: 380px;
+      }
+
+      .ssi-private-hero-heading {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ssi-private-hero-section {
+        padding: 40px 20px 30px;
+      }
+
+      .ssi-private-hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      /* Stack image first, content second on mobile */
+      .ssi-private-hero-left {
+        order: 1;
+      }
+
+      .ssi-private-hero-right {
+        order: 2;
+        max-width: 100%;
+      }
+
+      .ssi-private-hero-img-wrapper {
+        height: 300px;
+        border-radius: 20px;
+      }
+
+      .ssi-private-hero-heading {
+        font-size: 32px;
+      }
+
+      .ssi-private-hero-features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .ssi-private-hero-ctas .ssi-private-hero-btn {
+        width: 100%;
+      }
+
+      .ssi-private-offering-nav {
+        order: 3;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .ssi-private-nav-pill {
+        flex: 0 0 auto;
+      }
+    }
+  </style>
+
+  <div class="ssi-private-hero-container">
+    <!-- LEFT COLUMN: IMAGE SECTION -->
+    <div class="ssi-private-hero-left">
+      <div class="ssi-private-hero-img-wrapper">
+        <img src="PRIVATE_ROOM_IMAGE" alt="Secure private self storage room filled with organized boxes and personal belongings">
+      </div>
+      <!-- FLOATING BADGE -->
+      <div class="ssi-private-image-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+        </svg>
+        100% Private Storage
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN: CONTENT -->
+    <div class="ssi-private-hero-right">
+      <span class="ssi-private-hero-eyebrow">PRIVATE STORAGE ROOMS</span>
+      <h1 class="ssi-private-hero-heading">
+        Private Room Storage<br>
+        in Delhi NCR
+      </h1>
+      <p class="ssi-private-hero-desc">
+        Get a secure, dedicated storage room for household belongings, furniture, business inventory and personal items. Our private storage rooms offer the flexibility, privacy and professional care you need — whether you're moving, renovating, travelling or simply creating more space at home.
+      </p>
+
+      <!-- FEATURE POINTS -->
+      <div class="ssi-private-hero-features">
+        <div class="ssi-private-feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+          </svg>
+          Secure & Monitored
+        </div>
+        <div class="ssi-private-feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+          </svg>
+          Dedicated Private Space
+        </div>
+        <div class="ssi-private-feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+          </svg>
+          Flexible Storage Duration
+        </div>
+        <div class="ssi-private-feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+          </svg>
+          Professional Pickup Support
+        </div>
+      </div>
+
+      <!-- CTA BUTTONS -->
+      <div class="ssi-private-hero-ctas">
+        <a href="PRIVATE_ROOMS_URL" class="ssi-private-hero-btn ssi-private-hero-btn-primary">
+          Get Free Quote &rarr;
+        </a>
+        <a href="tel:+919090206090" class="ssi-private-hero-btn ssi-private-hero-btn-secondary">
+          Call +91-9090206090
+        </a>
+      </div>
+
+      <!-- TRUST / MICRO COPY -->
+      <div class="ssi-private-hero-trust">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+        </svg>
+        Secure storage solutions for homes, travellers & businesses.
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFERING NAVIGATION TABS -->
+  <nav class="ssi-private-offering-nav">
+    <a href="PRIVATE_ROOMS_URL" class="ssi-private-nav-pill ssi-private-nav-pill-active">Private Rooms</a>
+    <a href="BOX_STORAGE_URL" class="ssi-private-nav-pill ssi-private-nav-pill-inactive">Box Storage</a>
+    <a href="LUGGAGE_STORAGE_URL" class="ssi-private-nav-pill ssi-private-nav-pill-inactive">Luggage Storage</a>
+  </nav>
+</section>

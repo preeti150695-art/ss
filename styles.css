@@ -4105,34 +4105,28 @@ h3 {
 }
 
 .footer-logo {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: #ffffff; /* White background container for logos */
-    border-radius: 2px;
+    border-radius: 6px;
     box-sizing: border-box;
     overflow: hidden;
+    height: 52px;
+    padding: 8px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.03);
 }
 
 .footer-logo img {
     height: 100%;
     width: auto;
     object-fit: contain;
-}
-
-.footer-logo-primary {
-    width: 250px;
-    height: 52px;
-}
-
-.footer-logo-warehouse {
-    width: 420px;
-    height: 52px;
-}
-
-.footer-logo-member {
-    width: 85px;
-    height: 52px;
+    display: block;
 }
 
 /* Copyright */
@@ -4180,19 +4174,9 @@ h3 {
 
 /* Responsive Footer rules */
 @media (max-width: 992px) {
-    .footer-logo-primary {
-        width: 200px;
+    .footer-logo {
         height: 44px;
-    }
-
-    .footer-logo-warehouse {
-        width: 340px;
-        height: 44px;
-    }
-
-    .footer-logo-member {
-        width: 72px;
-        height: 44px;
+        padding: 6px 12px;
     }
 }
 
